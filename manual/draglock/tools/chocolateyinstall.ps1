@@ -1,0 +1,2 @@
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+Get-ChocolateyWebFile -PackageName 'draglock' -FileFullPath "$toolsDir\DragLock.exe" -Url 'http://www.donationcoder.com/Software/Skrommel/DragLock/DragLock.exe' -Checksum 'CD14D533D4D2CF159D6CC8050338011FAA5B99A09AF39C3EE353262C31DDB6D7' -ChecksumType 'sha256'
