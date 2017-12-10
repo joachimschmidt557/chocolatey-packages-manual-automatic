@@ -17,8 +17,9 @@ function global:au_GetLatest {
     #upx394w.zip
     $re  = "upx.+w.zip"
     $url = $download_page.links | ? href -match $re | select -First 1 -expand href
+    $url = "https://github.com" + $url
 
-    #$version = $url -split '-' | select -First 1 -Skip 1
+    $version = ($url -split '/' | select -last 1 -skip 1) -Replace 'v',''
 
     $Latest = @{ URL = $url; Version = $version }
     return $Latest
