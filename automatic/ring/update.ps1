@@ -17,12 +17,12 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
 
     #tidy-5.1.25-win64.zip
-    $re  = "tidy-.+-win(32|64).zip"
-    $url = $download_page.links | ? href -match $re | select -First 2 -expand href
+    $latest_url_32 = $download_page.links | ? href -match 'ring-windows-nightly-[0-9]+~.+' | select -last 1 -expand href
+    $latest_url_64 = $download_page.links | ? href -match 'ring-windows-nightly_x86_64-[0-9]+~.+' | select -last 1 -expand href
 
-    $version = $url[0] -split '-' | select -Last 1 -Skip 1
-    $url32 = 'https://github.com' + $url[0]
-    $url64 = 'https://github.com' + $url[1]
+    $version = ($url -split '-' | select -last 1) -split '~' | select -first 1
+    $url32 = 'https://dl.ring.cx/windows/' + $latest_url_32
+    $url64 = 'https://dl.ring.cx/windows/' + $latest_url_64
 
     $Latest = @{ URL32 = $url32; URL64 = $url64; Version = $version }
     return $Latest
