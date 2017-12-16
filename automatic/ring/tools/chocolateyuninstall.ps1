@@ -2,9 +2,9 @@
 $ErrorActionPreference = 'Stop';
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'mstream*'
+  softwareName  = 'ring*'
   fileType      = 'EXE'
-  silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  silentArgs   = '/S'
   validExitCodes= @(0)
 }
 
