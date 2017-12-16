@@ -20,7 +20,11 @@ function global:au_GetLatest {
     $latest_url_32 = $download_page.links | ? href -match 'ring-windows-nightly-[0-9]+~.+' | select -last 1 -expand href
     $latest_url_64 = $download_page.links | ? href -match 'ring-windows-nightly_x86_64-[0-9]+~.+' | select -last 1 -expand href
 
-    $version = ($url -split '-' | select -last 1) -split '~' | select -first 1
+    $raw = ($latest_url_32 -split '-' | select -last 1) -split '~' | select -first 1
+    $year = $raw[0..3] -join ''
+    $month = $raw[4..5] -join ''
+    $day = $raw[6..7] -join ''
+    $version = $year + '.' + $month + '.' + $day
     $url32 = 'https://dl.ring.cx/windows/' + $latest_url_32
     $url64 = 'https://dl.ring.cx/windows/' + $latest_url_64
 
