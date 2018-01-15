@@ -41,12 +41,12 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <iconUrl>https://cdn.rawgit.com/joachimschmidt557/chocolatey-packages-manual-automatic/0f1bb7f1/icons/Ring.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
-    <!--<licenseUrl>https://github.com/IrosTheBeggar/mStream/blob/master/LICENSE</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>-->
-    <!--<projectSourceUrl>https://github.com/IrosTheBeggar/mStream</projectSourceUrl>
-    <docsUrl>https://github.com/IrosTheBeggar/mStream/blob/master/docs</docsUrl>-->
-    <!--<mailingListUrl></mailingListUrl>-->
-    <!--<bugTrackerUrl>https://github.com/IrosTheBeggar/mStream/issues</bugTrackerUrl>-->
+    <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.en.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<projectSourceUrl>https://github.com/IrosTheBeggar/mStream</projectSourceUrl>-->
+    <docsUrl>https://tuleap.ring.cx/plugins/mediawiki/wiki/ring/index.php/Main_Page</docsUrl>
+    <mailingListUrl>https://lists.gnu.org/mailman/listinfo/ring</mailingListUrl>
+    <bugTrackerUrl>https://tuleap.ring.cx/projects/ring</bugTrackerUrl>
     <tags>ring gnu privacy</tags>
     <summary>Ring is a free and universal communication platform which preserves the users' privacy and freedoms.</summary>
     <description>
