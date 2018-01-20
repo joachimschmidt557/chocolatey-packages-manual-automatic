@@ -15,10 +15,10 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
 
     #quodlibet-4.0.2-installer.exe
-    $re  = "quodlibet-.+-installer.exe"f
+    $re  = "quodlibet-.+-installer.exe"
     $url = $download_page.links | ? href -match $re | select -First 1 -expand href
 
-    $version = ($url -split '-' | select -last 1).replace("v",'').replace(".exe","")
+    $version = ($url -split '-' | select -last 1 -Skip 1).replace("v",'').replace(".exe","")
 
     $Latest = @{ URL = ("https://github.com" + $url); Version = $version }
     return $Latest

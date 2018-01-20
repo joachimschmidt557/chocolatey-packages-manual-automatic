@@ -2,9 +2,9 @@
 $ErrorActionPreference = 'Stop';
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'mstream*'
+  softwareName  = 'quod libet*'
   fileType      = 'EXE'
-  silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  silentArgs   = '/S'
   validExitCodes= @(0)
 }
 
