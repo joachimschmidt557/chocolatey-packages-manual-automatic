@@ -18,7 +18,7 @@ function global:au_GetLatest {
     $re  = "quodlibet-.+-installer.exe"
     $url = $download_page.links | ? href -match $re | select -First 1 -expand href
 
-    $version = ($url -split '-' | select -last 1 -Skip 1).replace("v",'').replace(".exe","")
+    $version = ($url -split '-' | select -last 1 -Skip 1)
 
     $Latest = @{ URL = ("https://github.com" + $url); Version = $version }
     return $Latest
