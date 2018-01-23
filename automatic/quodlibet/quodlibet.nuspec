@@ -63,7 +63,7 @@ Unlike some, Quod Libet will scale to libraries with tens of thousands of songs.
       <dependency id="" version="[__EXACT_VERSION__]" />
       <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
       <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />-->
-      <dependency id="quodlibet.install" />
+      <dependency id="quodlibet.install" version="[0.1]" />
       <!--<dependency id="chocolatey-core.extension" version="1.1.0" />-->
     </dependencies>
     <!-- chocolatey-core.extension - https://chocolatey.org/packages/chocolatey-core.extension
@@ -78,7 +78,7 @@ Unlike some, Quod Libet will scale to libraries with tens of thousands of songs.
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
-    <file src="tools\**" target="tools" />
+    <!--<file src="tools\**" target="tools" />-->
     <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>
