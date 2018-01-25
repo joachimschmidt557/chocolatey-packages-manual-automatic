@@ -12,7 +12,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_file = Invoke-WebRequest -Uri $download
+    $download_file = Invoke-WebRequest -Uri $download -Method Head
 
     $version = ($download_file.Headers["Content-Disposition"] -split ' ' | select -last 1 ).replace('.msi"', '')
 
