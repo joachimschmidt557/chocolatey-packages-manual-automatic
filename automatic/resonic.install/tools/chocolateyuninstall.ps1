@@ -2,10 +2,10 @@
 $ErrorActionPreference = 'Stop';
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'quod libet*'
-  fileType      = 'EXE'
-  silentArgs   = '/S'
-  validExitCodes= @(0)
+  softwareName  = 'resonic*'
+  fileType      = 'MSI'
+  silentArgs    = "/qn /norestart"
+  validExitCodes= @(0, 3010, 1605, 1614, 1641)
 }
 
 $uninstalled = $false

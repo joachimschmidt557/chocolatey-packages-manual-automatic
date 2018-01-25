@@ -7,16 +7,16 @@ $checksum   = '588477831ce3f0ddbd812058050d31130ca3d1f468a91da5fed6cfa208320513'
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
-  fileType      = 'EXE'
+  fileType      = 'MSI'
   url           = $url
 
-  softwareName  = 'quod libet*'
+  softwareName  = 'resonic*'
 
   checksum      = $checksum
   checksumType  = 'sha256'
 
-  silentArgs   = '/S'
-  validExitCodes= @(0)
+  silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+  validExitCodes= @(0, 3010, 1641)
 }
 
 Install-ChocolateyPackage @packageArgs
