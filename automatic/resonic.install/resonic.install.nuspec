@@ -41,20 +41,40 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <iconUrl>https://cdn.rawgit.com/joachimschmidt557/chocolatey-packages-manual-automatic/552ff6a5/icons/Resonic.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
-    <licenseUrl>https://resonic.at/impressum</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<licenseUrl>https://resonic.at/impressum</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>-->
     <!--<projectSourceUrl>https://github.com/quodlibet/quodlibet</projectSourceUrl>-->
     <docsUrl>https://resonic.at/docs</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl>https://github.com/quodlibet/quodlibet/issues</bugTrackerUrl>-->
-    <tags>resonic.install resonic player music mp3 </tags>
+    <tags>resonic.install resonic player music mp3 wav flac ogg opus wma</tags>
     <summary>Fast and free audio player.</summary>
     <description>
 Resonic Player is a fast audio and music player, directory player, and sample browser, built around a big waveform view, a frequency analyzer, and a musical spectrum.
 
 Free for non-commercial and non-profit use.
 
-Browse and play large amounts of music files, sounds, and folders, audition many audio file formats.
+## Ridiculously Fast
+
+_Resonic_ makes extensive use of **multi-core processing**. Every important part is optimized for speed, which results in extremely fast browsing, seeking, and playback.
+
+## Lightweight
+
+A couple of files, a few megabytes, low memory footprint, and tidy use of disk space.
+
+No bloated runtime packages are required.
+
+DLL files are not loaded on startup, but whenever they are required, which tailors memory usage to your behavior.
+
+## Pure Sound
+
+In order to achieve the **purest sound quality**, there is absolutely nothing between decoded audio and sound output that might degrade quality, which is essential for both sound and sample previewing and audiophile audio playback.
+
+Resonic's audio engine runs on 32-bit floating point data.
+
+## Clean Interface
+
+A major design goal is to always keep the graphical user interface **clutter-free** and **user-friendly**, without nested menus and dialogs, and without dumbing down the more powerful features.
 </description>
     <releaseNotes>https://resonic.at/whatsnew</releaseNotes>
     <!-- =============================== -->      
