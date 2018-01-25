@@ -35,7 +35,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
     <title>fd</title>
-    <authors>Iros Software</authors>
+    <authors>sharkdp</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://github.com/sharkdp/fd</projectUrl>
     <!--<iconUrl>https://cdn.rawgit.com/joachimschmidt557/ChocolateyPackages/5332ef89/icons/mstreamExpress.png</iconUrl>-->
