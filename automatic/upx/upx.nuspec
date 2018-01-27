@@ -16,7 +16,7 @@
     <copyright>© 1996 Markus Franz Xaver Johannes Oberhumer, László Molnár, John F. Reiser</copyright>
     <tags>compression archiving packer cli</tags>
     <projectSourceUrl>https://github.com/upx/upx</projectSourceUrl>
-    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/_output/upx/3.91</packageSourceUrl>
+    <packageSourceUrl>https://github.com/joachimschmidt557/chocolatey-packages-manual-automatic/tree/master/automatic/upx</packageSourceUrl>
     <docsUrl>https://github.com/upx/upx/tree/master/doc</docsUrl>
     <!--<mailingListUrl>http://sourceforge.net/p/upx/discussion/</mailingListUrl>-->
     <bugTrackerUrl>https://github.com/upx/upx/issues</bugTrackerUrl>
