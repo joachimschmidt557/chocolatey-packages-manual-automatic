@@ -6,6 +6,7 @@
     <title>Areca Backup</title>
     <authors>Olivier Petrucci</authors>
     <owners>Waterdrop,joachim.schmidt557</owners>
+    <packageSourceUrl>https://github.com/joachimschmidt557/chocolatey-packages-manual-automatic/tree/master/automatic/ArecaBackup</packageSourceUrl>
     <licenseUrl>http://www.opensource.org/licenses/gpl-license.php</licenseUrl>
     <projectUrl>http://www.areca-backup.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/Summerspecial/ChocoCont/master/ArecaBackup/areca_logo.png</iconUrl>
