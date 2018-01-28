@@ -1,8 +1,8 @@
 ﻿$packageName = 'fd'
-$url32      = 'https://dl.ring.cx/windows/ring-windows-nightly-20180115143103~gitd0bda53.exe'
-$url64      = 'https://dl.ring.cx/windows/ring-windows-nightly_x86_64-20180115143103~gitd0bda53.exe'
-$checksum32 = '68f92b0740c9e0b78af690747e5435ea27ea5de3e3945b25db47bf45176d00c8'
-$checksum64 = '573c15157028fc2701689bf079a4c0063f40baa8fdd57abde2267452b6d8e934'
+$url32      = 'https://github.com/sharkdp/fd/releases/download/v6.2.0/fd-v6.2.0-i686-pc-windows-gnu.zip'
+$url64      = 'https://github.com/sharkdp/fd/releases/download/v6.2.0/fd-v6.2.0-x86_64-pc-windows-gnu.zip'
+$checksum32 = '2ce7d1e4a03d33913cbb27867924ba90468aa98bd2669c38a474d52a6a5eb443'
+$checksum64 = '58b46398b6f07455f3138332f470d90b4cdb11015789a8dc474e0d130c6dd889'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 Install-ChocolateyZipPackage -PackageName "$packageName" `
                              -Url "$url32" `
