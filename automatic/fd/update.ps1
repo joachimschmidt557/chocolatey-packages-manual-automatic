@@ -5,8 +5,10 @@ $releases = 'https://github.com/sharkdp/fd/releases'
 function global:au_SearchReplace {
     @{
         'tools\chocolateyInstall.ps1' = @{
-            "(^[$]url\s*=\s*)('.*')"      = "`$1'$($Latest.URL)'"
-            "(^[$]checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+            "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
+            "(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
+            "(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+            "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
         }
      }
 }
@@ -15,14 +17,18 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
 
     # fd-v6.2.0-i686-pc-windows-gnu.zip
-    $re  = "fd-v.+-i686-pc-windows-gnu.zip"
-    $url = $download_page.links | ? href -match $re | select -First 1 -expand href
-    $url = "https://github.com" + $url
+    $re_32  = "fd-v.+-i686-pc-windows-gnu.zip"
+    $re_64  = "fd-v.+-x86_64-pc-windows-gnu.zip"
+    $url32 = $download_page.links | ? href -match $re_32 | select -First 1 -expand href
+    $url64 = $download_page.links | ? href -match $re_64 | select -First 1 -expand href
 
-    $version = ($url -split '-' | select -last 1 -skip 4) -Replace 'v',''
+    $url32 = "https://github.com" + $url32
+    $url64 = "https://github.com" + $url64
 
-    $Latest = @{ URL = $url; Version = $version }
+    $version = ($url32 -split '-' | select -last 1 -skip 4) -Replace 'v',''
+
+    $Latest = @{ URL32 = $url32; URL64 = $url64; Version = $version }
     return $Latest
 }
 
-update -ChecksumFor 32
+update
