@@ -26,4 +26,9 @@ SharpKeys is a utility that manages a Registry key that allows Windows to remap 
       <dependency id="dotnet4.5" version="4.5.20120822" />
     </dependencies>
   </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
 </package>
