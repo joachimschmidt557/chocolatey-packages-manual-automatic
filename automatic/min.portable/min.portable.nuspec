@@ -34,44 +34,41 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>fd</title>
+    <title>min.portable</title>
     <authors>sharkdp</authors>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl>https://github.com/sharkdp/fd</projectUrl>
+    <projectUrl>https://minbrowser.github.io/min/</projectUrl>
     <!--<iconUrl>https://cdn.rawgit.com/joachimschmidt557/ChocolateyPackages/5332ef89/icons/mstreamExpress.png</iconUrl>-->
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
-    <licenseUrl>https://github.com/sharkdp/fd/blob/master/LICENSE-APACHE</licenseUrl>
+    <licenseUrl>https://github.com/minbrowser/min/blob/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/sharkdp/fd</projectSourceUrl>
-    <docsUrl>https://github.com/sharkdp/fd/tree/master/doc</docsUrl>
+    <projectSourceUrl>https://github.com/minbrowser/min</projectSourceUrl>
+    <docsUrl>https://github.com/minbrowser/min/wiki</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
-    <bugTrackerUrl>https://github.com/sharkdp/fd/issues</bugTrackerUrl>
-    <tags>fd find shell</tags>
-    <summary>A simple, fast and user-friendly alternative to find.</summary>
+    <bugTrackerUrl>https://github.com/minbrowser/min/issues</bugTrackerUrl>
+    <tags>min.portable min browser minbrowser electron</tags>
+    <summary>Min is a smarter, faster web browser. </summary>
     <description>
-*fd* is a simple, fast and user-friendly alternative to
-[*find*](https://www.gnu.org/software/findutils/).
+# Min
 
-While it does not seek to mirror all of *find*'s powerful functionality, it provides sensible
-(opinionated) defaults for [80%](https://en.wikipedia.org/wiki/Pareto_principle) of the use cases.
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-## Features
-* Convenient syntax: `fd PATTERN` instead of `find -iname '*PATTERN*'`.
-* Colorized terminal output (similar to *ls*).
-* It's *fast*.
-* Smart case: the search is case-insensitive by default. It switches to
-  case-sensitive if the pattern contains an uppercase
-  character[\*](http://vimdoc.sourceforge.net/htmldoc/options.html#'smartcase').
-* Ignores hidden directories and files, by default.
-* Ignores patterns from your `.gitignore`, by default.
-* Regular expressions.
-* Unicode-awareness.
-* The command name is *50%* shorter[\*](https://github.com/ggreer/the_silver_searcher) than
-  `find` :-).
-* Parallel command execution with a syntax similar to GNU Parallel.
+Min is a smarter, faster web browser. It includes features such as:
+
+* Information from [DuckDuckGo](https://duckduckgo.com) in the search bar.
+* Built-in ad and tracker blocking
+* Fuzzy search
+* Full-text search for visited pages
+* Reading list
+* Tabs improvements (tabs open to the right, and fade out when inactive).
+* Dark theme
+
+More information, and prebuilt binaries are available [here](https://minbrowser.github.io/min/).
+
+> Note: Min uses an older version of Chromium, which may be missing security fixes from later versions. [More Information](https://github.com/minbrowser/min/issues/440#issuecomment-338080554)
 </description>
-    <releaseNotes>https://github.com/sharkdp/fd/releases</releaseNotes>
+    <releaseNotes>https://github.com/minbrowser/min/releases</releaseNotes>
     <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
