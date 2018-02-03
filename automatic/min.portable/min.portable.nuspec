@@ -34,11 +34,11 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>min.portable</title>
-    <authors>sharkdp</authors>
+    <title>Min Browser (Portable)</title>
+    <authors>Min Browser,PalmerAL</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://minbrowser.github.io/min/</projectUrl>
-    <!--<iconUrl>https://cdn.rawgit.com/joachimschmidt557/ChocolateyPackages/5332ef89/icons/mstreamExpress.png</iconUrl>-->
+    <iconUrl>https://cdn.rawgit.com/joachimschmidt557/chocolatey-packages-manual-automatic/4d8aad87f2ea45053f3f44ee0fe6eb4e150d3d37/icons/Min.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://github.com/minbrowser/min/blob/master/LICENSE.txt</licenseUrl>
@@ -47,12 +47,10 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <docsUrl>https://github.com/minbrowser/min/wiki</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://github.com/minbrowser/min/issues</bugTrackerUrl>
-    <tags>min.portable min browser minbrowser electron</tags>
+    <tags>min.portable min browser minbrowser electron chromium</tags>
     <summary>Min is a smarter, faster web browser. </summary>
     <description>
 # Min
-
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 Min is a smarter, faster web browser. It includes features such as:
 
