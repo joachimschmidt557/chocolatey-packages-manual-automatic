@@ -22,61 +22,56 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- This section is about this package, although id and version have ties back to the software -->
     <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
     <!-- If the software is cross-platform, attempt to use the same id as the debian/rpm package(s) if possible. -->
-    <id>resonic.portable</id>
+    <id>min.portable</id>
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>0.9.1.1690</version>
-    <packageSourceUrl>https://github.com/joachimschmidt557/chocolatey-packages-manual-automatic/tree/master/automatic/resonic.portable</packageSourceUrl>
+    <version>0.1</version>
+    <packageSourceUrl>https://github.com/joachimschmidt557/chocolatey-packages-manual-automatic/tree/master/automatic/min.portable</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>joachim.schmidt557</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>Resonic Player (Portable)</title>
-    <authors>Liqube Audio</authors>
+    <title>fd</title>
+    <authors>sharkdp</authors>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl>https://resonic.at/home</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/joachimschmidt557/chocolatey-packages-manual-automatic/552ff6a5/icons/Resonic.png</iconUrl>
+    <projectUrl>https://github.com/sharkdp/fd</projectUrl>
+    <!--<iconUrl>https://cdn.rawgit.com/joachimschmidt557/ChocolateyPackages/5332ef89/icons/mstreamExpress.png</iconUrl>-->
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
-    <!--<licenseUrl>https://resonic.at/impressum</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>-->
-    <!--<projectSourceUrl>https://github.com/quodlibet/quodlibet</projectSourceUrl>-->
-    <docsUrl>https://resonic.at/docs</docsUrl>
+    <licenseUrl>https://github.com/sharkdp/fd/blob/master/LICENSE-APACHE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/sharkdp/fd</projectSourceUrl>
+    <docsUrl>https://github.com/sharkdp/fd/tree/master/doc</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
-    <!--<bugTrackerUrl>https://github.com/quodlibet/quodlibet/issues</bugTrackerUrl>-->
-    <tags>resonic.portable resonic player music mp3 wav flac ogg opus wma</tags>
-    <summary>Fast and free audio player.</summary>
+    <bugTrackerUrl>https://github.com/sharkdp/fd/issues</bugTrackerUrl>
+    <tags>fd find shell</tags>
+    <summary>A simple, fast and user-friendly alternative to find.</summary>
     <description>
-Resonic Player is a fast audio and music player, directory player, and sample browser, built around a big waveform view, a frequency analyzer, and a musical spectrum.
+*fd* is a simple, fast and user-friendly alternative to
+[*find*](https://www.gnu.org/software/findutils/).
 
-Free for non-commercial and non-profit use.
+While it does not seek to mirror all of *find*'s powerful functionality, it provides sensible
+(opinionated) defaults for [80%](https://en.wikipedia.org/wiki/Pareto_principle) of the use cases.
 
-## Ridiculously Fast
-
-_Resonic_ makes extensive use of **multi-core processing**. Every important part is optimized for speed, which results in extremely fast browsing, seeking, and playback.
-
-## Lightweight
-
-A couple of files, a few megabytes, low memory footprint, and tidy use of disk space.
-
-No bloated runtime packages are required.
-
-DLL files are not loaded on startup, but whenever they are required, which tailors memory usage to your behavior.
-
-## Pure Sound
-
-In order to achieve the **purest sound quality**, there is absolutely nothing between decoded audio and sound output that might degrade quality, which is essential for both sound and sample previewing and audiophile audio playback.
-
-Resonic's audio engine runs on 32-bit floating point data.
-
-## Clean Interface
-
-A major design goal is to always keep the graphical user interface **clutter-free** and **user-friendly**, without nested menus and dialogs, and without dumbing down the more powerful features.
+## Features
+* Convenient syntax: `fd PATTERN` instead of `find -iname '*PATTERN*'`.
+* Colorized terminal output (similar to *ls*).
+* It's *fast*.
+* Smart case: the search is case-insensitive by default. It switches to
+  case-sensitive if the pattern contains an uppercase
+  character[\*](http://vimdoc.sourceforge.net/htmldoc/options.html#'smartcase').
+* Ignores hidden directories and files, by default.
+* Ignores patterns from your `.gitignore`, by default.
+* Regular expressions.
+* Unicode-awareness.
+* The command name is *50%* shorter[\*](https://github.com/ggreer/the_silver_searcher) than
+  `find` :-).
+* Parallel command execution with a syntax similar to GNU Parallel.
 </description>
-    <releaseNotes>https://resonic.at/whatsnew</releaseNotes>
+    <releaseNotes>https://github.com/sharkdp/fd/releases</releaseNotes>
     <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
