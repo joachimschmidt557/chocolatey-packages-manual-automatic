@@ -1,2 +1,5 @@
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-Get-ChocolateyWebFile -PackageName 'accents' -FileFullPath "$toolsDir\Accents.exe" -Url 'http://www.donationcoder.com/Software/Skrommel/Accents/Accents.exe' -Checksum 'DDEAF6F425BCE2303A3F25183192F4FCA34CE8BDCAE2E4F473B1DE05C0AF1556' -ChecksumType 'sha256'
+Install-ChocolateyZipPackage -PackageName 'Accents' `
+  -Url 'https://github.com/IrosTheBeggar/mStream/releases/download/v3.2.0/mstreamExpress-portable-v0.6.zip' `
+  -UnzipLocation "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)" `
+  -Checksum "D6B06BA79E4E67BC5A09E64EACE99E9A91E92F2F691CA7852D761BE26B1FEABF" `
+  -ChecksumType "sha256"
