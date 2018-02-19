@@ -35,7 +35,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
     <title>Quod Libet (Portable)</title>
-    <authors>https://quodlibet.readthedocs.io/en/latest/license.html#authors</authors>
+    <authors>Christoph Reiter, Joe Wreschnig</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://quodlibet.readthedocs.io/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/joachimschmidt557/chocolatey-packages-manual-automatic/41e333f2/icons/quodlibet.png</iconUrl>
