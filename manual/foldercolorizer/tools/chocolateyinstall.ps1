@@ -15,7 +15,7 @@ $packageArgs = @{
   validExitCodes= @(0)
 
   softwareName  = 'folder colorizer*'
-  checksum      = '26B3E394C9164BC761F0C3950D380060B0F27772ECD1A835E2A5161F676B593F'
+  checksum      = 'B34BA76A482B4410F29177E23F359BBFB6DA2EB8F670A4A378554947D9AFF535'
   checksumType  = 'sha256'
 }
 
