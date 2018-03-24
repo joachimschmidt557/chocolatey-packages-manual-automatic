@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/sharkdp/fd/releases'
+$releases = 'https://github.com/qpdf/qpdf/releases'
 
 function global:au_SearchReplace {
     @{
@@ -16,16 +16,16 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
 
-    # fd-v6.2.0-i686-pc-windows-gnu.zip
-    $re_32  = "fd-v.+-i686-pc-windows-gnu.zip"
-    $re_64  = "fd-v.+-x86_64-pc-windows-gnu.zip"
+    # qpdf-8.0.2-bin-mingw32.zip
+    $re_32  = "qpdf-.+-bin-mingw32.zip"
+    $re_64  = "qpdf-.+-bin-mingw64.zip"
     $url32 = $download_page.links | ? href -match $re_32 | select -First 1 -expand href
     $url64 = $download_page.links | ? href -match $re_64 | select -First 1 -expand href
 
     $url32 = "https://github.com" + $url32
     $url64 = "https://github.com" + $url64
 
-    $version = ($url32 -split '-' | select -last 1 -skip 4) -Replace 'v',''
+    $version = ($url32 -split '-' | select -last 1 -skip 2)
 
     $Latest = @{ URL32 = $url32; URL64 = $url64; Version = $version }
     return $Latest
