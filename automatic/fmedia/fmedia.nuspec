@@ -38,7 +38,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Simon Zolin</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>http://fmedia.firmdev.com/</projectUrl>
-    <!--<iconUrl>https://cdn.rawgit.com/joachimschmidt557/ChocolateyPackages/5332ef89/icons/mstreamExpress.png</iconUrl>-->
+    <iconUrl>https://cdn.rawgit.com/joachimschmidt557/chocolatey-packages-manual-automatic/4bfe0d1c88368f493a0dbc5b53c558d825b23c84/icons/fmedia.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://github.com/sharkdp/fd/blob/master/LICENSE-APACHE</licenseUrl>
