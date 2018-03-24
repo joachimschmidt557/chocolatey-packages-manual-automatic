@@ -1,4 +1,4 @@
-﻿$packageName = 'fd'
+﻿$packageName = 'fmedia'
 $url32      = 'https://github.com/sharkdp/fd/releases/download/v6.3.0/fd-v6.3.0-i686-pc-windows-gnu.zip'
 $url64      = 'https://github.com/sharkdp/fd/releases/download/v6.3.0/fd-v6.3.0-x86_64-pc-windows-gnu.zip'
 $checksum32 = 'ab3686c842bfb64166c264ec55ed0d92ec14651689b82465d795cd9b8e5943f3'

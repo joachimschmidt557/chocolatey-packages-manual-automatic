@@ -27,7 +27,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
     <version>0.1</version>
-    <packageSourceUrl>https://github.com/joachimschmidt557/chocolatey-packages-manual-automatic/tree/master/automatic/fd</packageSourceUrl>
+    <packageSourceUrl>https://github.com/joachimschmidt557/chocolatey-packages-manual-automatic/tree/master/automatic/fmedia</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>joachim.schmidt557</owners>
     <!-- ============================== -->
@@ -35,7 +35,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
     <title>fmedia</title>
-    <authors>sharkdp</authors>
+    <authors>Simon Zolin</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>http://fmedia.firmdev.com/</projectUrl>
     <!--<iconUrl>https://cdn.rawgit.com/joachimschmidt557/ChocolateyPackages/5332ef89/icons/mstreamExpress.png</iconUrl>-->
@@ -44,32 +44,25 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <licenseUrl>https://github.com/sharkdp/fd/blob/master/LICENSE-APACHE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/stsaz/fmedia</projectSourceUrl>
-    <docsUrl>https://github.com/sharkdp/fd/tree/master/doc</docsUrl>
+    <docsUrl>http://fmedia.firmdev.com/#articles</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
-    <bugTrackerUrl>https://github.com/sharkdp/fd/issues</bugTrackerUrl>
-    <tags>fd find shell</tags>
-    <summary>A simple, fast and user-friendly alternative to find.</summary>
+    <bugTrackerUrl>https://github.com/stsaz/fmedia/issues</bugTrackerUrl>
+    <tags>fmedia media media-player player mp3 aac wav</tags>
+    <summary>fast media player/recorder/converter</summary>
     <description>
-*fd* is a simple, fast and user-friendly alternative to
-[*find*](https://www.gnu.org/software/findutils/).
+fmedia is a fast asynchronous media player/recorder/converter for Windows, Linux and FreeBSD.
+It provides smooth playback and recording even if devices are very slow.
+It's highly customizable and can be easily extended with additional plugins.
+Its low CPU & memory consumption saves energy when running on a notebook's battery.
 
-While it does not seek to mirror all of *find*'s powerful functionality, it provides sensible
-(opinionated) defaults for [80%](https://en.wikipedia.org/wiki/Pareto_principle) of the use cases.
+Play or convert audio files, record new audio tracks from microphone, save songs from Internet radio, and much more!
+fmedia is free and open-source project, and you can use it as a standalone application or as a library for your own software.
 
-## Features
-* Convenient syntax: `fd PATTERN` instead of `find -iname '*PATTERN*'`.
-* Colorized terminal output (similar to *ls*).
-* It's *fast*.
-* Smart case: the search is case-insensitive by default. It switches to
-  case-sensitive if the pattern contains an uppercase
-  character[\*](http://vimdoc.sourceforge.net/htmldoc/options.html#'smartcase').
-* Ignores hidden directories and files, by default.
-* Ignores patterns from your `.gitignore`, by default.
-* Regular expressions.
-* Unicode-awareness.
-* The command name is *50%* shorter[\*](https://github.com/ggreer/the_silver_searcher) than
-  `find` :-).
-* Parallel command execution with a syntax similar to GNU Parallel.
+fmedia can decode: .mp3, .ogg (Vorbis, Opus), .opus, .m4a/.mp4 (AAC, ALAC, MPEG), .mka/.mkv (AAC, ALAC, MPEG, Vorbis), .avi (AAC, MPEG), .aac, .mpc, .flac, .ape, .wv, .wav.
+
+fmedia can encode into: .mp3, .ogg, .opus, .m4a (AAC), .flac, .wav.
+
+You'll find more detailed information about fmedia in README.txt file inside the package.
 </description>
     <releaseNotes>http://fmedia.firmdev.com/CHANGES.txt</releaseNotes>
     <!-- =============================== -->      
