@@ -53,7 +53,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 fmedia is a fast asynchronous media player/recorder/converter for Windows, Linux and FreeBSD.
 It provides smooth playback and recording even if devices are very slow.
 It's highly customizable and can be easily extended with additional plugins.
-Its low CPU & memory consumption saves energy when running on a notebook's battery.
+Its low CPU and memory consumption saves energy when running on a notebook's battery.
 
 Play or convert audio files, record new audio tracks from microphone, save songs from Internet radio, and much more!
 fmedia is free and open-source project, and you can use it as a standalone application or as a library for your own software.
