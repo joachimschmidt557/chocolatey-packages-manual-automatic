@@ -22,56 +22,37 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- This section is about this package, although id and version have ties back to the software -->
     <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
     <!-- If the software is cross-platform, attempt to use the same id as the debian/rpm package(s) if possible. -->
-    <id>fd</id>
+    <id>jack</id>
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>6.3.0</version>
-    <packageSourceUrl>https://github.com/joachimschmidt557/chocolatey-packages-manual-automatic/tree/master/automatic/fd</packageSourceUrl>
+    <version>0.1</version>
+    <packageSourceUrl>https://github.com/joachimschmidt557/chocolatey-packages-manual-automatic/tree/master/automatic/jack</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>joachim.schmidt557</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>fd</title>
-    <authors>sharkdp</authors>
+    <title>JACK2 Audio Connection Kit</title>
+    <authors>Paul Davis,Stephane Letz,Jack O'Quinn,Torben Hohn</authors>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl>https://github.com/sharkdp/fd</projectUrl>
+    <projectUrl>http://jackaudio.org/</projectUrl>
     <!--<iconUrl>https://cdn.rawgit.com/joachimschmidt557/ChocolateyPackages/5332ef89/icons/mstreamExpress.png</iconUrl>-->
-    <!-- <copyright>Year Software Vendor</copyright> -->
+    <copyright>Copyright (C) 2001-2011 by Paul Davis, Stephane Letz, Jack O'Quinn, Torben Hohn and others</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
-    <licenseUrl>https://github.com/sharkdp/fd/blob/master/LICENSE-APACHE</licenseUrl>
+    <licenseUrl>http://jackaudio.org/api/index.html#license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/sharkdp/fd</projectSourceUrl>
-    <docsUrl>https://github.com/sharkdp/fd/tree/master/doc</docsUrl>
-    <!--<mailingListUrl></mailingListUrl>-->
-    <bugTrackerUrl>https://github.com/sharkdp/fd/issues</bugTrackerUrl>
-    <tags>fd find shell</tags>
-    <summary>A simple, fast and user-friendly alternative to find.</summary>
+    <projectSourceUrl>https://github.com/jackaudio/jack2</projectSourceUrl>
+    <docsUrl>https://github.com/jackaudio/jackaudio.github.com/wiki</docsUrl>
+    <mailingListUrl>http://lists.jackaudio.org/listinfo.cgi/jack-devel-jackaudio.org</mailingListUrl>
+    <bugTrackerUrl>https://github.com/jackaudio/jack2/issues</bugTrackerUrl>
+    <tags>jack audio jack-audio foss cross-platform</tags>
+    <summary>JACK Audio Connection Kit provides a basic infrastructure for audio applications to communicate with each other and with audio hardware. </summary>
     <description>
-*fd* is a simple, fast and user-friendly alternative to
-[*find*](https://www.gnu.org/software/findutils/).
-
-While it does not seek to mirror all of *find*'s powerful functionality, it provides sensible
-(opinionated) defaults for [80%](https://en.wikipedia.org/wiki/Pareto_principle) of the use cases.
-
-## Features
-* Convenient syntax: `fd PATTERN` instead of `find -iname '*PATTERN*'`.
-* Colorized terminal output (similar to *ls*).
-* It's *fast*.
-* Smart case: the search is case-insensitive by default. It switches to
-  case-sensitive if the pattern contains an uppercase
-  character[\*](http://vimdoc.sourceforge.net/htmldoc/options.html#'smartcase').
-* Ignores hidden directories and files, by default.
-* Ignores patterns from your `.gitignore`, by default.
-* Regular expressions.
-* Unicode-awareness.
-* The command name is *50%* shorter[\*](https://github.com/ggreer/the_silver_searcher) than
-  `find` :-).
-* Parallel command execution with a syntax similar to GNU Parallel.
+Have you ever wanted to take the audio output of one piece of software and send it to another? How about taking the output of that same program and send it to two others, then record the result in the first program? Or maybe you’re a [programmer](http://jackaudio.org/developers.html) who writes real-time audio and music [applications](http://jackaudio.org/applications) and who is looking for a cross-platform API that enables not only device sharing but also inter-application audio routing, and is incredibly easy to learn and use? If so, JACK may be what you’ve been looking for.
 </description>
-    <releaseNotes>https://github.com/sharkdp/fd/releases</releaseNotes>
+    <releaseNotes>https://github.com/jackaudio/jack2/releases</releaseNotes>
     <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
