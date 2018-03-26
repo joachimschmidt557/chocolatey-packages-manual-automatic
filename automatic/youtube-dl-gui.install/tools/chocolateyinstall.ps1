@@ -1,16 +1,26 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/IrosTheBeggar/mStream/releases/download/v3.2.0/mStreamExpress-installer-v0.6.exe'
-$checksum   = '923B68A419FF86FF5F0471820C1A7A6BB952163E02A7BA5779B8EA32F40F8716'
+$url        = 'https://github.com/MrS0m30n3/youtube-dl-gui/releases/download/0.4/youtube-dl-gui-0.4-win-portable.zip'
+$checksum   = '5642d1ae53a6dba7a084d997ca76305e40b897e90b1f7a932e08d980ea1a2ba0'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
-  fileType      = 'EXE'
   url           = $url
 
-  softwareName  = 'mstream*'
+  checksum      = $checksum
+  checksumType  = 'sha256'
+}
+
+Install-ChocolateyZipPackage @packageArgs
+
+$installPackageArgs = @{
+  packageName = $env:ChocolateyPackageName
+  fileType = 'EXE'
+  File = Get-ChildItem $toolsDir | Select-Object -First 1
+
+  softwareName = 'Youtube-DLG*'
 
   checksum      = $checksum
   checksumType  = 'sha256'
@@ -19,4 +29,6 @@ $packageArgs = @{
   validExitCodes= @(0)
 }
 
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyPackage @installPackageArgs
+
+Get-ChildItem $toolsDir\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content -Value "" -Path "$_.ignore" }}
