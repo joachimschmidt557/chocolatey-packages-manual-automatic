@@ -1,5 +1,16 @@
-﻿Install-ChocolateyZipPackage -PackageName 'mstream.portable' `
-  -Url 'https://github.com/IrosTheBeggar/mStream/releases/download/v3.2.0/mstreamExpress-portable-v0.6.zip' `
-  -UnzipLocation "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)" `
-  -Checksum "D6B06BA79E4E67BC5A09E64EACE99E9A91E92F2F691CA7852D761BE26B1FEABF" `
-  -ChecksumType "sha256"
+﻿
+$ErrorActionPreference = 'Stop';
+$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url        = 'https://resonic.at/get/player/portable'
+$checksum   = '99abf07d6c0671e5340a3971c9b53b8cc9f562413856c3b744a421a53f7e96e6'
+
+$packageArgs = @{
+  packageName   = $env:ChocolateyPackageName
+  unzipLocation = $toolsDir
+  url           = $url
+
+  checksum      = $checksum
+  checksumType  = 'sha256'
+}
+
+Install-ChocolateyZipPackage @packageArgs
