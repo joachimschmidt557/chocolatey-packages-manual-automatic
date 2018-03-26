@@ -1,8 +1,8 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://resonic.at/get/player/portable'
-$checksum   = '99abf07d6c0671e5340a3971c9b53b8cc9f562413856c3b744a421a53f7e96e6'
+$url        = 'https://github.com/MrS0m30n3/youtube-dl-gui/releases/download/0.4/youtube-dl-gui-0.4-win-portable.zip'
+$checksum   = '5642d1ae53a6dba7a084d997ca76305e40b897e90b1f7a932e08d980ea1a2ba0'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
