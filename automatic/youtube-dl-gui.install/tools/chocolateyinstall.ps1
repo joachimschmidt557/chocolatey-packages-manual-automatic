@@ -1,8 +1,8 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/MrS0m30n3/youtube-dl-gui/releases/download/0.4/youtube-dl-gui-0.4-win-portable.zip'
-$checksum   = '5642d1ae53a6dba7a084d997ca76305e40b897e90b1f7a932e08d980ea1a2ba0'
+$url        = 'https://github.com/MrS0m30n3/youtube-dl-gui/releases/download/0.4/youtube-dl-gui-0.4-win-setup.zip'
+$checksum   = '230690b25bd1c5bf7e396f905fa51c6760af93ad24a50ce2fb0eee5ffa9d7068'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
