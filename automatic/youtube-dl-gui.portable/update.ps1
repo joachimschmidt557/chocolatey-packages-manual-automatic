@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/IrosTheBeggar/mStream/releases'
+$releases = 'https://github.com/MrS0m30n3/youtube-dl-gui/releases'
 
 function global:au_SearchReplace {
     @{
@@ -14,11 +14,11 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
 
-    #mstreamExpress-portable-v0.6.zip
-    $re  = "mStreamExpress-portable-v.+.zip"
+    # youtube-dl-gui-0.4-win-portable.zip
+    $re  = "youtube-dl-gui-.+-win-portable.zip"
     $url = $download_page.links | ? href -match $re | select -First 1 -expand href
 
-    $version = ($url -split '-' | select -last 1).replace("v",'').replace(".zip","")
+    $version = ($url -split '-' | select -last 1 -Skip 2)
 
     $Latest = @{ URL = ("https://github.com" + $url); Version = $version }
     return $Latest
