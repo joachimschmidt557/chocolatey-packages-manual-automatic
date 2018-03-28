@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/minbrowser/min/releases'
+$releases = 'https://github.com/tamlok/vnote/releases'
 
 function global:au_SearchReplace {
     @{
@@ -16,17 +16,17 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
 
-    # Min-v1.7.0-win32-ia32.zip
-    # Min-v1.7.0-win32-x64.zip
-    $re_32  = "Min-v.+-win32-ia32.zip"
-    $re_64  = "Min-v.+-win32-x64.zip"
+    # VNote_win_x86_portable_1.13.zip
+    # VNote_win_X64_portable_1.13.zip
+    $re_32  = "VNote_win_x86_portable_.+.zip"
+    $re_64  = "VNote_win_x64_portable_.+.zip"
     $url32 = $download_page.links | ? href -match $re_32 | select -First 1 -expand href
     $url64 = $download_page.links | ? href -match $re_64 | select -First 1 -expand href
 
     $url32 = "https://github.com" + $url32
     $url64 = "https://github.com" + $url64
 
-    $version = ($url32 -split '-' | select -last 1 -skip 2) -Replace 'v',''
+    $version = ($url32 -split '_' | select -last 1).replace('.zip', '')
 
     $Latest = @{ URL32 = $url32; URL64 = $url64; Version = $version }
     return $Latest
