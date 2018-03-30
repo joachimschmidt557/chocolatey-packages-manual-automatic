@@ -18,7 +18,7 @@ Install-ChocolateyZipPackage @packageArgs
 $installPackageArgs = @{
   packageName = $env:ChocolateyPackageName
   fileType = 'EXE'
-  File = Get-ChildItem $toolsDir | Select-Object -First 1
+  File = Get-ChildItem $toolsDir | Where-Object -Contains 'youtubedlg' | Select-Object -First 1
 
   softwareName = 'Youtube-DLG*'
 
