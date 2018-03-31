@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/sharkdp/fd/releases'
+$releases = 'https://www.shotcut.org/download/'
 
 function global:au_SearchReplace {
     @{
@@ -16,16 +16,16 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
 
-    # fd-v6.2.0-i686-pc-windows-gnu.zip
-    $re_32  = "fd-v.+-i686-pc-windows-gnu.zip"
-    $re_64  = "fd-v.+-x86_64-pc-windows-gnu.zip"
+    # https://github.com/mltframework/shotcut/releases/download/v18.03/shotcut-win64-180306.zip
+    $re_32  = "shotcut-win32-.+.zip"
+    $re_64  = "shotcut-win64-.+.zip"
     $url32 = $download_page.links | ? href -match $re_32 | select -First 1 -expand href
     $url64 = $download_page.links | ? href -match $re_64 | select -First 1 -expand href
 
-    $url32 = "https://github.com" + $url32
-    $url64 = "https://github.com" + $url64
+    #$url32 = "https://github.com" + $url32
+    #$url64 = "https://github.com" + $url64
 
-    $version = ($url32 -split '-' | select -last 1 -skip 4) -Replace 'v',''
+    $version = ($url32 -split '/' | select -last 1 -skip 1) -Replace 'v',''
 
     $Latest = @{ URL32 = $url32; URL64 = $url64; Version = $version }
     return $Latest
