@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Shotcut</id>
+    <version>17.11</version>
+    <title>Shotcut</title>
+    <authors>Dan Dennedy</authors>
+    <owners>Waterdrop</owners>
+    <licenseUrl>https://github.com/mltframework/shotcut/blob/master/COPYING</licenseUrl>
+    <projectUrl>https://www.shotcut.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/Summerspecial/ChocoCont/master/Shotcut/shotcut_Logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Shotcut is a free, open source, cross-platform video editor. 
+Features: https://www.shotcut.org/features/
+Roadmap: https://www.shotcut.org/roadmap/</description>
+    <summary>Shotcut is a free, open source, cross-platform video editor.</summary>
+    <releaseNotes />
+    <copyright>GPLv3</copyright>
+    <tags>shotcut video editor cutting color correction media</tags>
+  </metadata>
+</package>
