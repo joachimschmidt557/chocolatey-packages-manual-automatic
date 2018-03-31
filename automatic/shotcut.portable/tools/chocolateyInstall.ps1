@@ -1,8 +1,8 @@
 ﻿$packageName = 'fd'
-$url32      = 'https://github.com/sharkdp/fd/releases/download/v7.0.0/fd-v7.0.0-i686-pc-windows-gnu.zip'
-$url64      = 'https://github.com/sharkdp/fd/releases/download/v7.0.0/fd-v7.0.0-x86_64-pc-windows-gnu.zip'
-$checksum32 = '864312a830a4a2e29d49aac1bb7c25ab55e223590406e79b8cbc5b16836e58e4'
-$checksum64 = '074e280b3399aa2792cb3ae1fe20afab5f0465d69a07a694dbfbbbea2908211d'
+$url32      = 'https://github.com/mltframework/shotcut/releases/download/v18.03/shotcut-win32-180306.zip'
+$url64      = 'https://github.com/mltframework/shotcut/releases/download/v18.03/shotcut-win64-180306.zip'
+$checksum32 = '1d35c72bbd91189e86dd4d3f088da1bb5ffe7e11c856aa00d3f95073053c7c39'
+$checksum64 = '0b96dc52fd9fe6ea42a81490c422be2f3ca6e83e362a465726c2d40eb680c942'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 Install-ChocolateyZipPackage -PackageName "$packageName" `
                              -Url "$url32" `
