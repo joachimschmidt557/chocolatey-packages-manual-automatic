@@ -56,7 +56,7 @@ Supports hundreds of audio and video formats and codecs thanks to FFmpeg. No imp
 
 ###Device and Transport Options
 
-Blackmagic Design SDI and HDMI for input and preview monitoring. Screen, webcam and audio capture. Network stream playback. Supports resolutions up to 4k and capture from SDI, HDMI, webcam, JACK & Pulse audio, IP stream, X11 screen and Windows DirectShow devices.
+Blackmagic Design SDI and HDMI for input and preview monitoring. Screen, webcam and audio capture. Network stream playback. Supports resolutions up to 4k and capture from SDI, HDMI, webcam, JACK &amp; Pulse audio, IP stream, X11 screen and Windows DirectShow devices.
 
 ###Sleek, Intuitive Interface
 
