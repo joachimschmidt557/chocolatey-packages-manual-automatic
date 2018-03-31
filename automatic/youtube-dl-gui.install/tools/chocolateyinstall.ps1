@@ -6,7 +6,7 @@ $checksum   = 'B0FC0A0ED763639873438B859A9172B4B0059D81360AD481AA4577DD597F790D'
 $installPackageArgs = @{
   packageName = $env:ChocolateyPackageName
   fileType = 'EXE'
-  File = Get-Item "$toolsDir\youtube-dlg-*.exe"
+  File = Get-Item "$toolsDir\youtubedlg-*.exe"
 
   softwareName = 'Youtube-DLG*'
 
