@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://quadsoft.org/download/USBLogonSetup.exe'
+$url        = 'http://usblogon.quadsoft.org/en/downloads/USBLogonSetup.exe'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -12,7 +12,7 @@ $packageArgs = @{
 
   softwareName  = 'quadsoft usblogon*'
 
-  checksum      = '8F2503F220CF7357D2F61A33894129C660C8F817D39E6441301C319C37172CCC'
+  checksum      = '248fdd65d7bbb5bec582996061ab87383052c802305688f26d30c27b16d7f0ec'
   checksumType  = 'sha256'
 
   silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
