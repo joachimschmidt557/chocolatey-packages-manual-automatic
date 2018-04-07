@@ -22,11 +22,11 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- This section is about this package, although id and version have ties back to the software -->
     <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
     <!-- If the software is cross-platform, attempt to use the same id as the debian/rpm package(s) if possible. -->
-    <id>mstream.install</id>
+    <id>avbin</id>
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>0.6</version>
+    <version>10.0</version>
     <packageSourceUrl>https://github.com/joachimschmidt557/chocolatey-packages-manual-automatic/tree/master/automatic/mstream.install</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>joachim.schmidt557</owners>
@@ -34,37 +34,27 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>mstream (Install)</title>
-    <authors>Iros Software</authors>
+    <title>AVBin (Install)</title>
+    <authors>Nathan Stocks</authors>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl>http://mstream.io/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/joachimschmidt557/ChocolateyPackages/5332ef89/icons/mstreamExpress.png</iconUrl>
+    <projectUrl>https://avbin.github.io/AVbin/Home/Home.html</projectUrl>
+    <!--<iconUrl>https://cdn.rawgit.com/joachimschmidt557/ChocolateyPackages/5332ef89/icons/mstreamExpress.png</iconUrl>-->
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
-    <licenseUrl>https://github.com/IrosTheBeggar/mStream/blob/master/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/AVbin/AVbin/blob/master/COPYING.LESSER</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/IrosTheBeggar/mStream</projectSourceUrl>
-    <docsUrl>https://github.com/IrosTheBeggar/mStream/blob/master/docs</docsUrl>
+    <projectSourceUrl>https://github.com/AVbin/AVbin</projectSourceUrl>
+    <docsUrl>https://avbin.github.io/AVbin/Docs.html</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
-    <bugTrackerUrl>https://github.com/IrosTheBeggar/mStream/issues</bugTrackerUrl>
-    <tags>mstream.install music mp3 flac server foss cross-platform</tags>
-    <summary>mStream is a suite of open source software that lets you sync and stream your music between all your devices.</summary>
+    <bugTrackerUrl>https://github.com/AVbin/AVbin/issues</bugTrackerUrl>
+    <tags>avbin audio pyglet libav</tags>
+    <summary>AVbin is a C library that provides a thin, cross-platform wrapper around Libav’s video- and audio-decoding functionality.</summary>
     <description>
-## Philosophy
-mStream aims to be the simplest music streaming software around. mStream software will always be free and never have any advertisements
+AVbin is a binary release of a cross-platform, thin wrapper around [Libav](http://libav.org "http://libav.org")’s video and audio decoding library, providing long-term binary compatibility for applications and languages that need it.  
 
-## Naming Scheme
-mStream is the name of the entire project. Each piece of software is given name like 'mStream Something'
-mStream Server is the backbone behind the entire project. It's a music streaming server written with NodeJS. The code is available on github and you can use it to setup your own server, but it's going to take some work and it has a few dependencies.
-mStream Express is a special version of the server the comes with all the dependencies pre-packaged. It also comes with a GUI config tool to makes setup as simple as possible. These modifications allow mStream Express to be run without installing anything.
-
-## History
-Development of mStream was started around 2012. I had grown up using Winamp and at this point it was clear that it was time to move to something else. There was old PC collecting dust in my closet so I put Ubuntu on it, moved all my music to it, and started writing scripts to organize my collection's metadata. After a few weeks I had my own, primitive, music streaming service.
-mStream Server was worked on as a hobby project for the next few years. During that time I experimented with different server software and rewrote the whole thing from scratch at least twice. Finally I settled on using NodeJS and started work on the latest version of mStream Server. I put this code on Github and one day someone posted a bug about the code crashing on Windows. At this point I had only run it on Linux. It took me a day to get it to install it on Windows, and another half a day to cleanup some Windows exclusive bugs. I still don't recommend installing mStream Server on Windows, it hasn't gotten much easier since then.
-That whole Windows ordeal got me curious how other server software handled working on windows. The short answer is: not well. Every server I tried took a lot of time and technical knowledge to get up and running on Windows. So I came up with a challenge, to make a version of mStream Server that could be setup on Windows in under 5 minutes.
-mStream Express is the product of this self-imposed challenge. It's so simple that you can get a server up and running in under a minute.
+AVbin was originally created for the [Pyglet](http://pyglet.org/ "http://pyglet.org/") project as its media decoding/decompression library, though we hope others find AVbin useful as well.
     </description>
-    <releaseNotes>https://github.com/IrosTheBeggar/mStream/releases</releaseNotes>
+    <releaseNotes>https://avbin.github.io/AVbin/Home/Home.html</releaseNotes>
     <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
