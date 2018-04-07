@@ -34,7 +34,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>Resonic Player (Install)</title>
+    <title>Resonic Player</title>
     <authors>Liqube Audio</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://resonic.at/home</projectUrl>
