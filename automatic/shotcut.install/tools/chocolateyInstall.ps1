@@ -1,10 +1,10 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url32      = 'https://dl.ring.cx/windows/ring-windows-nightly-20180406193649~gitd732c04.exe'
-$url64      = 'https://dl.ring.cx/windows/ring-windows-nightly_x86_64-20180406193649~gitd732c04.exe'
-$checksum32 = '383c936d5b07c54de57c458b2a9875b8e25057045710423cba6c42171e9c187e'
-$checksum64 = 'd3017fbe8f92c66accb70249bd0bf3d7f29f47f7b3b9c4b2caacf5c92bdf93d1'
+$url32      = 'https://github.com/mltframework/shotcut/releases/download/v18.03/shotcut-win32-180306.exe'
+$url64      = 'https://github.com/mltframework/shotcut/releases/download/v18.03/shotcut-win64-180306.exe'
+$checksum32 = '2032cd030ef94604c9ba5e0fc1bdb25666654a4a12ec8fdea2b06794c3a52b7d'
+$checksum64 = 'b1f8eb7238e5e2ec83c5f150610ee8b6e2ac7e550c3d9504b458936e8b418417'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
