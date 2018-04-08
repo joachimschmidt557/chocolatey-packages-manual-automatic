@@ -1,4 +1,4 @@
-﻿$packageName = 'fd'
+﻿$packageName = 'shotcut.portable'
 $url32      = 'https://github.com/mltframework/shotcut/releases/download/v18.03/shotcut-win32-180306.zip'
 $url64      = 'https://github.com/mltframework/shotcut/releases/download/v18.03/shotcut-win64-180306.zip'
 $checksum32 = '1d35c72bbd91189e86dd4d3f088da1bb5ffe7e11c856aa00d3f95073053c7c39'
