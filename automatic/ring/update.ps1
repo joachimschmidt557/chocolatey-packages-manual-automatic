@@ -24,7 +24,7 @@ function global:au_GetLatest {
     $year = $raw[0..3] -join ''
     $month = $raw[4..5] -join ''
     $day = $raw[6..7] -join ''
-    $version = $year + '.' + $month + '.' + $day
+    $version = $year + '.' + $month + '.' + $day + '-nightly'
     $url32 = 'https://dl.ring.cx/windows/' + $latest_url_32
     $url64 = 'https://dl.ring.cx/windows/' + $latest_url_64
 
