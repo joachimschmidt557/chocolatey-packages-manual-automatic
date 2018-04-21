@@ -2,6 +2,11 @@ import-module au
 
 $releases = 'https://github.com/MrS0m30n3/youtube-dl-gui/releases'
 
+function global:au_BeforeUpdate() {
+    #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
+    #Get-RemoteFiles -Purge
+}
+
 function global:au_SearchReplace {
     @{
         'tools\chocolateyInstall.ps1' = @{
