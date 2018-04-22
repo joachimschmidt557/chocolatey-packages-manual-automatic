@@ -1,10 +1,10 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url32      = 'https://dl.ring.cx/windows/ring-windows-nightly-20180414194343~git2c51f89.exe'
-$url64      = 'https://dl.ring.cx/windows/ring-windows-nightly_x86_64-20180414194343~git2c51f89.exe'
-$checksum32 = 'cffa255842d1afebf58a5c2fa67104c8c68a39cd282580a96c2ab512772258bb'
-$checksum64 = 'bf5225c9c1f3c1dca587ce61a88faf94b9d60294a54e2ac222a7d7204dcfc8ed'
+$url32      = 'https://dl.ring.cx/windows/ring-windows-nightly-20180420235848~gitac1aac4.exe'
+$url64      = 'https://dl.ring.cx/windows/ring-windows-nightly_x86_64-20180420235848~gitac1aac4.exe'
+$checksum32 = '3bcba1c23a135165e57c17599c9d68cb6ef9b5ad15cb21c00161f8f9028f03a3'
+$checksum64 = '8602acc31f4ecff97e0c6fe858efa811fb09f5f3f63fca2fccd9e082f07c0fd6'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
