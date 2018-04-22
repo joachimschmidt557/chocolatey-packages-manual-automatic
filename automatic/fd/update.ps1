@@ -2,14 +2,26 @@ import-module au
 
 $releases = 'https://github.com/sharkdp/fd/releases'
 
+function global:au_BeforeUpdate() {
+    #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
+    Get-RemoteFiles -Purge
+}
+
 function global:au_SearchReplace {
     @{
         'tools\chocolateyInstall.ps1' = @{
-            "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
-            "(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
+            #"(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
+            #"(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
             "(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
             "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
         }
+
+        ".\legal\VERIFICATION.txt" = @{
+            "(?i)(\s+32-bit:).*"             = "`${1} $($Latest.URL32)"
+            "(?i)(\s+64-bit:).*"             = "`${1} $($Latest.URL64)"
+            "(?i)(checksum32:).*"           = "`${1} $($Latest.Checksum32)"
+            "(?i)(checksum64:).*"           = "`${1} $($Latest.Checksum64)"
+          }
      }
 }
 
