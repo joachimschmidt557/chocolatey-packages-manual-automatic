@@ -2,12 +2,21 @@ import-module au
 
 $releases = 'https://github.com/upx/upx/releases'
 
+function global:au_BeforeUpdate() {
+    #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
+    Get-RemoteFiles -Purge
+}
+
 function global:au_SearchReplace {
     @{
         'tools\chocolateyInstall.ps1' = @{
-            "(^[$]url\s*=\s*)('.*')"      = "`$1'$($Latest.URL)'"
             "(^[$]checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
         }
+
+        ".\legal\VERIFICATION.txt" = @{
+            "(?i)(\s+URL:).*"             = "`${1} $($Latest.URL32)"
+            "(?i)(checksum:).*"           = "`${1} $($Latest.Checksum32)"
+          }
      }
 }
 

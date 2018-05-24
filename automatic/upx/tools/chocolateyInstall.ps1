@@ -1,10 +1,16 @@
-$packageName = 'upx'
-$url = 'https://github.com/upx/upx/releases/download/v3.94/upx394w.zip'
-$checksum = '74308DB1183436576D011BFCC3E7C99C836FB052DE7B7EB0539026366453D6E8'
-$checksumType = 'sha256'
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-Install-ChocolateyZipPackage -PackageName "$packageName" `
-                             -Url "$url" `
-                             -UnzipLocation "$toolsDir" `
-                             -Checksum "$checksum" `
-                             -ChecksumType "$checksumType"
+
+$ErrorActionPreference = 'Stop';
+$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$zipFile    = Get-Item "$toolsDir\upx*.zip"
+$checksum   = '5642d1ae53a6dba7a084d997ca76305e40b897e90b1f7a932e08d980ea1a2ba0'
+
+$packageArgs = @{
+  packageName   = $env:ChocolateyPackageName
+  unzipLocation = $toolsDir
+  file          = $zipFile
+
+  checksum      = $checksum
+  checksumType  = 'sha256'
+}
+
+Install-ChocolateyZipPackage @packageArgs
