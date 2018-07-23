@@ -22,7 +22,7 @@ function global:au_GetLatest {
 
     $version = ($url32 -split '/' | select -last 1 -skip 1) -Replace 'v',''
 
-    $Latest = @{ URL32 = $url32; URL64 = $url64; Version = $version }
+    $Latest = @{ URL32 = $url32; Version = $version }
     return $Latest
 }
 
