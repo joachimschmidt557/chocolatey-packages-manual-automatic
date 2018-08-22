@@ -50,21 +50,21 @@ init:
 - git config --global core.safecrlf false
 
 install:
-- pwsh: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
-- pwsh: $PSVersionTable
+- ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
+- ps: $PSVersionTable
 - git --version
-- pwsh: >-
+- ps: >-
     git clone -q https://github.com/majkinetor/au.git $Env:TEMP/au
     . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
 
-- pwsh: >-
+- ps: >-
     "Build info"
     '  {0,-20} {1}' -f 'SCHEDULED BUILD:', ($Env:APPVEYOR_SCHEDULED_BUILD -eq 'true')
     '  {0,-20} {1}' -f 'FORCED BUILD:'   , ($Env:APPVEYOR_FORCED_BUILD    -eq 'true')
     '  {0,-20} {1}' -f 'RE BUILD:'       , ($Env:APPVEYOR_RE_BUILD        -eq 'true')
 
 build_script:
-- pwsh: >-
+- ps: >-
     $ErrorActionPreference = 'Continue'
 
     if ($Env:APPVEYOR_PROJECT_NAME  -like '*test*') { ./test_all.ps1 "random $Env:au_test_groups"; return }
