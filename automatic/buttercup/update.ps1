@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://buttercup.pw'
+$releases = 'https://github.com/buttercup/buttercup-desktop/releases'
 
 function global:au_SearchReplace {
     @{
