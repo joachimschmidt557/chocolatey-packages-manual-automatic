@@ -1,8 +1,8 @@
 ﻿$packageName = 'shotcut.portable'
-$url32      = 'https://github.com/mltframework/shotcut/releases/download/v18.08.14/shotcut-win32-180814.zip'
-$url64      = 'https://github.com/mltframework/shotcut/releases/download/v18.08.14/shotcut-win64-180814.zip'
-$checksum32 = 'e85e66ab1976105dda281bfc54ab38e3d8da75d3c006a844c0aea87eb85d559b'
-$checksum64 = '24927866e7803b4f0bcee5a5fa664c97ca703997ca9021ad47a98afaa8d73bc0'
+$url32      = 'https://github.com/mltframework/shotcut/releases/download/v18.09.13/shotcut-win32-180913.zip'
+$url64      = 'https://github.com/mltframework/shotcut/releases/download/v18.09.13/shotcut-win64-180913.zip'
+$checksum32 = 'e2db98efc1ba6a1f0ed16cf5eda37be3cbbde1507c7e0e4c292e53d66d2d0471'
+$checksum64 = '9d0c53cb8f83ada88696a2c3a65679783b6d3772876118f1c62bf4f22eab2287'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 Install-ChocolateyZipPackage -PackageName "$packageName" `
                              -Url "$url32" `
