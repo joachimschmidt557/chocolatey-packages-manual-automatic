@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://buttercup.pw'
+$releases = 'https://github.com/buttercup/buttercup-desktop/releases'
 
 function global:au_SearchReplace {
     @{
@@ -12,7 +12,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     # buttercup-desktop-setup-1.6.0.exe
     $re  = "buttercup-desktop-.+.exe"
