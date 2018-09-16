@@ -26,7 +26,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
+    $download_page = Invoke-WebRequest -Uri $releases -UsePasicParsing
 
     # fd-v6.2.0-i686-pc-windows-gnu.zip
     $re_32  = "fd-v.+-i686-pc-windows-gnu.zip"
