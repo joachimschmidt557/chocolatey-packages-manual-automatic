@@ -14,7 +14,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     # qpdf-8.0.2-bin-mingw32.zip
     $re_32  = "qpdf-.+-bin-mingw32.zip"
