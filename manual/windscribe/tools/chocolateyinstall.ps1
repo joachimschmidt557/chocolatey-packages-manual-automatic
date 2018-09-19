@@ -11,7 +11,7 @@ $packageArgs = @{
 
   softwareName  = 'windscribe*'
 
-  checksum      = 'fab90a1ab6fe1765d9133135b0f168e59e608bf5af04521bff0a72bb6b4ede1b'
+  checksum      = 'A2C83B12B7C3A3E9879E95D2863266E644FD62E7532F28B0F472C34EE515A5C3'
   checksumType  = 'sha256'
 
   silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /NODRIVER'
