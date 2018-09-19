@@ -20,4 +20,4 @@ Package can be verified like this:
    checksum64: B0FC0A0ED763639873438B859A9172B4B0059D81360AD481AA4577DD597F790D
 
 File 'LICENSE.txt' obtained from:
-   https://github.com/MrS0m30n3/youtube-dl-gui/blob/master/LICENSE
+   https://github.com/sharkdp/fd/blob/master/LICENSE-APACHE
