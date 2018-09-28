@@ -22,39 +22,56 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- This section is about this package, although id and version have ties back to the software -->
     <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
     <!-- If the software is cross-platform, attempt to use the same id as the debian/rpm package(s) if possible. -->
-    <id>quodlibet.install</id>
+    <id>loop-drop</id>
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>4.1.0</version>
-    <packageSourceUrl>https://github.com/joachimschmidt557/chocolatey-packages-manual-automatic/tree/master/automatic/quodlibet.install</packageSourceUrl>
+    <version>0.1</version>
+    <packageSourceUrl>https://github.com/joachimschmidt557/chocolatey-packages-manual-automatic/tree/master/automatic/loop-drop</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>joachim.schmidt557</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>Quod Libet (Install)</title>
-    <authors>Christoph Reiter, Joe Wreschnig</authors>
+    <title>Loop Drop (Install)</title>
+    <authors>Matt McKegg</authors>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl>https://quodlibet.readthedocs.io/</projectUrl>
+    <projectUrl>http://loopjs.com</projectUrl>
     <iconUrl>https://cdn.rawgit.com/joachimschmidt557/chocolatey-packages-manual-automatic/41e333f2/icons/quodlibet.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
-    <licenseUrl>https://github.com/quodlibet/quodlibet/blob/master/COPYING</licenseUrl>
+    <licenseUrl>https://github.com/mmckegg/loop-drop-app/blob/master/LICENSE-AGPL-3.0.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/quodlibet/quodlibet</projectSourceUrl>
-    <docsUrl>https://quodlibet.readthedocs.io/en/latest/index.html</docsUrl>
+    <projectSourceUrl>https://github.com/mmckegg/loop-drop-app</projectSourceUrl>
+    <docsUrl>http://loopjs.com</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
-    <bugTrackerUrl>https://github.com/quodlibet/quodlibet/issues</bugTrackerUrl>
-    <tags>quodlibet.install quodlibet music mp3 python foss cross-platform</tags>
-    <summary>Music player and music library manager for Linux, Windows, and macOS</summary>
+    <bugTrackerUrl>https://github.com/mmckegg/loop-drop-app/issues</bugTrackerUrl>
+    <tags>loop-drop loops looper music production synth sampler</tags>
+    <summary>MIDI looper, modular synth and sampler app built using Web Audio and Web MIDI APIs</summary>
     <description>
-**Quod Libet** is a GTK+-based **audio player** written in Python, using the Mutagen tagging library. It’s designed around the idea that you know how to organize your music better than we do. It lets you make playlists based on regular expressions (don’t worry, regular searches work too). It lets you display and edit any tags you want in the file, for all the file formats it supports.
+- [Watch a video of Loop Drop in action](https://www.youtube.com/watch?v=EBkmdNDIR6E)
+- [Visit the website](http://loopjs.com)
+- [Listen to music created with Loop Drop!](https://soundcloud.com/destroy-with-science)
+- [Support this project on Patreon](https://www.patreon.com/MattMcKegg) 💖
 
-Unlike some, Quod Libet will scale to libraries with tens of thousands of songs. It also supports most of the features you’d expect from a modern media player: Unicode support, advanced tag editing, Replay Gain, podcasts and Internet radio, album art support and all major audio formats.
+#### Create sounds and load samples
+
+Drop them where you want on your controllers then start jamming!
+
+#### Everything you play is recorded.
+
+Hit the loop button at any time. Whatever you just played will start to loop!
+
+#### Play to the beat.
+
+Use beat repeat and hold down buttons to trigger at different rates relative to tempo.
+
+#### Transform your loops while they play.
+
+Select, move, repeat, suppress. All using your hardware controller.
     </description>
-    <releaseNotes>https://github.com/quodlibet/quodlibet/releases</releaseNotes>
+    <releaseNotes>https://github.com/mmckegg/loop-drop-app/releases</releaseNotes>
     <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
