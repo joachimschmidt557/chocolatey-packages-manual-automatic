@@ -18,8 +18,8 @@ function global:au_GetLatest {
 
     # Min-v1.7.0-win32-ia32.zip
     # Min-v1.7.0-win32-x64.zip
-    $re_32  = "Min-v.+-win32-ia32.zip"
-    $re_64  = "Min-v.+-win32-x64.zip"
+    $re_32  = "Min-v[^A-Za-z]+-win32-ia32.zip"
+    $re_64  = "Min-v[^A-Za-z]+-win32-x64.zip"
     $url32 = $download_page.links | ? href -match $re_32 | select -First 1 -expand href
     $url64 = $download_page.links | ? href -match $re_64 | select -First 1 -expand href
 

@@ -15,7 +15,7 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     #quodlibet-4.0.2-portable.exe
-    $re  = "quodlibet-.+-portable.exe"
+    $re  = "quodlibet-[^A-Za-z]+-portable.exe"
     $url = $download_page.links | ? href -match $re | select -First 1 -expand href
 
     $version = ($url -split '-' | select -last 1 -Skip 1)
