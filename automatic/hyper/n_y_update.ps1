@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/upx/upx/releases'
+$releases = 'https://github.com/zeit/hyper/releases'
 
 function global:au_BeforeUpdate() {
     #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
@@ -19,15 +19,29 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    #upx394w.zip
-    $re  = "upx.+w.zip"
-    $url = $download_page.links | ? href -match $re | select -First 1 -expand href
-    $url = "https://github.com" + $url
+    # Release: hyper-Setup-2.0.0.exe
+    $re_release     = "hyper-Setup-[^A-Za-z]+.exe"
+    $url_release    = $download_page.links | ? href -match $re | select -First 1 -expand href
+    $url_release    = "https://github.com" + $url
 
-    $version = ($url -split '/' | select -last 1 -skip 1) -Replace 'v',''
+    $version_release= ($url -split '/' | select -last 1 -skip 1)
 
-    $Latest = @{ URL = $url; Version = $version }
-    return $Latest
+    # Canary: hyper-Setup-2.1.0-canary.2.exe
+    $re_canary      = "hyper-Setup-[^A-Za-z]+-canary.[^A-Za-z]+.exe"
+    $url_canary     = $download_page.links | ? href -match $re | select -First 1 -expand href
+    $url_canary     = "https://github.com" + $url
+
+    $version_canary = ($url -split '/' | select -last 1 -skip 1)
+
+    #$Latest = @{ URL = $url; Version = $version }
+    #return $Latest
+
+    @{
+        Streams = [ordered] @{
+            'release' = @{ Version = $version_release; URL32 = $url_release }
+            'canary' = @{ Version = $version_canary; URL32 = $url_canary }
+        }
+    }
 }
 
 update -ChecksumFor 32
