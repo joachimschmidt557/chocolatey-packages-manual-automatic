@@ -41,21 +41,53 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <iconUrl>https://cdn.rawgit.com/joachimschmidt557/chocolatey-packages-manual-automatic/162820ff/icons/hyper.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is is required for the community feed -->
-    <licenseUrl>https://github.com/zeit/hyper/blob/canary/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/255kb/mockoon/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/zeit/hyper</projectSourceUrl>
-    <docsUrl>https://hyper.is/</docsUrl>
+    <projectSourceUrl>https://github.com/255kb/mockoon</projectSourceUrl>
+    <docsUrl>https://github.com/255kb/mockoon/wiki</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
-    <bugTrackerUrl>https://github.com/zeit/hyper/issues</bugTrackerUrl>
-    <tags>hyper admin console terminal</tags>
-    <summary>A terminal built on web technologies https://hyper.is </summary>
+    <bugTrackerUrl>https://github.com/255kb/mockoon/issues</bugTrackerUrl>
+    <tags>mockoon rest api rest-api mock foss cross-platfrom</tags>
+    <summary>Mockoon is the easiest and quickest way to run mock APIs locally. No remote deployment, no account required, open source.</summary>
     <description>
-## Project goals
-The goal of the project is to create a beautiful and extensible experience for command-line interface users, built on open web standards.
-In the beginning, our focus will be primarily around speed, stability and the development of the correct API for extension authors.
-In the future, we anticipate the community will come up with innovative additions to enhance what could be the simplest, most powerful and well-tested interface for productivity.
+## What is it? 
+
+Mockoon is an open source server/API mocking tool built with Electron and available on Windows, Linux and MacOS.
+
+![screenshot](./images/screenshot.jpg)
+
+### Unlimited fast mocking
+
+Create an unlimited number of mock local servers and routes, and run them in parallel.
+
+### Complete control
+
+customize routes: HTTP methods, regex paths, HTTP status, file serving, custom headers...
+
+### ... and more
+
+Import / export, JSON templating, auto save, proxy mode, HTTPS, latency simulation, CORS support...
+
+## Complete list of features
+
+* Mock an unlimited number of environments with unlimited number of routes
+* Environment import / export (from file or clipboard)
+* Run multiple mock local servers in parallel
+* Route regex supported (/.*, /[a-z]{3}, ...)
+* Support all HTTP codes and methods
+* Automatic CORS headers for OPTIONS requests
+* HTTPS support (self signed certificate)
+* Unlimited custom headers with autocompletion
+* Environment / route level latency simulation
+* Incoming request logs
+* Proxy mode: redirect all non-defined routes to an URL
+* File serving with automatic mime type detection
+* Rich text editor for body content with JSON templating
+* JSON templating supports request parameters (URL and route params, query string...)
+* Real-time auto save
+* No account required
     </description>
-    <releaseNotes>https://github.com/zeit/hyper/releases</releaseNotes>
+    <releaseNotes>https://github.com/255kb/mockoon/releases</releaseNotes>
     <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
