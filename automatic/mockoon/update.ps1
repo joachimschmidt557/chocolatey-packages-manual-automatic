@@ -22,14 +22,14 @@ function global:au_GetLatest {
     # Release: mockoon.setup.1.1.0.exe
     $re_release     = "mockoon.setup.[^A-Za-z]+.exe"
     $url_release    = $download_page.links | ? href -match $re_release | select -First 1 -expand href
-    $url_release    = "https://github.com" + $url
+    $url_release    = "https://github.com" + $url_release
 
     $version_release= ($url -split '/' | select -last 1 -skip 1) -Replace 'v',''
 
     ## Canary: hyper-Setup-2.1.0-canary.2.exe
     #$re_canary      = "hyper-Setup-[^A-Za-z]+-canary.[^A-Za-z]+.exe"
     #$url_canary     = $download_page.links | ? href -match $re_canary | select -First 1 -expand href
-    #$url_canary     = "https://github.com" + $url
+    #$url_canary     = "https://github.com" + $url_canary
 
     #$version_canary = ($url -split '/' | select -last 1 -skip 1)
 
