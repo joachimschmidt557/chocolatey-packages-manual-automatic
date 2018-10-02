@@ -24,7 +24,7 @@ function global:au_GetLatest {
     $url_release    = $download_page.links | ? href -match $re_release | select -First 1 -expand href
     $url_release    = "https://github.com" + $url_release
 
-    $version_release= ($url -split '/' | select -last 1 -skip 1) -Replace 'v',''
+    $version_release= ($url_release -split '/' | select -last 1 -skip 1) -Replace 'v',''
 
     ## Canary: hyper-Setup-2.1.0-canary.2.exe
     #$re_canary      = "hyper-Setup-[^A-Za-z]+-canary.[^A-Za-z]+.exe"

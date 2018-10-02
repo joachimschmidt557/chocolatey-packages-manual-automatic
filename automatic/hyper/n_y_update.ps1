@@ -24,14 +24,14 @@ function global:au_GetLatest {
     $url_release    = $download_page.links | ? href -match $re_release | select -First 1 -expand href
     $url_release    = "https://github.com" + $url_release
 
-    $version_release= ($url -split '/' | select -last 1 -skip 1)
+    $version_release= ($url_release -split '/' | select -last 1 -skip 1)
 
     # Canary: hyper-Setup-2.1.0-canary.2.exe
     $re_canary      = "hyper-Setup-[^A-Za-z]+-canary.[^A-Za-z]+.exe"
     $url_canary     = $download_page.links | ? href -match $re_canary | select -First 1 -expand href
     $url_canary     = "https://github.com" + $url_canary
 
-    $version_canary = ($url -split '/' | select -last 1 -skip 1)
+    $version_canary = ($url_canary -split '/' | select -last 1 -skip 1)
 
     #$Latest = @{ URL = $url; Version = $version }
     #return $Latest
