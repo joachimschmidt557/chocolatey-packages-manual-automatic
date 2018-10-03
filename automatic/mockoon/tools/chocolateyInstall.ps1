@@ -1,7 +1,7 @@
 
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
-$fileLocation = Get-Item "$toolsDir\hyper-Setup-*.exe"
+$fileLocation = Get-Item "$toolsDir\mockoon*.exe"
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
