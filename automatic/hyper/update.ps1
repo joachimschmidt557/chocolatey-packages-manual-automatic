@@ -33,6 +33,7 @@ function global:au_GetLatest {
     $url_canary     = "https://github.com" + $url_canary
 
     $version_canary = ($url_canary -split '/' | select -last 1 -skip 1)
+    $version_canary = ($version_canary -split ".")[0..2] -join ''
 
     #$Latest = @{ URL = $url; Version = $version }
     #return $Latest
