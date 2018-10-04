@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   32-bit: https://github.com/sharkdp/fd/releases/download/v7.1.0/fd-v7.1.0-i686-pc-windows-gnu.zip
-   64-bit: https://github.com/sharkdp/fd/releases/download/v7.1.0/fd-v7.1.0-x86_64-pc-windows-gnu.zip
+   32-bit: https://github.com/jean-emmanuel/open-stage-control/releases/download/v0.37.3/open-stage-control-0.37.3-win32-ia32.zip
+   64-bit: https://github.com/jean-emmanuel/open-stage-control/releases/download/v0.37.3/open-stage-control-0.37.3-win32-x64.zip
 
    to download the zip file.
 
@@ -16,8 +16,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 8f1a97da5c74bd5054d8876fc208ecc71ead3b98f6bb8d69d1996f3d3ea607bc
-   checksum64: f924449c4d66919158b9c43b072ebb55aa3abb34ba0388850716efea0427da57
+   checksum32: a8890666e21c8b65e1b9d7ceeb0630a9af99197f62b313528a3372736af90580
+   checksum64: 577f2944c9cd8464350f85a8445a5c2823262090c51d550180247b223e3ccda1
 
 File 'LICENSE.txt' obtained from:
    https://github.com/jean-emmanuel/open-stage-control/blob/master/LICENSE
