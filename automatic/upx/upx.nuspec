@@ -21,4 +21,10 @@
     <!--<mailingListUrl>http://sourceforge.net/p/upx/discussion/</mailingListUrl>-->
     <bugTrackerUrl>https://github.com/upx/upx/issues</bugTrackerUrl>
   </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
 </package>
