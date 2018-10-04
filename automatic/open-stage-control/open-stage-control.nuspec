@@ -38,8 +38,8 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Jean-Emmanuel Doucet</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>http://osc.ammd.net</projectUrl>
-    <!--<iconUrl>https://cdn.rawgit.com/joachimschmidt557/ChocolateyPackages/5332ef89/icons/mstreamExpress.png</iconUrl>-->
-    <!-- <copyright>Year Software Vendor</copyright> -->
+    <iconUrl>https://cdn.rawgit.com/joachimschmidt557/chocolatey-packages-manual-automatic/878a23ee/icons/open-stage-control.png</iconUrl>
+    <copyright>Copyleft © Jean-Emmanuel Doucet @ AMMD 2018</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://github.com/jean-emmanuel/open-stage-control/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
