@@ -32,7 +32,7 @@ function global:au_GetLatest {
     $url32 = "https://github.com" + $url32
     $url64 = "https://github.com" + $url64
 
-    $version = ($url32 -split '/' | select -last 1 -skip 1)
+    $version = ($url32 -split '/' | select -last 1 -skip 1) -Replace 'v',''
 
     $Latest = @{ URL32 = $url32; URL64 = $url64; Version = $version }
     return $Latest
