@@ -7,15 +7,15 @@ Package can be verified like this:
 
 1. Go to
 
-   URL: https://github.com/MrS0m30n3/youtube-dl-gui/releases/download/0.4/youtube-dl-gui-0.4-win-setup.zip
+   URL: https://github.com/zeit/hyper/releases/download/2.1.0-canary.2/hyper-Setup-2.1.0-canary.2.exe
 
    to download the installer.
 
-2. You can use one of the following methods to obtain the SHA256 checksum:
+2. You can use one of the following methods to obtain the SHA256 checksum: ca31e18ef7ba587ef7d7815c60757bf06935d9a007bf741e352aa8ada4229faf
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum: B0FC0A0ED763639873438B859A9172B4B0059D81360AD481AA4577DD597F790D
+   checksum: ca31e18ef7ba587ef7d7815c60757bf06935d9a007bf741e352aa8ada4229faf
 
 File 'LICENSE.txt' obtained from:
    https://github.com/zeit/hyper/blob/canary/LICENSE
