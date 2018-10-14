@@ -54,7 +54,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 
 Mockoon is an open source server/API mocking tool built with Electron and available on Windows, Linux and MacOS.
 
-![screenshot](./images/screenshot.jpg)
+![screenshot](https://raw.githubusercontent.com/255kb/mockoon/master/images/screenshot.jpg)
 
 ### Unlimited fast mocking
 
