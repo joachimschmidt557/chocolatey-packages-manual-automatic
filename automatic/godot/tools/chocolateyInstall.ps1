@@ -1,8 +1,8 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$zipFile    = Get-Item "$toolsDir\*-i686-pc-windows-gnu*.zip"
-$zipFile64  = Get-Item "$toolsDir\*-x86_64-pc-windows-gnu*.zip"
+$zipFile    = Get-Item "$toolsDir\*stable_win32*.zip"
+$zipFile64  = Get-Item "$toolsDir\*stable_win64*.zip"
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
