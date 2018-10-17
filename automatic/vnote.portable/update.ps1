@@ -16,7 +16,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    # VNote_win_x86_portable_1.13.zip asdf
+    # VNote_win_x86_portable_1.13.zip
     # VNote_win_X64_portable_1.13.zip
     $re_32  = "VNote_win_x86_portable_.+.zip"
     $re_64  = "VNote_win_x64_portable_.+.zip"
