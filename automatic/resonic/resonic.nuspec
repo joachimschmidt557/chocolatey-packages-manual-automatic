@@ -38,7 +38,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Liqube Audio</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://resonic.at/home</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/joachimschmidt557/chocolatey-packages-manual-automatic/552ff6a5/icons/Resonic.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/chocolatey-packages-manual-automatic@552ff6a5a13f373d7c9c82e0eef3a2458941232a/icons/Resonic.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
     <!--<licenseUrl>https://resonic.at/impressum</licenseUrl>

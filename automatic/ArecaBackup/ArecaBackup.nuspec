@@ -9,7 +9,7 @@
     <packageSourceUrl>https://github.com/joachimschmidt557/chocolatey-packages-manual-automatic/tree/master/automatic/ArecaBackup</packageSourceUrl>
     <licenseUrl>http://www.opensource.org/licenses/gpl-license.php</licenseUrl>
     <projectUrl>http://www.areca-backup.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/Summerspecial/ChocoCont/master/ArecaBackup/areca_logo.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/Summerspecial/ChocoCont@5fdddf143e28339f45a5289d96751b0d5611a5c6/ArecaBackup/areca_logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Areca Backup basically allows you to select a set of files / directories to back-up, choose where and how (as a simple file copy, as a zip archive, ...) they will be stored, and configure post-backup actions (like sending backup reports by email or launching custom shell scripts)
 

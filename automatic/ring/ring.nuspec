@@ -38,7 +38,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Iros Software</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://ring.cx/en</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/joachimschmidt557/chocolatey-packages-manual-automatic/0f1bb7f1/icons/Ring.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/chocolatey-packages-manual-automatic@0f1bb7f1b6f3156037c2030d9c9c9d945be4aa3f/icons/Ring.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.en.html</licenseUrl>

@@ -38,7 +38,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Adrian Jablonski</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>http://usblogon.quadsoft.org/en/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/joachimschmidt557/ChocolateyPackages/4aa742c6/icons/USBLogon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/ChocolateyPackages@4aa742c6d17cfd32c89dacd2938350428cc7c441/icons/USBLogon.png</iconUrl>
     <copyright>2017 Adrian Jablonski</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>

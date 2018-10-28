@@ -38,7 +38,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Christoph Reiter, Joe Wreschnig</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://quodlibet.readthedocs.io/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/joachimschmidt557/chocolatey-packages-manual-automatic/41e333f2/icons/quodlibet.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/chocolatey-packages-manual-automatic@41e333f268a4c790c1e8ae9d0058df1236de398b/icons/quodlibet.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://github.com/quodlibet/quodlibet/blob/master/COPYING</licenseUrl>

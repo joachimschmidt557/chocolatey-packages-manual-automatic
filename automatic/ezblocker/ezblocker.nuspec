@@ -38,7 +38,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Eric Zhang</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://www.ericzhang.me/projects/spotify-ad-blocker-ezblocker/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/joachimschmidt557/ChocolateyPackages/cc1bec62/icons/EZBlocker.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/ChocolateyPackages@cc1bec624fce4f95d55e44263cafd51b6be4884b/icons/EZBlocker.png</iconUrl>
     <copyright>2012-2016 Eric Zhang</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://github.com/Xeroday/Spotify-Ad-Blocker/blob/master/LICENSE</licenseUrl>

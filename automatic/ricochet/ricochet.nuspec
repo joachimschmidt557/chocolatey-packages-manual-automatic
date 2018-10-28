@@ -38,7 +38,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Ricochet</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://ricochet.im</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/joachimschmidt557/ChocolateyPackages/d6fe543d/icons/ricochet.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/ChocolateyPackages@d6fe543d10eb660d4f62178fd68d6b2c15b0647a/icons/ricochet.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://github.com/ricochet-im/ricochet/blob/master/LICENSE</licenseUrl>

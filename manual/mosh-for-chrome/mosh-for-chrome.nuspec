@@ -38,7 +38,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Richard Woodbury</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://mosh.org</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/joachimschmidt557/ChocolateyPackages/d582af8c/icons/mosh.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/ChocolateyPackages@af784da6bc5020f203ddd639f3a6249677279b35/icons/FolderColorizer.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>

@@ -38,7 +38,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Le Tan</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://tamlok.github.io/vnote</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/joachimschmidt557/chocolatey-packages-manual-automatic/3dc1f2b1/icons/VNote.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/chocolatey-packages-manual-automatic@3dc1f2b188005745729c4d67ee29585dfc262236/icons/VNote.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://github.com/tamlok/vnote/blob/master/LICENSE</licenseUrl>

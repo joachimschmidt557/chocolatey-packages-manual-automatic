@@ -38,7 +38,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>1 Hour Software by Skrommel</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>http://www.donationcoder.com/Software/Skrommel/index.html#DragLock</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/joachimschmidt557/ChocolateyPackages/92965e3d/icons/DragLock.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/ChocolateyPackages@92965e3df18f1080d71519d5e61cc2a7e8cf19de/icons/DragLock.png</iconUrl>
     <copyright>2007 1 Hour Software by Skrommel</copyright>
     <!-- If there is a license Url available, it is is required for the community feed -->
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>

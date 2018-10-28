@@ -38,7 +38,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Guillaume Monnet</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://mockoon.com</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/joachimschmidt557/chocolatey-packages-manual-automatic/dcc75842/icons/mockoon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/chocolatey-packages-manual-automatic@dcc75842088ba1c333df7ca20dda29639ef0c4e4/icons/mockoon.png</iconUrl>
     <copyright>Copyright Mockoon 2017</copyright>
     <!-- If there is a license Url available, it is is required for the community feed -->
     <licenseUrl>https://github.com/255kb/mockoon/blob/master/LICENSE.md</licenseUrl>

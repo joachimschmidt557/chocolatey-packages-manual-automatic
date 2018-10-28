@@ -38,7 +38,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Adrian Jablonski</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>http://quadsoft.org/downloads</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/joachimschmidt557/ChocolateyPackages/76c0aa02/icons/easyCrypt.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/ChocolateyPackages@76c0aa020cd870927f61e7d1fa5de5feec28c9d2/icons/easyCrypt.png</iconUrl>
     <copyright>2012 Adrian Jablonski</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
