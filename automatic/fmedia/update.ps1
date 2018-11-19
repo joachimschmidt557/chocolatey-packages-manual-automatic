@@ -22,8 +22,8 @@ function global:au_GetLatest {
     $url32 = $download_page.links | ? href -match $re_32 | select -First 1 -expand href
     $url64 = $download_page.links | ? href -match $re_64 | select -First 1 -expand href
 
-    $url32 = "http://fmedia.firmdev.com/" + $url32
-    $url64 = "http://fmedia.firmdev.com/" + $url64
+    #$url32 = "http://fmedia.firmdev.com/" + $url32
+    #$url64 = "http://fmedia.firmdev.com/" + $url64
 
     $version = ($url32 -split '-' | select -last 1 -skip 2)
 
