@@ -12,9 +12,9 @@ function global:au_BeforeUpdate() {
 function global:au_SearchReplace {
     @{
         ".\legal\VERIFICATION.txt" = @{
-            "(?i)(\s+32-bit:).*"             = "`${1} $($Latest.URL32)"
+            "(?i)(\s+URL:).*"             = "`${1} $($Latest.URL32)"
             #"(?i)(\s+64-bit:).*"             = "`${1} $($Latest.URL64)"
-            "(?i)(checksum32:).*"           = "`${1} $($Latest.Checksum32)"
+            "(?i)(checksum:).*"           = "`${1} $($Latest.Checksum32)"
             #"(?i)(checksum64:).*"           = "`${1} $($Latest.Checksum64)"
           }
      }
