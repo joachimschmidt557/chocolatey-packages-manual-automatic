@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   32-bit: https://downloads.tuxfamily.org/godotengine/3.0.6/Godot_v3.0.6-stable_win32.exe.zip
-   64-bit: https://downloads.tuxfamily.org/godotengine/3.0.6/Godot_v3.0.6-stable_win64.exe.zip
+   32-bit: https://downloads.tuxfamily.org/godotengine/3.0.6/mono/Godot_v3.0.6-stable_mono_win32.zip
+   64-bit: https://downloads.tuxfamily.org/godotengine/3.0.6/mono/Godot_v3.0.6-stable_mono_win64.zip
 
    to download the zip file.
 
@@ -16,8 +16,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: edf30cae08206431965866d56159595ab65b5dd947ae9e54496dcb9605333006
-   checksum64: 6489961eaf4f87a3cca048a4022748c4797452518acd5b9c91e713fb75d1af8a
+   checksum32: 81678755a57ef283289cf6cdef8cf9372b68b69dcd98be0f9b306ad6ab044cca
+   checksum64: 939414002d26e1cda935698dede3729d984092ed8839835f598d5b1831a8c115
 
 File 'LICENSE.txt' obtained from:
    https://github.com/godotengine/godot/blob/master/LICENSE.txt
