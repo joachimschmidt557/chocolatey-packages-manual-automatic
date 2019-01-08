@@ -29,3 +29,5 @@ Update-AUPackages.md
 Update-Force-Test-.md
 Update-History.md
 .vs/*
+*.exe
+*.zip
