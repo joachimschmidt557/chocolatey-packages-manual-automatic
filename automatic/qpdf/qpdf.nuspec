@@ -85,6 +85,7 @@ QPDF releases are hosted at its [SourceForge project page](http://sourceforge.ne
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="tools" />
     <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>
