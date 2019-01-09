@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>sharpkeys.portable</id>
-    <version>3.8</version>
+    <version>3.9</version>
     <title>Randyrants Sharpkeys (Portable)</title>
     <authors>Randyrants.com</authors>
     <owners>joachim.schmidt557</owners>
