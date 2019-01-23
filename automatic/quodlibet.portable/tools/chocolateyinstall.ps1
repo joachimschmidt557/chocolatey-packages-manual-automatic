@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/quodlibet/quodlibet/releases/download/release-4.2.0/quodlibet-4.2.0-portable.exe'
-$checksum   = '13C6007BB20329CACE4596651D09983F8C8CE5D37B2CAA4DC2837CAB4D088988'
+$url        = 'https://github.com/quodlibet/quodlibet/releases/download/release-4.2.1/quodlibet-4.2.1-portable.exe'
+$checksum   = '4c421bd314c2815ebbea399a393d797b2547b316418b9c674d30ab87470bb2cb'
 
 Get-ChocolateyWebFile -PackageName 'quodlibet.portable' -FileFullPath "$toolsDir\QuodLibet.exe" -Url $url -Checksum $checksum -ChecksumType 'sha256'

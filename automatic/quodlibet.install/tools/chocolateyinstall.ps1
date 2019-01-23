@@ -1,8 +1,8 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/quodlibet/quodlibet/releases/download/release-4.1.0/quodlibet-4.1.0-installer.exe'
-$checksum   = '34f8fa2892a7a8f52576319cc0db0d228aca2abeee47749faabcfec5be8625eb'
+$url        = 'https://github.com/quodlibet/quodlibet/releases/download/release-4.2.1/quodlibet-4.2.1-installer.exe'
+$checksum   = '2e477560e32db8379b1e42a0f23d120b3a03e8f065eea55246deb9536beef2b3'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
