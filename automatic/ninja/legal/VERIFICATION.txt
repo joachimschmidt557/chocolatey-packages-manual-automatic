@@ -7,15 +7,15 @@ Package can be verified like this:
 
 1. Go to
 
-   URL: https://github.com/ninja-build/ninja/releases/download/v1.8.2/ninja-win.zip
+   URL: https://github.com/ninja-build/ninja/releases/download/v1.9.0/ninja-win.zip
 
    to download the zip file.
 
-2. You can use one of the following methods to obtain the SHA256 checksum: c80313e6c26c0b9e0c241504718e2d8bbc2798b73429933adf03fdc6d84f0e70
+2. You can use one of the following methods to obtain the SHA256 checksum: 6af9a6e5afba71fff0aa406ead9331038e87e56f1987a604b4a837dd5ee34fe3
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum: c80313e6c26c0b9e0c241504718e2d8bbc2798b73429933adf03fdc6d84f0e70
+   checksum: 6af9a6e5afba71fff0aa406ead9331038e87e56f1987a604b4a837dd5ee34fe3
 
 File 'LICENSE.txt' obtained from:
    https://github.com/ninja-build/ninja/blob/master/COPYING
