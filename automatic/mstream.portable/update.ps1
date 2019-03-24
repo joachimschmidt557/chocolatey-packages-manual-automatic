@@ -14,11 +14,11 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    #mstreamExpress-portable-v0.6.zip
-    $re  = "mStreamExpress-portable-v.+.zip"
+    #mstreamExpress-Windows-x64-portable.zip
+    $re  = "mStreamExpress-Windows-x64-portable.zip"
     $url = $download_page.links | ? href -match $re | select -First 1 -expand href
 
-    $version = ($url -split '-' | select -last 1).replace("v",'').replace(".zip","")
+    $version = ($url32 -split '/' | select -last 1 -skip 1) -Replace 'v',''
 
     $Latest = @{ URL = ("https://github.com" + $url); Version = $version }
     return $Latest
