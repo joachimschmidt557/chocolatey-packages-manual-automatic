@@ -18,7 +18,7 @@ function global:au_GetLatest {
     $re  = "mStreamExpress.*-Windows-x64-portable.zip"
     $url = $download_page.links | ? href -match $re | select -First 1 -expand href
 
-    $version = ($url32 -split '/' | select -last 1 -skip 1) -Replace 'v',''
+    $version = ($url -split '/' | select -last 1 -skip 1) -Replace 'v',''
 
     $Latest = @{ URL = ("https://github.com" + $url); Version = $version }
     return $Latest
