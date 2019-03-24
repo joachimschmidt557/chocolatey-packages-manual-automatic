@@ -1,8 +1,8 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://resonic.at/get/player/portable'
-$checksum   = '99abf07d6c0671e5340a3971c9b53b8cc9f562413856c3b744a421a53f7e96e6'
+$url        = 'https://github.com/IrosTheBeggar/mStream/releases/download/v4.0.1/mStreamExpress-Windows-x64-portable.zip'
+$checksum   = '37208a0b7fbcfb8c11b0b1f2b95b08b87934415f005d40560db4fa7ad8e3dbe7'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
