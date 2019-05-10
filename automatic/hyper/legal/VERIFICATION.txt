@@ -7,15 +7,15 @@ Package can be verified like this:
 
 1. Go to
 
-   URL: https://github.com/zeit/hyper/releases/download/3.0.1-canary.2/hyper-Setup-3.0.1-canary.2.exe
+   URL: https://github.com/zeit/hyper/releases/download/3.0.2/hyper-Setup-3.0.2.exe
 
    to download the installer.
 
-2. You can use one of the following methods to obtain the SHA256 checksum: 8307cfd0e4595e3695ef1d5cd0ac109fa975491241af562b9a838b6800746ad7
+2. You can use one of the following methods to obtain the SHA256 checksum: 5a12669c103f7129e59bdd41f01f5014782301a1cbad36b3d4dca4af33ca439f
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum: 8307cfd0e4595e3695ef1d5cd0ac109fa975491241af562b9a838b6800746ad7
+   checksum: 5a12669c103f7129e59bdd41f01f5014782301a1cbad36b3d4dca4af33ca439f
 
 File 'LICENSE.txt' obtained from:
    https://github.com/zeit/hyper/blob/canary/LICENSE
