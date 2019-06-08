@@ -14,7 +14,7 @@ $packageArgs = @{
 Get-ChocolateyUnzip @packageArgs
 
 # Make a nicer shim
-$longFileName = Get-Item "$toolsDir\Godot*.exe"
+$longFileName = Get-Item "$toolsDir\Godot*\Godot*.exe"
 Install-BinFile -Name "godot" -Path "$longFileName"
 
 New-Item "$longFileName.ignore" -ItemType "file"
