@@ -26,7 +26,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>2018.08.02-nightly</version>
+    <version>2019.0.0</version>
     <packageSourceUrl>https://github.com/joachimschmidt557/chocolatey-packages-manual-automatic/tree/master/automatic/ring</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>joachim.schmidt557</owners>
@@ -34,11 +34,11 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>Ring (Install)</title>
+    <title>[Deprecated] Ring (Install)</title>
     <authors>Iros Software</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://ring.cx/en</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/chocolatey-packages-manual-automatic@0f1bb7f1b6f3156037c2030d9c9c9d945be4aa3f/icons/Ring.png</iconUrl>
+    <!--<iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/chocolatey-packages-manual-automatic@0f1bb7f1b6f3156037c2030d9c9c9d945be4aa3f/icons/Ring.png</iconUrl>-->
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.en.html</licenseUrl>
@@ -50,33 +50,17 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <tags>ring gnu privacy</tags>
     <summary>Ring is a free and universal communication platform which preserves the users' privacy and freedoms.</summary>
     <description>
-Free software
-* Free
-* Released under GPLv3 licence
-* Supported by an active community
+## This package is deprecated because the software name changed to Jami.
 
-A network
-* OpenDHT protocol
-* Decentralized communication
-* Peer-to-peer discovery and connection
-
-Secured
-* End-to-end encryption with authentification
-* Identity managed by X.509 certificates
-* Based on RSA/AES/DTLS/SRTP technologies
+You can view the package for jami on [chocolatey](https://chocolatey.org/packages/jami).
 </description>
     <!--<releaseNotes>https://github.com/IrosTheBeggar/mStream/releases</releaseNotes>-->
     <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
-    <!--<dependencies>
-      <dependency id="" version="__MINIMUM_VERSION__" />
-      <dependency id="" version="[__EXACT_VERSION__]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
-      <dependency id="" />
-      <dependency id="chocolatey-core.extension" version="1.1.0" />
-    </dependencies>-->
+    <dependencies>
+      <dependency id="jami" />
+    </dependencies>
     <!-- chocolatey-core.extension - https://chocolatey.org/packages/chocolatey-core.extension
          - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
          - You want to use Get-PackageParameters and on less than 0.11.0
@@ -87,9 +71,5 @@ Secured
     <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
     <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
   </metadata>
-  <files>
-    <!-- this section controls what actually gets packaged into the Chocolatey package -->
-    <file src="tools\**" target="tools" />
-    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
-  </files>
+  <files />
 </package>
