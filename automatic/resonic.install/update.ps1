@@ -21,7 +21,7 @@ function global:au_GetLatest {
 
     $version = ($download_file.Headers["Content-Disposition"] -split ' ' | select -last 1 ).replace('.msi"', '')
 
-    $Latest = @{ URL = $download; Version = $version }
+    $Latest = @{ URL = $download; Version = $version; FileType = 'msi' }
     return $Latest
 }
 
