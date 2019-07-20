@@ -2,7 +2,7 @@
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'https://resonic.at/get/player'
-$checksum   = 'ba6dbd8e92e5a9b94712aa85a3f9089b5af4d6da00ce63e93b50c14c5a31d0a7'
+$checksum   = '53dae7caaaa3568deecff4f29a4d1c67291e3f8cddf47df7930109189bdcb4af'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
