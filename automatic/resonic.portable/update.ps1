@@ -16,7 +16,7 @@ function global:au_GetLatest {
 
     $version = ($download_file.Headers["Content-Disposition"] -split ' ' | select -last 1 ).replace('.zip"', '')
 
-    $Latest = @{ URL = $download; Version = $version }
+    $Latest = @{ URL32 = $download; Version = $version }
     return $Latest
 }
 
