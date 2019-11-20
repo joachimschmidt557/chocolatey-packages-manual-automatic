@@ -15,7 +15,7 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     # buttercup-desktop-setup-1.6.0.exe
-    $re  = "buttercup-desktop-.+.exe"
+    $re  = "Buttercup-Setup-.+.exe"
     $url = $download_page.links | ? href -match $re | select -First 1 -expand href
 
     $version = ($url -split '-' | select -last 1).replace(".exe","")
