@@ -14,7 +14,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $re  = "mStreamExpress.*-Windows-x64-installer.exe"
+    $re  = "mStream-Server-Setup-.*.exe"
     $url = $download_page.links | ? href -match $re | select -First 1 -expand href
 
     $version = ($url -split '/' | select -last 1 -skip 1) -Replace 'v',''
