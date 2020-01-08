@@ -50,15 +50,15 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <tags>shotcut video editor cutting color correction media foss cross-platform</tags>
     <summary>Shotcut is a free, open source, cross-platform video editor.</summary>
     <description>
-###Wide Format Support
+### Wide Format Support
 
 Supports hundreds of audio and video formats and codecs thanks to FFmpeg. No import required which means native editing, plus multi-format timelines, resolutions and frame-rates within a project. Frame accurate seeking supported for many video formats.
 
-###Device and Transport Options
+### Device and Transport Options
 
 Blackmagic Design SDI and HDMI for input and preview monitoring. Screen, webcam and audio capture. Network stream playback. Supports resolutions up to 4k and capture from SDI, HDMI, webcam, JACK &amp; Pulse audio, IP stream, X11 screen and Windows DirectShow devices.
 
-###Sleek, Intuitive Interface
+### Sleek, Intuitive Interface
 
 Multiple dockable and undockable panels, including detailed media properties, recent files with search, playlist with thumbnail view, filter panel, history view, encoding panel, jobs queue, and melted server and playlist. Also supports drag-n-drop of assets from file manager.
 </description>
