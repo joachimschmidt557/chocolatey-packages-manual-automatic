@@ -11,7 +11,7 @@ $packageArgs = @{
 
   softwareName  = 'musique*'
 
-  checksum      = '24E8322589C3DB2D9C76A6FA14481DB2D2996960235B73B868E6F27B478D2692'
+  checksum      = 'c1c1b42b6bc83bf996729ea9f32e5da50493cb4641c76a13fff82c153268c4b0'
   checksumType  = 'sha256'
 
   silentArgs   = '/S'
