@@ -11,4 +11,5 @@ $packageArgs = @{
   filefullpath64= $zipFile64
 }
 
+Get-ChildItem $toolsDir\* | Where-Object { $_.PSISContainer } | Remove-Item -Recurse -Force #remove older package dirs
 Get-ChocolateyUnzip @packageArgs
