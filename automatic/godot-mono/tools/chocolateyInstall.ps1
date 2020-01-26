@@ -11,6 +11,9 @@ $packageArgs = @{
   filefullpath64= $zipFile64
 }
 
+# Remove older Godot versions first
+Get-Item "$toolsDir\Godot*.exe" | Remove-Item -Force
+
 Get-ChocolateyUnzip @packageArgs
 
 # Make a nicer shim
