@@ -7,6 +7,7 @@ if ( $pp.InstallDir ) {
   $installDir = $pp.InstallDir
 }
 
+$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $zipFile    = Get-Item "$toolsDir\ninja-win*.zip"
 #$zipFile64  = Get-Item "$toolsDir\*-x86_64-pc-windows-gnu*.zip"
 
