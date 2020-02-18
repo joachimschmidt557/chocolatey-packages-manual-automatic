@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'http://fmedia.firmdev.com'
+$releases = 'https://github.com/stsaz/fmedia/releases'
 
 function global:au_SearchReplace {
     @{
