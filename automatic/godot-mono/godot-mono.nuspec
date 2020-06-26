@@ -34,7 +34,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>Godot Game Engine</title>
+    <title>Godot Game Engine (Mono version)</title>
     <authors>Juan Linietsky, Ariel Manzur and contributors</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://godotengine.org/</projectUrl>
