@@ -1,10 +1,10 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url32      = 'https://github.com/mltframework/shotcut/releases/download/v20.04.12/shotcut-win32-200412.exe'
-$url64      = 'https://github.com/mltframework/shotcut/releases/download/v20.04.12/shotcut-win64-200412.exe'
-$checksum32 = '8d1ba9c3e5abd7c04ae0215516aa38e306e462ddd13b509f82134bc58b06fd95'
-$checksum64 = '05dba3e892048a877dab229c58c75b74d836a6f1a65acf2c9e9ec9024b0556f6'
+$url32      = 'https://github.com/mltframework/shotcut/releases/download/v20.06.28/shotcut-win32-200628.exe'
+$url64      = 'https://github.com/mltframework/shotcut/releases/download/v20.06.28/shotcut-win64-200628.exe'
+$checksum32 = 'cf3bb6301a99c7839125729327c98b67a330268bdd0a50ea40dd47c03c7bd949'
+$checksum64 = '4763307c5dbdc3b8bb9598062cf7f4dff8ecf777bfc987000f76ff061b9af370'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
