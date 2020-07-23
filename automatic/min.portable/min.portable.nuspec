@@ -37,7 +37,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <title>Min Browser (Portable)</title>
     <authors>Min Browser,PalmerAL</authors>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl>https://minbrowser.github.io/min/</projectUrl>
+    <projectUrl>https://minbrowser.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/chocolatey-packages-manual-automatic@4d8aad87f2ea45053f3f44ee0fe6eb4e150d3d37/icons/Min.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
