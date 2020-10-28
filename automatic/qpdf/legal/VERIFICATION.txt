@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   32-bit: https://github.com/qpdf/qpdf/releases/download/release-qpdf-9.1.1/qpdf-9.1.1-bin-mingw32.zip
-   64-bit: https://github.com/qpdf/qpdf/releases/download/release-qpdf-9.1.1/qpdf-9.1.1-bin-mingw64.zip
+   32-bit: https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.0.2/qpdf-10.0.2-bin-mingw32.zip
+   64-bit: https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.0.2/qpdf-10.0.2-bin-mingw64.zip
 
    to download the zip file.
 
@@ -16,8 +16,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 5819c47fa8bf82a087b8e17b422a07fc778c822038e6feb7d6604334249dcaf0
-   checksum64: 4cb26262e95898e89e2987f1a83b3ef5202e43fdb820aa85b319079772ba7a8c
+   checksum32: 87c40fb47f8151dbbb83cab8395f06f3684f169a3d278cc2b98a9ba479e20564
+   checksum64: f651930f1707b00a3c17a6db500ab975ce8eaf76b11e77668d0ed5522b08e34d
 
 File 'LICENSE.txt' obtained from:
    https://github.com/qpdf/qpdf/blob/master/LICENSE.txt
