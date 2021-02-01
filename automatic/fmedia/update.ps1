@@ -14,7 +14,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     # fmedia-0.34.1-win-x64.zip
     #$re_32  = "fmedia-.+-win-x64.zip"
