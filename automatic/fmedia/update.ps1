@@ -18,7 +18,7 @@ function global:au_GetLatest {
 
     # fmedia-0.34.1-win-x64.zip
     #$re_32  = "fmedia-.+-win-x64.zip"
-    $re_64  = "fmedia-.+-win-x86.zip"
+    $re_64  = "fmedia-.+-win-x64.zip"
     #$url32 = $download_page.links | ? href -match $re_32 | select -First 1 -expand href
     $url64 = $download_page.links | ? href -match $re_64 | select -First 1 -expand href
 
