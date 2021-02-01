@@ -12,7 +12,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     # https://github.com/mltframework/shotcut/releases/download/v18.03/shotcut-win64-180306.zip
     $re_64  = "shotcut-win64-.+.zip"
