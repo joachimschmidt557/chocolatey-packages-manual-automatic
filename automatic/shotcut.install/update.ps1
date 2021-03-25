@@ -16,7 +16,7 @@ function global:au_GetLatest {
 
     # https://github.com/mltframework/shotcut/releases/download/v18.03/shotcut-win64-180306.exe
     $re_64  = "shotcut-win64-.+.exe"
-    $url64 = $download_page.links | ? href -match $re_64 | select -First 1 -Skip 1 -expand href
+    $url64 = $download_page.links | ? href -match $re_64 | select -First 1 -expand href
 
     $url64 = "https://github.com" + $url64
 
