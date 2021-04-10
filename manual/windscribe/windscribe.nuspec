@@ -47,6 +47,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
+    <releaseNotes>https://windscribe.com/changelog/windows</releaseNotes>
     <tags>windscribe vpn adblock</tags>
     <summary>Browse the web privately as it was meant to be</summary>
     <description>
