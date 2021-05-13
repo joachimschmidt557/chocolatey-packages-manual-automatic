@@ -1,8 +1,8 @@
 ﻿$packageName = 'vnote.portable'
-$url32      = 'https://github.com/tamlok/vnote/releases/download/v2.10/VNote_win_x86_portable_2.10.zip'
-$url64      = 'https://github.com/tamlok/vnote/releases/download/v2.10/VNote_win_X64_portable_2.10.zip'
-$checksum32 = 'b3474dfda636cffedef0ff3aeb268d33e6ebf8256cec38418b8d1e0088976a16'
-$checksum64 = '99f67a2e0e35c21a68d2d2e0caa8314f57720571b9d106684e790b1b1373caee'
+$url32      = 'https://github.com/vnotex/vnote/releases/download/v3.0.1/vnote-win-x86_v3.0.1.zip'
+$url64      = 'https://github.com/vnotex/vnote/releases/download/v3.0.1/vnote-win-x64_v3.0.1.zip'
+$checksum32 = 'db64e76ddf07f40920bdf28f0a3f63f9a6a5d94bc0eec50a13e93c4cc70f17d0'
+$checksum64 = 'd0db70fe61643c5b091fdedf5f86d70856ca6c138da25f62e1c6a32bb2bff564'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 Install-ChocolateyZipPackage -PackageName "$packageName" `
                              -Url "$url32" `
