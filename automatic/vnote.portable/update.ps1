@@ -18,15 +18,15 @@ function global:au_GetLatest {
 
     # vnote-win-x86_.+.zip
     # vnote-win-x64_.+.zip
-    $re_32  = "VNote_win_x86_portable_.+.zip"
-    $re_64  = "VNote_win_x64_portable_.+.zip"
+    $re_32  = "vnote-win-x86_.+.zip"
+    $re_64  = "vnote-win-x64_.+.zip"
     $url32 = $download_page.links | ? href -match $re_32 | select -First 1 -expand href
     $url64 = $download_page.links | ? href -match $re_64 | select -First 1 -expand href
 
     $url32 = "https://github.com" + $url32
     $url64 = "https://github.com" + $url64
 
-    $version = ($url32 -split '_' | select -last 1).replace('.zip', '')
+    $version = ($url64 -split '/' | select -last 1 -skip 1) -Replace 'v',''
 
     $Latest = @{ URL32 = $url32; URL64 = $url64; Version = $version }
     return $Latest
