@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/tamlok/vnote/releases'
+$releases = 'https://github.com/vnotex/vnote/releases'
 
 function global:au_SearchReplace {
     @{
@@ -16,8 +16,8 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    # VNote_win_x86_portable_1.13.zip
-    # VNote_win_X64_portable_1.13.zip
+    # vnote-win-x86_.+.zip
+    # vnote-win-x64_.+.zip
     $re_32  = "VNote_win_x86_portable_.+.zip"
     $re_64  = "VNote_win_x64_portable_.+.zip"
     $url32 = $download_page.links | ? href -match $re_32 | select -First 1 -expand href
