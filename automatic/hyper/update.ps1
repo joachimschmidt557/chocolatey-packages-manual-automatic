@@ -23,14 +23,14 @@ function global:au_GetLatest {
     # Release: Hyper-Setup-2.0.0.exe
     $re_release     = "Hyper-Setup-[^A-Za-z]+.exe"
     $url_release    = $download_page.links | ? href -match $re_release | select -First 1 -expand href
-    $url_release    = "https://github.com" + $url_release
+    # $url_release    = "https://github.com" + $url_release
 
     $version_release= ($url_release -split '/' | select -last 1 -skip 1) -Replace 'v',''
 
     # Canary: Hyper-Setup-2.1.0-canary.2.exe
     $re_canary      = "Hyper-Setup-[^A-Za-z]+-canary.[^A-Za-z]+.exe"
     $url_canary     = $download_page.links | ? href -match $re_canary | select -First 1 -expand href
-    $url_canary     = "https://github.com" + $url_canary
+    # $url_canary     = "https://github.com" + $url_canary
 
     $version_canary = ($url_canary -split '/' | select -last 1 -skip 1) -Replace 'v',''
     $version_canary = ($version_canary.split(".") | select -first 3) -join '.'
