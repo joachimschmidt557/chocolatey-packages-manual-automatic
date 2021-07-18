@@ -5,8 +5,8 @@ $releases = 'https://github.com/buttercup/buttercup-desktop/releases'
 function global:au_SearchReplace {
     @{
         'tools\chocolateyInstall.ps1' = @{
-            "(^[$]url\s*=\s*)('.*')"      = "`$1'$($Latest.URL)'"
-            "(^[$]checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+            "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
+            "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
         }
      }
 }
@@ -14,14 +14,16 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    # buttercup-desktop-setup-1.6.0.exe
-    $re  = "Buttercup-Setup-.+.exe"
+    # Buttercup-win-x64-2.9.1-installer.exe
+    $re  = "Buttercup-win-x64-[^A-Za-z]+-installer.exe"
     $url = $download_page.links | ? href -match $re | select -First 1 -expand href
 
-    $version = ($url -split '-' | select -last 1).replace(".exe","")
+    $url = "https://github.com" + $url
 
-    $Latest = @{ URL = ("https://github.com" + $url); Version = $version }
+    $version = ($url -split '/' | select -last 1 -skip 1) -Replace 'v',''
+
+    $Latest = @{ URL64 = $url; Version = $version }
     return $Latest
 }
 
-update -ChecksumFor 32
+update -ChecksumFor 64
