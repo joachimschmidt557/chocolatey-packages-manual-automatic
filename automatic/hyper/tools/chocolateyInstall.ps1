@@ -7,7 +7,7 @@ $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'EXE'
   file          = $fileLocation
-  silentArgs    = "--silent"
+  silentArgs    = "/S"
   validExitCodes= @(0)
   softwareName  = 'Hyper*'
 }
