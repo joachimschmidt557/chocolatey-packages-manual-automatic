@@ -1,6 +1,6 @@
 ﻿$packageName = 'sharpkeys.portable'
-$url = 'https://github.com/randyrants/sharpkeys/releases/download/v3.9.2/sharpkeys392.zip'
-$checksum = '2ea10aba2c75726f6ff2294f0c43b558e85f443c21df4860408feb84120944f8'
+$url = 'https://github.com/randyrants/sharpkeys/releases/download/v3.9.3/sharpkeys393.zip'
+$checksum = '30ef2c64de819f2d544e995674baa39275c3910c5ba993a2fa169ded66ac3f93'
 $checksumType = 'sha256'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 Install-ChocolateyZipPackage -PackageName "$packageName" `
