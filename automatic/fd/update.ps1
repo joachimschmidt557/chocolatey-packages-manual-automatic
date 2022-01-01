@@ -24,8 +24,8 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     # fd-v6.2.0-i686-pc-windows-gnu.zip
-    $re_32  = "fd-v.+-i686-pc-windows-gnu.zip"
-    $re_64  = "fd-v.+-x86_64-pc-windows-gnu.zip"
+    $re_32  = "fd-v.+-i686-pc-windows-msvc.zip"
+    $re_64  = "fd-v.+-x86_64-pc-windows-msvc.zip"
     $url32 = $download_page.links | ? href -match $re_32 | select -First 1 -expand href
     $url64 = $download_page.links | ? href -match $re_64 | select -First 1 -expand href
 
