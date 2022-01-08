@@ -7,15 +7,15 @@ Package can be verified like this:
 
 1. Go to
 
-   URL: https://github.com/vercel/hyper/releases/download/v3.1.4/Hyper-Setup-3.1.4.exe
+   URL: https://github.com/vercel/hyper/releases/download/v3.1.5/Hyper-Setup-3.1.5.exe
 
    to download the installer.
 
-2. You can use one of the following methods to obtain the SHA256 checksum: e1815e27bce2514b3b8ffc4615c8a1f122d062702b2de50e21a859e83430a18d
+2. You can use one of the following methods to obtain the SHA256 checksum: badce6621fee713bd118b986a72c2a71665b80e772de4b5e867c178de5bd23fb
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum: e1815e27bce2514b3b8ffc4615c8a1f122d062702b2de50e21a859e83430a18d
+   checksum: badce6621fee713bd118b986a72c2a71665b80e772de4b5e867c178de5bd23fb
 
 File 'LICENSE.txt' obtained from:
    https://github.com/zeit/hyper/blob/canary/LICENSE
