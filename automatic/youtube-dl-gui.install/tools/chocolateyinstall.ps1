@@ -6,11 +6,11 @@ $checksum   = '71D4FC4EEA97199218FDDE36717E90326ED0FD4BD980C6AFBFFC263514E34BE9'
 $installPackageArgs = @{
   packageName = $env:ChocolateyPackageName
   fileType = 'MSI'
-  File = Get-Item "$toolsDir\yt-dlg.msi"
+  file64 = Get-Item "$toolsDir\yt-dlg.msi"
 
   softwareName = 'yt-dlg'
 
-  checksum      = $checksum
+  checksum64      = $checksum
   checksumType  = 'sha256'
 
   silentArgs   = '/qn'

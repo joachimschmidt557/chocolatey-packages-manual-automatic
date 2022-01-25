@@ -10,8 +10,8 @@ function global:au_BeforeUpdate() {
 function global:au_SearchReplace {
     @{
         ".\legal\VERIFICATION.txt" = @{
-            "(?i)(\s+URL:).*"             = "`${1} $($Latest.URL32)"
-            "(?i)(checksum:).*"           = "`${1} $($Latest.Checksum32)"
+            "(?i)(\s+URL:).*"             = "`${1} $($Latest.URL64)"
+            "(?i)(checksum:).*"           = "`${1} $($Latest.Checksum64)"
           }
     }
 }
@@ -24,7 +24,7 @@ function global:au_GetLatest {
 
     $version = ( $url -split '/' | select -last 1 -Skip 1 | % SubString(1) )
 
-    $Latest = @{ URL32 = ("https://github.com" + $url); Version = $version }
+    $Latest = @{ URL64 = ("https://github.com" + $url); Version = $version }
     return $Latest
 }
 
