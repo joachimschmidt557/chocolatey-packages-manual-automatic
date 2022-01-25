@@ -26,7 +26,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>0.4</version>
+    <version>1.8.3</version>
     <packageSourceUrl>https://github.com/joachimschmidt557/chocolatey-packages-manual-automatic/tree/master/automatic/youtube-dl-gui.install</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>joachimschmidt557</owners>
@@ -35,18 +35,18 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
     <title>youtube-dl-gui</title>
-    <authors>MrS0m30n3,Henrique Pereira,Fironet</authors>
+    <authors>MrS0m30n3,Henrique Pereira,Fironet,oleksis</authors>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl>https://mrs0m30n3.github.io/youtube-dl-gui/</projectUrl>
+    <projectUrl>https://oleksis.github.io/youtube-dl-gui/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/chocolatey-packages-manual-automatic@b99893b722bd6feff9a2a6b3048035672987fe19/icons/youtube-dl-gui.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://github.com/MrS0m30n3/youtube-dl-gui/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/MrS0m30n3/youtube-dl-gui</projectSourceUrl>
+    <projectSourceUrl>https://github.com/oleksis/youtube-dl-gui</projectSourceUrl>
     <!--<docsUrl>https://github.com/IrosTheBeggar/mStream/blob/master/docs</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
-    <bugTrackerUrl>https://github.com/MrS0m30n3/youtube-dl-gui/issues</bugTrackerUrl>
+    <bugTrackerUrl>https://github.com/oleksis/youtube-dl-gui/issues</bugTrackerUrl>
     <tags>youtube-dl-gui youtube-dl youtube mp3 converter downloader mp3 mp4 foss cross-platform</tags>
     <summary>A cross platform front-end GUI of the popular youtube-dl written in wxPython</summary>
     <description>
@@ -54,15 +54,15 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 A cross platform front-end GUI of the popular [youtube-dl](https://rg3.github.io/youtube-dl/) media downloader written in wxPython. [Supported sites](https://rg3.github.io/youtube-dl/supportedsites.html)
 
 ## Screenshots
-![youtube-dl-gui main window](https://raw.githubusercontent.com/MrS0m30n3/youtube-dl-gui/gh-pages/images/ydlg_ui.gif)
+![youtube-dl-gui main window](https://raw.githubusercontent.com/oleksis/youtube-dl-gui/gh-pages/images/ydlg_ui.gif)
     </description>
-    <releaseNotes>https://github.com/MrS0m30n3/youtube-dl-gui/releases</releaseNotes>
+    <releaseNotes>https://github.com/oleksis/youtube-dl-gui/releases</releaseNotes>
     <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
     <dependencies>
       <!--<dependency id="" version="__MINIMUM_VERSION__" />-->
-      <dependency id="youtube-dl-gui.install" version="[0.4]" />
+      <dependency id="youtube-dl-gui.install" version="[1.8.3]" />
       <!--<dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
       <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
       <dependency id="" />

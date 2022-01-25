@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/MrS0m30n3/youtube-dl-gui/releases'
+$releases = 'https://github.com/oleksis/youtube-dl-gui/releases'
 
 function global:au_SearchReplace {
 
@@ -12,17 +12,20 @@ function global:au_SearchReplace {
 
 }
 
-function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+function global:au_BeforeUpdate() {
+  # Skip download of installer
+}
 
-    # youtube-dl-gui-0.4-win-setup.zip
-    $re  = "youtube-dl-gui-.+-win-setup.zip"
+function global:au_GetLatest {
+    $download_page = Invoke-WebRequest -Uri $releases
+
+    $re  = "yt-dlg.*\.msi"
     $url = $download_page.links | ? href -match $re | select -First 1 -expand href
 
-    $version = ($url -split '-' | select -last 1 -Skip 2)
+    $version = ( $url -split '/' | select -last 1 -Skip 1 | % SubString(1) )
 
-    $Latest = @{ URL = ("https://github.com" + $url); Version = $version }
+    $Latest = @{ URL32 = ("https://github.com" + $url); Version = $version }
     return $Latest
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none
