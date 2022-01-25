@@ -1,22 +1,22 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$checksum   = 'B0FC0A0ED763639873438B859A9172B4B0059D81360AD481AA4577DD597F790D'
+$checksum   = '71D4FC4EEA97199218FDDE36717E90326ED0FD4BD980C6AFBFFC263514E34BE9'
 
 $installPackageArgs = @{
   packageName = $env:ChocolateyPackageName
-  fileType = 'EXE'
-  File = Get-Item "$toolsDir\youtubedlg-*.exe"
+  fileType = 'MSI'
+  File = Get-Item "$toolsDir\yt-dlg.msi"
 
-  softwareName = 'Youtube-DLG*'
+  softwareName = 'yt-dlg'
 
   checksum      = $checksum
   checksumType  = 'sha256'
 
-  silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  silentArgs   = '/qn'
   validExitCodes= @(0)
 }
 
 Install-ChocolateyPackage @installPackageArgs
 
-Get-ChildItem $toolsDir\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content -Value "" -Path "$_.ignore" }}
+Get-ChildItem $toolsDir\*.msi | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content -Value "" -Path "$_.ignore" }}

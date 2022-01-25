@@ -7,17 +7,15 @@ Package can be verified like this:
 
 1. Go to
 
-   x32 / x64: https://github.com/MrS0m30n3/youtube-dl-gui/releases/download/0.4/youtube-dl-gui-0.4-win-setup.zip
+   URL: https://github.com/oleksis/youtube-dl-gui/releases/download/v1.8.3/yt-dlg-20220118.2.msi
 
    to download the installer.
 
-2. Unzip the archiv to obtain the setup executable.
-
-3. You can use one of the following methods to obtain the SHA256 checksum:
+2. You can use one of the following methods to obtain the SHA256 checksum: 71D4FC4EEA97199218FDDE36717E90326ED0FD4BD980C6AFBFFC263514E34BE9
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum: B0FC0A0ED763639873438B859A9172B4B0059D81360AD481AA4577DD597F790D
+   checksum: 71D4FC4EEA97199218FDDE36717E90326ED0FD4BD980C6AFBFFC263514E34BE9
 
 File 'LICENSE.txt' obtained from:
-   https://github.com/MrS0m30n3/youtube-dl-gui/blob/master/LICENSE
+   https://github.com/oleksis/youtube-dl-gui/blob/master/LICENSE
