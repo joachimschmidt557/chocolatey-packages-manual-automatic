@@ -55,6 +55,11 @@ A cross platform front-end GUI of the popular [youtube-dl](https://github.com/yt
 
 ## Screenshots
 ![youtube-dl-gui main window](https://raw.githubusercontent.com/MrS0m30n3/youtube-dl-gui/gh-pages/images/ydlg_ui.gif)
+
+## Virus Scan False Positives
+
+Some anti-virus software falsely flag this software as potential malware. This is because this executable was created using [PyInstaller](https://www.pyinstaller.org/) and executables created with this tool are known to often get false positive detections [1](https://python.plainenglish.io/pyinstaller-exe-false-positive-trojan-virus-resolved-b33842bd3184) [2](https://www.reddit.com/r/Python/comments/9ri81s/my_pyinstallercompiled_exe_progs_are_victims_of/) [3](https://stackoverflow.com/questions/43777106/program-made-with-pyinstaller-now-seen-as-a-trojan-horse-by-avg).
+
     </description>
     <releaseNotes>https://github.com/oleksis/youtube-dl-gui/releases</releaseNotes>
     <!-- =============================== -->
