@@ -19,8 +19,8 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    # yt-dlg*.msi
-    $re  = "yt-dlg*.msi"
+    # yt-dlg.*.msi
+    $re  = "yt-dlg.*.msi"
     $url = $download_page.links | ? href -match $re | select -First 1 -expand href
 
     $version = ($url -split '/' | select -last 1 -Skip 1) -Replace 'v',''
