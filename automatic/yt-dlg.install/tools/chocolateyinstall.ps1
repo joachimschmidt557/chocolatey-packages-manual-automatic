@@ -14,4 +14,4 @@ $packageArgs = @{
   softwareName  = 'yt-dlg*'
 }
 
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs
