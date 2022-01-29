@@ -20,6 +20,13 @@ function global:au_GetLatest {
     $url64 = "https://github.com" + $url64
 
     $version = ($url64 -split '/' | select -last 1 -skip 1) -Replace 'v',''
+    $release_url = "https://github.com/mltframework/shotcut/releases/tag/v" + $version
+    $release_page = Invoke-WebRequest -Uri $release_url -UseBasicParsing
+    $pre_release = $release_page.Content -match "<span.*>Pre-Release</span>"
+    if ( $pre_release )
+    {
+        $version = $version + "-pre"
+    }
 
     $Latest = @{ URL64 = $url64; Version = $version }
     return $Latest
