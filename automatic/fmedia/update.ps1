@@ -25,7 +25,7 @@ function global:au_GetLatest {
     #$url32 = "http://fmedia.firmdev.com/" + $url32
     $url64 = "https://github.com" + $url64
 
-    $version = ($url64 -split '-' | select -last 1 -skip 2)
+    $version = ($url64 -split '-' | select -last 1 -skip 2) -replace 'beta','-beta'
 
     $Latest = @{ URL64 = $url64; Version = $version }
     return $Latest
