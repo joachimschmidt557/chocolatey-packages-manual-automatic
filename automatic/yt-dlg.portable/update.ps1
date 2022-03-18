@@ -4,7 +4,7 @@ $releases = 'https://github.com/oleksis/youtube-dl-gui/releases'
 
 function global:au_BeforeUpdate() {
     #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
-    Get-RemoteFiles -Purge
+    Get-RemoteFiles -Purge -NoSuffix
 }
 
 function global:au_SearchReplace {
