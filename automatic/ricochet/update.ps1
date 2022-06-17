@@ -15,7 +15,7 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     #tidy-5.1.25-win64.zip
-    $re  = "ricochet-.+-win-install.exe"
+    $re  = "/releases/download/.+/ricochet-.+-win-install.exe"
     $url = $download_page.links | ? href -match $re | select -First 1 -Skip 1 -expand href
 
     $version = $url -split '-' | select -First 1 -Skip 1
