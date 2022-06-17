@@ -18,6 +18,8 @@ function global:au_GetLatest {
     $re  = "/releases/download/.+/ricochet-.+-win-install.exe"
     $url = $download_page.links | ? href -match $re | select -First 1 -expand href
 
+    $url = "https://github.com" + $url
+
     $version = $url -split '-' | select -Last 1 -Skip 2
 
     $Latest = @{ URL = $url; Version = $version }
