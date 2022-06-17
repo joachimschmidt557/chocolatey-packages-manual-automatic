@@ -16,7 +16,7 @@ function global:au_GetLatest {
 
     #tidy-5.1.25-win64.zip
     $re  = "/releases/download/.+/ricochet-.+-win-install.exe"
-    $url = $download_page.links | ? href -match $re | select -First 1 -Skip 1 -expand href
+    $url = $download_page.links | ? href -match $re | select -First 1 -expand href
 
     $version = $url -split '-' | select -First 1 -Skip 1
 
