@@ -1,6 +1,6 @@
 ﻿$packageName = 'fmedia'
-$url64      = 'https://github.com/stsaz/fmedia/releases/download/v1.27.4/fmedia-1.27.4-win-x64.zip'
-$checksum64 = '9e3bf639b095b04c4a1a09f84f5a87900ff25c3e8724479733226fc648297cf5'
+$url64      = 'https://github.com/stsaz/fmedia/releases/download/v1.28/fmedia-1.28-win-x64.zip'
+$checksum64 = 'db4febfdbfc3bf1379a113404e3491dad03464c0e450b142bbc2f511e9200528'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 Install-ChocolateyZipPackage -PackageName "$packageName" `
                              -Url64Bit "$url64" `
