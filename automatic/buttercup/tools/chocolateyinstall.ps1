@@ -1,8 +1,8 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64      = 'https://github.com/buttercup/buttercup-desktop/releases/download/v2.14.2/Buttercup-win-x64-2.14.2-installer.exe'
-$checksum64 = '35ffb483c95137d8febda0ef914ea532f1625f33b5d2b587d92b589341c714e9'
+$url64      = 'https://github.com/buttercup/buttercup-desktop/releases/download/v2.15.0/Buttercup-win-x64-2.15.0-installer.exe'
+$checksum64 = '1fb3412a5bb3657d7cc58c1b91cbd10475f0e7eb49645f2ab41b6110489da5f3'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
