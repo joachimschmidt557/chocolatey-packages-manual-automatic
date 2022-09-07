@@ -8,8 +8,8 @@
 This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Reference. Chocolatey uses a special version of NuGet.Core that allows us to do more than was initially possible. As such there are certain things to be aware of:
 
 * the package xmlns schema url may cause issues with nuget.exe
-* Any of the following elements can ONLY be used by choco tools - projectSourceUrl, docsUrl, mailingListUrl, bugTrackerUrl, packageSourceUrl, provides, conflicts, replaces 
-* nuget.exe can still install packages with those elements but they are ignored. Any authoring tools or commands will error on those elements 
+* Any of the following elements can ONLY be used by choco tools - projectSourceUrl, docsUrl, mailingListUrl, bugTrackerUrl, packageSourceUrl, provides, conflicts, replaces
+* nuget.exe can still install packages with those elements but they are ignored. Any authoring tools or commands will error on those elements
 -->
 
 <!-- You can embed software files directly into packages, as long as you are not bound by distribution rights. -->
@@ -26,7 +26,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>2.14</version>
+    <version>2.15</version>
     <packageSourceUrl>https://github.com/joachimschmidt557/chocolatey-packages-manual-automatic/tree/master/manual/asio4all</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>joachim.schmidt557</owners>
@@ -37,14 +37,14 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <title>ASIO4ALL (Install)</title>
     <authors>Michael Tippach</authors>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl>http://www.asio4all.org/intro.html</projectUrl>
+    <projectUrl>https://www.asio4all.org/</projectUrl>
     <!--<iconUrl>https://cdn.rawgit.com/joachimschmidt557/ChocolateyPackages/5332ef89/icons/mstreamExpress.png</iconUrl>-->
-    <copyright>Copyright(c)2003-2015, Michael Tippach</copyright>
+    <copyright>Copyright(c)2003-2021, Michael Tippach</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <!--<licenseUrl>https://github.com/AVbin/AVbin/blob/master/COPYING.LESSER</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>-->
     <!--<projectSourceUrl>https://github.com/AVbin/AVbin</projectSourceUrl>-->
-    <docsUrl>http://www.asio4all.org/faq.html</docsUrl>
+    <docsUrl>https://www.asio4all.org/index.php/help/instruction-manual/</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl>https://github.com/AVbin/AVbin/issues</bugTrackerUrl>-->
     <tags>asio4all asio sound soundcard daw</tags>
@@ -66,8 +66,8 @@ What ASIO4ALL will NOT do:
 
 ASIO4ALL is free for the end user. Commercial exploitation (resale/bundling...), however, is restricted.
     </description>
-    <releaseNotes>http://www.asio4all.org/history.html</releaseNotes>
-    <!-- =============================== -->      
+    <releaseNotes>https://www.asio4all.org/index.php/project/history/</releaseNotes>
+    <!-- =============================== -->
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
     <!--<dependencies>
