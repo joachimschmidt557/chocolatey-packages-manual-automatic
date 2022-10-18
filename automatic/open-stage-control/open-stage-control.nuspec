@@ -37,14 +37,14 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <title>Open Stage Control (Portable)</title>
     <authors>Jean-Emmanuel Doucet</authors>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl>http://osc.ammd.net</projectUrl>
+    <projectUrl>https://openstagecontrol.ammd.net/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/chocolatey-packages-manual-automatic@878a23ee46977d7b49945d48922f5073f25b948d/icons/open-stage-control.png</iconUrl>
     <copyright>Copyleft © Jean-Emmanuel Doucet @ AMMD 2018</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://github.com/jean-emmanuel/open-stage-control/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/jean-emmanuel/open-stage-control</projectSourceUrl>
-    <docsUrl>http://osc.ammd.net</docsUrl>
+    <docsUrl>https://openstagecontrol.ammd.net/docs/getting-started/introduction/</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://github.com/jean-emmanuel/open-stage-control/issues</bugTrackerUrl>
     <tags>open-stage-control open stage control osc midi audio foss cross-platform electron</tags>
