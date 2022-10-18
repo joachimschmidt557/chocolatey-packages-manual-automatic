@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/qpdf/qpdf/releases'
+$releases = 'https://api.github.com/repos/qpdf/qpdf/releases'
 
 function global:au_BeforeUpdate() {
     #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
@@ -21,21 +21,30 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $json = $response | ConvertFrom-Json
 
-    # qpdf-8.0.2-bin-mingw32.zip
-    $re_32  = "qpdf-.+-bin-mingw32.zip"
-    $re_64  = "qpdf-.+-bin-mingw64.zip"
-    $url32 = $download_page.links | ? href -match $re_32 | select -First 1 -expand href
-    $url64 = $download_page.links | ? href -match $re_64 | select -First 1 -expand href
+    # qpdf-11.1.1-mingw32.zip
+    $re_32  = "qpdf-.+-mingw32.zip"
+    $re_64  = "qpdf-.+-mingw64.zip"
 
-    $url32 = "https://github.com" + $url32
-    $url64 = "https://github.com" + $url64
+    foreach ($release in $json) {
+        $asset32 = $release.assets | ? name -match $re_32
+        $asset64 = $release.assets | ? name -match $re_64
 
-    $version = ($url32 -split '-' | select -last 1 -skip 2)
+        if ($asset32 -eq $null) { continue }
+        if ($asset64 -eq $null) { continue }
 
-    $Latest = @{ URL32 = $url32; URL64 = $url64; Version = $version }
-    return $Latest
+        $url32 = $asset32.browser_download_url
+        $url64 = $asset64.browser_download_url
+
+        $version = $release.tag_name -Replace 'v',''
+
+        $Latest = @{ URL32 = $url32; URL64 = $url64; Version = $version }
+        return $Latest
+    }
+
+    throw "No release with suitable binaries found."
 }
 
 update -ChecksumFor none
