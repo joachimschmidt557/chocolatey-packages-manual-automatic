@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/mltframework/shotcut/releases'
+$releases = 'https://api.github.com/repos/mltframework/shotcut/releases'
 
 function global:au_SearchReplace {
     @{
@@ -12,25 +12,33 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $json = $response | ConvertFrom-Json
 
-    # https://github.com/mltframework/shotcut/releases/download/v18.03/shotcut-win64-180306.exe
+    # shotcut-win64-180306.exe
     $re_64  = "shotcut-win64-.+.exe"
-    $url64 = $download_page.links | ? href -match $re_64 | select -First 1 -expand href
 
-    $url64 = "https://github.com" + $url64
+    foreach ($release in $json) {
+        # $asset32 = $release.assets | ? name -match $re_32
+        $asset64 = $release.assets | ? name -match $re_64
 
-    $version = ($url64 -split '/' | select -last 1 -skip 1) -Replace 'v',''
-    $release_url = "https://github.com/mltframework/shotcut/releases/tag/v" + $version
-    $release_page = Invoke-WebRequest -Uri $release_url -UseBasicParsing
-    $pre_release = $release_page.Content -match "<span.*>Pre-Release</span>"
-    if ( $pre_release )
-    {
-        $version = $version + "-pre"
+        # if ($asset32 -eq $null) { continue }
+        if ($asset64 -eq $null) { continue }
+
+        # $url32 = $asset32.browser_download_url
+        $url64 = $asset64.browser_download_url
+
+        $version = $release.tag_name -Replace 'v',''
+
+        if ($release.prerelease) {
+            $version = $version + "-pre"
+        }
+
+        $Latest = @{ URL64 = $url64; Version = $version }
+        return $Latest
     }
 
-    $Latest = @{ URL64 = $url64; Version = $version }
-    return $Latest
+    throw "No release with suitable binaries found."
 }
 
 update -ChecksumFor 64
