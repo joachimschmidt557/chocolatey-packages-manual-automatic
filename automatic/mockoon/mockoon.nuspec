@@ -8,8 +8,8 @@
 This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Reference. Chocolatey uses a special version of NuGet.Core that allows us to do more than was initially possible. As such there are certain things to be aware of:
 
 * the package xmlns schema url may cause issues with nuget.exe
-* Any of the following elements can ONLY be used by choco tools - projectSourceUrl, docsUrl, mailingListUrl, bugTrackerUrl, packageSourceUrl, provides, conflicts, replaces 
-* nuget.exe can still install packages with those elements but they are ignored. Any authoring tools or commands will error on those elements 
+* Any of the following elements can ONLY be used by choco tools - projectSourceUrl, docsUrl, mailingListUrl, bugTrackerUrl, packageSourceUrl, provides, conflicts, replaces
+* nuget.exe can still install packages with those elements but they are ignored. Any authoring tools or commands will error on those elements
 -->
 
 <!-- You can embed software files directly into packages, as long as you are not bound by distribution rights. -->
@@ -41,16 +41,16 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/chocolatey-packages-manual-automatic@dcc75842088ba1c333df7ca20dda29639ef0c4e4/icons/mockoon.png</iconUrl>
     <copyright>Copyright Mockoon 2017</copyright>
     <!-- If there is a license Url available, it is is required for the community feed -->
-    <licenseUrl>https://github.com/255kb/mockoon/blob/master/LICENSE.md</licenseUrl>
+    <licenseUrl>https://github.com/mockoon/mockoon/blob/main/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/255kb/mockoon</projectSourceUrl>
-    <docsUrl>https://github.com/255kb/mockoon/wiki</docsUrl>
+    <projectSourceUrl>https://github.com/mockoon/mockoon</projectSourceUrl>
+    <docsUrl>https://mockoon.com/docs/latest/about/</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
-    <bugTrackerUrl>https://github.com/255kb/mockoon/issues</bugTrackerUrl>
+    <bugTrackerUrl>https://github.com/mockoon/mockoon/issues</bugTrackerUrl>
     <tags>mockoon rest api rest-api mock foss cross-platfrom</tags>
     <summary>Mockoon is the easiest and quickest way to run mock APIs locally. No remote deployment, no account required, open source.</summary>
     <description>
-## What is it? 
+## What is it?
 
 Mockoon is an open source server/API mocking tool built with Electron and available on Windows, Linux and MacOS.
 
@@ -87,8 +87,8 @@ Import / export, JSON templating, auto save, proxy mode, HTTPS, latency simulati
 * Real-time auto save
 * No account required
     </description>
-    <releaseNotes>https://github.com/255kb/mockoon/releases</releaseNotes>
-    <!-- =============================== -->      
+    <releaseNotes>https://mockoon.com/releases/desktop/</releaseNotes>
+    <!-- =============================== -->
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
     <!--<dependencies>

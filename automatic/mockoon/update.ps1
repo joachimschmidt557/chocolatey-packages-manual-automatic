@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/255kb/mockoon/releases'
+$releases = 'https://api.github.com/repos/mockoon/mockoon/releases'
 
 function global:au_BeforeUpdate() {
     #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
@@ -18,31 +18,29 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $json = $response | ConvertFrom-Json
 
-    # Release: mockoon.setup.1.1.0.exe
-    $re_release     = "mockoon.setup.[^A-Za-z]+.exe"
-    $url_release    = $download_page.links | ? href -match $re_release | select -First 1 -expand href
-    $url_release    = "https://github.com" + $url_release
+    # mockoon.setup.1.1.0.exe
+    $re_32  = "mockoon.setup.[^A-Za-z]+.exe"
 
-    $version_release= ($url_release -split '/' | select -last 1 -skip 1) -Replace 'v',''
+    foreach ($release in $json) {
+        $asset32 = $release.assets | ? name -match $re_32
+        # $asset64 = $release.assets | ? name -match $re_64
 
-    ## Canary: hyper-Setup-2.1.0-canary.2.exe
-    #$re_canary      = "hyper-Setup-[^A-Za-z]+-canary.[^A-Za-z]+.exe"
-    #$url_canary     = $download_page.links | ? href -match $re_canary | select -First 1 -expand href
-    #$url_canary     = "https://github.com" + $url_canary
+        if ($asset32 -eq $null) { continue }
+        # if ($asset64 -eq $null) { continue }
 
-    #$version_canary = ($url -split '/' | select -last 1 -skip 1)
+        $url32 = $asset32.browser_download_url
+        # $url64 = $asset64.browser_download_url
 
-    $Latest = @{ URL32 = $url_release; Version = $version_release }
-    return $Latest
+        $version = $release.tag_name -Replace 'v',''
 
-    #@{
-    #    Streams = [ordered] @{
-    #        'release' = @{ Version = $version_release; URL32 = $url_release }
-    #        'canary' = @{ Version = $version_canary; URL32 = $url_canary }
-    #    }
-    #}
+        $Latest = @{ URL32 = $url32; Version = $version }
+        return $Latest
+    }
+
+    throw "No release with suitable binaries found."
 }
 
 update -ChecksumFor none
