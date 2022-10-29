@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   32-bit: https://github.com/upx/upx/releases/download/v3.95/upx-3.95-win32.zip
-   64-bit: https://github.com/upx/upx/releases/download/v3.95/upx-3.95-win64.zip
+   32-bit: https://github.com/upx/upx/releases/download/v4.0.0/upx-4.0.0-win32.zip
+   64-bit: https://github.com/upx/upx/releases/download/v4.0.0/upx-4.0.0-win64.zip
 
    to download the zip file.
 
@@ -16,8 +16,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: f94ff30b175d125d1c238458716f5808aee222547a813918b44d0f67035c0054
-   checksum64: 5c076f87ba64d82f11513f4af0ceb07246a3540aa3c72ca3ffc2d53971fa56e3
+   checksum32: 6ab81fcb9f4491742b05dc470d872ceab9e0bd589b328bba895fcf080b594db4
+   checksum64: a0fe01d06dadc5ca551e531ba684bf5f39269170af8dcfdc161e45caf077c4ef
 
 File 'LICENSE.txt' obtained from:
    https://github.com/upx/upx/blob/master/COPYING
