@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/ricochet-im/ricochet/releases'
+$releases = 'https://api.github.com/repos/ricochet-im/ricochet/releases'
 
 function global:au_SearchReplace {
     @{
@@ -12,18 +12,29 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $json = $response | ConvertFrom-Json
 
-    #tidy-5.1.25-win64.zip
-    $re  = "/releases/download/.+/ricochet-.+-win-install.exe"
-    $url = $download_page.links | ? href -match $re | select -First 1 -expand href
+    # ricochet-1.1.4-win-install.exe
+    $re_32  = "ricochet-.+-win-install.exe"
 
-    $url = "https://github.com" + $url
+    foreach ($release in $json) {
+        $asset32 = $release.assets | ? name -match $re_32
+        # $asset64 = $release.assets | ? name -match $re_64
 
-    $version = $url -split '-' | select -Last 1 -Skip 2
+        if ($asset32 -eq $null) { continue }
+        # if ($asset64 -eq $null) { continue }
 
-    $Latest = @{ URL = $url; Version = $version }
-    return $Latest
+        $url32 = $asset32.browser_download_url
+        # $url64 = $asset64.browser_download_url
+
+        $version = $release.tag_name -Replace 'v',''
+
+        $Latest = @{ URL32 = $url32; Version = $version }
+        return $Latest
+    }
+
+    throw "No release with suitable binaries found."
 }
 
 update -ChecksumFor 32
