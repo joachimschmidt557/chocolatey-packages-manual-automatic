@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/IrosTheBeggar/mStream/releases'
+$releases = 'https://api.github.com/repos/IrosTheBeggar/mStream/releases'
 
 function global:au_SearchReplace {
 
