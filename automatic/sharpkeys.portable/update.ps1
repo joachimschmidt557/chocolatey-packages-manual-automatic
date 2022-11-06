@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/randyrants/sharpkeys/releases'
+$releases = 'https://api.github.com/repos/randyrants/sharpkeys/releases'
 
 function global:au_SearchReplace {
     @{
@@ -12,17 +12,29 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $json = $response | ConvertFrom-Json
 
-    #upx394w.zip
-    $re  = "sharpkeys.+.zip"
-    $url = $download_page.links | ? href -match $re | select -First 1 -expand href
-    $url = "https://github.com" + $url
+    # sharpkeys394.zip
+    $re_32  = "sharpkeys.+.zip"
 
-    $version = ($url -split '/' | select -last 1 -skip 1) -Replace 'v',''
+    foreach ($release in $json) {
+        $asset32 = $release.assets | ? name -match $re_32
+        # $asset64 = $release.assets | ? name -match $re_64
 
-    $Latest = @{ URL = $url; Version = $version }
-    return $Latest
+        if ($asset32 -eq $null) { continue }
+        # if ($asset64 -eq $null) { continue }
+
+        $url32 = $asset32.browser_download_url
+        # $url64 = $asset64.browser_download_url
+
+        $version = $release.tag_name -Replace 'v',''
+
+        $Latest = @{ URL32 = $url32; Version = $version }
+        return $Latest
+    }
+
+    throw "No release with suitable binaries found."
 }
 
 update -ChecksumFor 32
