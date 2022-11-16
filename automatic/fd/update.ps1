@@ -21,8 +21,9 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $json = $response | ConvertFrom-Json
+    $token = ConvertTo-SecureString $Env:github_api_key -AsPlainText -Force
+    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing -Authentication Bearer -Token $token
+    $json = ConvertFrom-Json $response
 
     # fd-v6.2.0-i686-pc-windows-gnu.zip
     $re_32  = "fd-v.+-i686-pc-windows-msvc.zip"

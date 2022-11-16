@@ -14,8 +14,9 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $json = $response | ConvertFrom-Json
+    $token = ConvertTo-SecureString $Env:github_api_key -AsPlainText -Force
+    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing -Authentication Bearer -Token $token
+    $json = ConvertFrom-Json $response
 
     # fmedia-0.34.1-win-x64.zip
     #$re_32  = "fmedia-.+-win-x64.zip"

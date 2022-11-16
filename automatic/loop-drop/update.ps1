@@ -14,8 +14,9 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $json = $response | ConvertFrom-Json
+    $token = ConvertTo-SecureString $Env:github_api_key -AsPlainText -Force
+    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing -Authentication Bearer -Token $token
+    $json = ConvertFrom-Json $response
 
     # Loop.Drop.v3.0.1.x64.msi
     $re_32  = "Loop.Drop.v[^A-Za-z]+.msi"

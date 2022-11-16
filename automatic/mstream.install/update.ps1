@@ -12,8 +12,9 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $json = $response | ConvertFrom-Json
+    $token = ConvertTo-SecureString $Env:github_api_key -AsPlainText -Force
+    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing -Authentication Bearer -Token $token
+    $json = ConvertFrom-Json $response
 
     # mStream-Server-Setup-5.11.4.exe
     $re_32  = "mStream-Server-Setup-.*.exe$"
