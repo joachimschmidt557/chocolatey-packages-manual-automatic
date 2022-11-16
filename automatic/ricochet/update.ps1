@@ -12,8 +12,9 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $json = $response | ConvertFrom-Json
+    $token = ConvertTo-SecureString $Env:github_api_key -AsPlainText -Force
+    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing -Authorization Bearer -Token $token
+    $json = ConvertFrom-Json $response
 
     # ricochet-1.1.4-win-install.exe
     $re_32  = "ricochet-.+-win-install.exe"
