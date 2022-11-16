@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://api.github.com/api/oleksis/youtube-dl-gui/releases'
+$releases = 'https://api.github.com/repos/oleksis/youtube-dl-gui/releases'
 
 function global:au_BeforeUpdate() {
     #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
