@@ -7,15 +7,15 @@ Package can be verified like this:
 
 1. Go to
 
-   URL: https://github.com/oleksis/youtube-dl-gui/releases/download/v1.8.2/yt-dlg.exe
+   URL: https://github.com/oleksis/youtube-dl-gui/releases/download/v1.8.4/yt-dlg.exe
 
    to download the installer.
 
-2. You can use one of the following methods to obtain the SHA256 checksum: 72949DB3EECC4A026B6BDD03DADBC16289024CA7C7A4F606F9608929A69FFD9B
+2. You can use one of the following methods to obtain the SHA256 checksum: 95FFD4E3C1ADD51CB5EAA283F3C7A64C5CBAD3D83A645CEC57DFD04DD67B63F0
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum: 72949DB3EECC4A026B6BDD03DADBC16289024CA7C7A4F606F9608929A69FFD9B
+   checksum: 95FFD4E3C1ADD51CB5EAA283F3C7A64C5CBAD3D83A645CEC57DFD04DD67B63F0
 
 File 'LICENSE.txt' obtained from:
    https://github.com/MrS0m30n3/youtube-dl-gui/blob/master/LICENSE
