@@ -22,7 +22,7 @@ function global:au_GetLatest {
     $json = ConvertFrom-Json $response
 
     # yt-dlg.exe
-    $re  = "yt-dlg.exe"
+    $re_32  = "yt-dlg.exe"
 
     foreach ($release in $json) {
         $asset32 = $release.assets | ? name -match $re_32
