@@ -13,7 +13,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $token = ConvertTo-SecureString $Env:github_api_key -AsPlainText -Force
-    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing -Authorization Bearer -Token $token
+    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing -Authentication Bearer -Token $token
     $json = ConvertFrom-Json $response
 
     # ricochet-1.1.4-win-install.exe
