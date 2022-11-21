@@ -22,7 +22,7 @@ function global:au_GetLatest {
     $json = ConvertFrom-Json $response
 
     #quodlibet-4.0.2-portable.exe
-    $re_32  = "quodlibet-[^A-Za-z]+-portable.exe"
+    $re_32  = "^quodlibet-[^A-Za-z]+-portable.exe$"
 
     foreach ($release in $json) {
         $asset32 = $release.assets | ? name -match $re_32
