@@ -3,8 +3,8 @@ Import-Module au
 function global:au_SearchReplace {
     @{
         'tools\chocolateyinstall.ps1' = @{
-            "(^[$]url\s*=\s*)('.*')" = "`$1'$($Latest.Url32)'"
-            "(^\s*?checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+            "(^[$]url\s*=\s*)('.*')" = "`$1'$($Latest.Url64)'"
+            "(^\s*?checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
         }
         "$($Latest.PackageName).nuspec" = @{
           '(\<copyright\>).*?(\<\/copyright\>)' = "`${1}$(Get-Date -Format yyyy) Windscribe Limited`$2"
@@ -39,12 +39,12 @@ function global:au_GetLatest {
   $stableUrl = $changelogPage.Links | Where-Object href -like "*/$stableVersion/*" | Select-Object -First 1 -Expand href
 
   $streams = [ordered] @{
-    Alpha = @{ Url32 = $alphaUrl; Version = "$alphaVersion-alpha" }
-    Beta = @{ Url32 = $betaUrl; Version = "$betaVersion-beta" }
-    Stable = @{ Url32 = $stableUrl; Version = $stableVersion }
+    Alpha = @{ Url64 = $alphaUrl; Version = "$alphaVersion-alpha" }
+    Beta = @{ Url64 = $betaUrl; Version = "$betaVersion-beta" }
+    Stable = @{ Url64 = $stableUrl; Version = $stableVersion }
   }
 
   return @{ Streams = $streams }
 }
 
-Update-Package -ChecksumFor 32 -NoReadme
+Update-Package -ChecksumFor 64 -NoReadme
