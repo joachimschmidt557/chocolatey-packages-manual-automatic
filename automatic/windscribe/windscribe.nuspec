@@ -43,10 +43,10 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://windscribe.com/terms/eula</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
-    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
+    <projectSourceUrl>https://github.com/Windscribe/Desktop-App</projectSourceUrl>
+    <docsUrl>https://windscribe.com/support</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
-    <!--<bugTrackerUrl></bugTrackerUrl>-->
+    <bugTrackerUrl>https://github.com/Windscribe/Desktop-App/issues</bugTrackerUrl>
     <releaseNotes>https://windscribe.com/changelog/windows</releaseNotes>
     <tags>windscribe vpn adblock</tags>
     <summary>Browse the web privately as it was meant to be</summary>
