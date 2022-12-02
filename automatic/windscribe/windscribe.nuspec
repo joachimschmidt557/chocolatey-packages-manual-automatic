@@ -27,7 +27,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
     <version>2.02.10</version>
-    <packageSourceUrl>https://github.com/joachimschmidt557/chocolatey-packages-manual-automatic/tree/master/manual/windscribe</packageSourceUrl>
+    <packageSourceUrl>https://github.com/joachimschmidt557/chocolatey-packages-manual-automatic/tree/master/automatic/windscribe</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>joachim.schmidt557</owners>
     <!-- ============================== -->
@@ -38,15 +38,15 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Windscribe Limited</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://windscribe.com</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/ChocolateyPackages@7e01db0642c523457459e3e43c43d7785a47b54c/icons/Windscribe.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/chocolatey-packages-manual-automatic@d0d7eb53637456056867aac9cdb51a755c677313/icons/Windscribe.png</iconUrl>
     <copyright>2017 Windscribe Limited</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://windscribe.com/terms/eula</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
-    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
+    <projectSourceUrl>https://github.com/Windscribe/Desktop-App</projectSourceUrl>
+    <docsUrl>https://windscribe.com/support</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
-    <!--<bugTrackerUrl></bugTrackerUrl>-->
+    <bugTrackerUrl>https://github.com/Windscribe/Desktop-App/issues</bugTrackerUrl>
     <releaseNotes>https://windscribe.com/changelog/windows</releaseNotes>
     <tags>windscribe vpn adblock</tags>
     <summary>Browse the web privately as it was meant to be</summary>
@@ -70,14 +70,9 @@ Your privacy is a right. We don't track you. We don't keep logs. We erase everyt
     <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
-    <!--<dependencies>
-      <dependency id="" version="__MINIMUM_VERSION__" />
-      <dependency id="" version="[__EXACT_VERSION__]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
-      <dependency id="" />
-      <dependency id="chocolatey-core.extension" version="1.1.0" />
-    </dependencies>-->
+    <dependencies>
+      <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
+    </dependencies>
     <!-- chocolatey-core.extension - https://chocolatey.org/packages/chocolatey-core.extension
          - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
          - You want to use Get-PackageParameters and on less than 0.11.0
