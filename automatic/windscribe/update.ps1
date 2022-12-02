@@ -1,5 +1,9 @@
 Import-Module au
 
+function global:au_BeforeUpdate {
+  $Latest.Checksum64 = Get-RemoteChecksum -Url $Latest.Url64 -Algorithm sha256
+}
+
 function global:au_SearchReplace {
     @{
         'tools\chocolateyinstall.ps1' = @{
@@ -47,4 +51,4 @@ function global:au_GetLatest {
   return @{ Streams = $streams }
 }
 
-Update-Package -ChecksumFor 64 -NoReadme
+Update-Package -ChecksumFor None -NoReadme
