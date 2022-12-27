@@ -1,8 +1,8 @@
 ﻿$packageName = 'min.portable'
-$url32      = 'https://github.com/minbrowser/min/releases/download/v1.26.0/Min-v1.26.0-windows-ia32.zip'
-$url64      = 'https://github.com/minbrowser/min/releases/download/v1.26.0/Min-v1.26.0-windows.zip'
-$checksum32 = '2c2c338c0c49492d2943f478649350828677feb3eac249ea8123e04500cf1a8e'
-$checksum64 = 'b3bf165f7e0b14e65c91b2d1ffb5a66e09b409b62b4dab6fb6c629e5aee98431'
+$url32      = 'https://github.com/minbrowser/min/releases/download/v1.27.0/Min-v1.27.0-windows-ia32.zip'
+$url64      = 'https://github.com/minbrowser/min/releases/download/v1.27.0/Min-v1.27.0-windows.zip'
+$checksum32 = '55b221d02f2b61ffd19363facbabdf0331258456dab359c96de8863cca763576'
+$checksum64 = 'a0c8c8580d5611c56a7bd234b3a9014bf4b424430b009f944bac78858756db41'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 Install-ChocolateyZipPackage -PackageName "$packageName" `
                              -Url "$url32" `
