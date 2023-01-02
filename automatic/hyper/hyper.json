@@ -1,4 +1,4 @@
-﻿{
-    "canary":  "3.4.0-canary",
-    "release":  "3.3.0"
+{
+  "canary": "4.0.0-canary",
+  "release": "3.4.0"
 }
