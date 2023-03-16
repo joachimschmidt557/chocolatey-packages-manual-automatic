@@ -27,8 +27,8 @@ function global:au_GetLatest {
     # Godot_v3.0.6-stable_win32.exe.zip
     $re_32  = "Godot_v.+-stable_win32.exe.zip"
     $re_64  = "Godot_v.+-stable_win64.exe.zip"
-    $url32 = $download_page.links | ? href -match $re_32 | select -First 1 -expand href
-    $url64 = $download_page.links | ? href -match $re_64 | select -First 1 -expand href
+    $url32 = ($download_page.links | ? href -match $re_32 | select -First 1 -expand href).Trim()
+    $url64 = ($download_page.links | ? href -match $re_64 | select -First 1 -expand href).Trim()
 
     #$url32 = "https://github.com" + $url32
     #$url64 = "https://github.com" + $url64
