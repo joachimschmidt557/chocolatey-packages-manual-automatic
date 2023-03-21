@@ -22,7 +22,7 @@ environment:
   # https://ci.appveyor.com/tools/encrypt
   github_user_repo: joachimschmidt557/chocolatey-packages-manual-automatic
   github_api_key:
-    secure: 98AXGEm/+rDJ4DNnX27n3T9SuAGMxFtdC1irjoBd8HUxMpLwytOcpVH3q1Mw+xAN
+    secure: TWISznbZKtipCG131Yce1oAsOTGweMkkCjQ0jYvychfdFsF3/Refr4XPx5YfCxdI
 
 
   # Mail credentials - for error notifications
