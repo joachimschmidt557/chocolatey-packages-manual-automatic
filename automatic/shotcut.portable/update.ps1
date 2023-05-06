@@ -2,6 +2,10 @@ import-module au
 
 $releases = 'https://api.github.com/repos/mltframework/shotcut/releases'
 
+function global:au_BeforeUpdate() {
+    $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64
+}
+
 function global:au_SearchReplace {
     @{
         'tools\chocolateyInstall.ps1' = @{
@@ -42,4 +46,4 @@ function global:au_GetLatest {
     throw "No release with suitable binaries found."
 }
 
-update -ChecksumFor 64
+update -ChecksumFor none

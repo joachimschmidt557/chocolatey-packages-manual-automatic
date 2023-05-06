@@ -41,4 +41,4 @@ function global:au_GetLatest {
     throw "No release with suitable binaries found."
 }
 
-update -ChecksumFor 64
+update -ChecksumFor none
