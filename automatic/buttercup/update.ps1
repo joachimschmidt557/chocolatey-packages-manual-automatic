@@ -17,7 +17,7 @@ function global:au_GetLatest {
     $json = ConvertFrom-Json $response
 
     # Buttercup-win-x64-2.9.1-installer.exe
-    $re_64  = "Buttercup-win-x64-[^A-Za-z]+-installer.exe"
+    $re_64  = "^Buttercup-win-x64-[^A-Za-z]+-installer.exe$"
 
     foreach ($release in $json) {
         # $asset32 = $release.assets | ? name -match $re_32
