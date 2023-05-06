@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/buttercup/buttercup-desktop/releases'
+$releases = 'https://api.github.com/repos/buttercup/buttercup-desktop/releases'
 
 function global:au_SearchReplace {
     @{
@@ -12,18 +12,34 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $token = ConvertTo-SecureString $Env:github_api_key -AsPlainText -Force
+    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing -Authentication Bearer -Token $token
+    $json = ConvertFrom-Json $response
 
     # Buttercup-win-x64-2.9.1-installer.exe
-    $re  = "Buttercup-win-x64-[^A-Za-z]+-installer.exe"
-    $url = $download_page.links | ? href -match $re | select -First 1 -expand href
+    $re_64  = "Buttercup-win-x64-[^A-Za-z]+-installer.exe"
 
-    $url = "https://github.com" + $url
+    foreach ($release in $json) {
+        # $asset32 = $release.assets | ? name -match $re_32
+        $asset64 = $release.assets | ? name -match $re_64
 
-    $version = ($url -split '/' | select -last 1 -skip 1) -Replace 'v',''
+        # if ($asset32 -eq $null) { continue }
+        if ($asset64 -eq $null) { continue }
 
-    $Latest = @{ URL64 = $url; Version = $version }
-    return $Latest
+        # $url32 = $asset32.browser_download_url
+        $url64 = $asset64.browser_download_url
+
+        $version = $release.tag_name -Replace 'v',''
+
+        if ($release.prerelease) {
+            $version = $version + "-pre"
+        }
+
+        $Latest = @{ URL64 = $url64; Version = $version }
+        return $Latest
+    }
+
+    throw "No release with suitable binaries found."
 }
 
 update -ChecksumFor 64
