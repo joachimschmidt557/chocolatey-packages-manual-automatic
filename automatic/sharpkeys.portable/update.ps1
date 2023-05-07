@@ -2,10 +2,14 @@ import-module au
 
 $releases = 'https://api.github.com/repos/randyrants/sharpkeys/releases'
 
+function global:au_BeforeUpdate() {
+    $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32
+}
+
 function global:au_SearchReplace {
     @{
         'tools\chocolateyInstall.ps1' = @{
-            "(^[$]url\s*=\s*)('.*')"      = "`$1'$($Latest.URL)'"
+            "(^[$]url\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
             "(^[$]checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
         }
      }
@@ -38,4 +42,4 @@ function global:au_GetLatest {
     throw "No release with suitable binaries found."
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none

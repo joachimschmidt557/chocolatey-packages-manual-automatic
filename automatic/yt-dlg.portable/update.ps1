@@ -5,6 +5,7 @@ $releases = 'https://api.github.com/repos/oleksis/youtube-dl-gui/releases'
 function global:au_BeforeUpdate() {
     #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
     Get-RemoteFiles -Purge -NoSuffix
+    $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32
 }
 
 function global:au_SearchReplace {
@@ -43,4 +44,4 @@ function global:au_GetLatest {
     throw "No release with suitable binaries found."
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none

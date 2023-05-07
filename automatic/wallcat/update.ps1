@@ -2,6 +2,10 @@ import-module au
 
 $releases = 'https://api.github.com/repos/PaitoAnderson/WallcatWindows/releases'
 
+function global:au_BeforeUpdate() {
+    $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32
+}
+
 function global:au_SearchReplace {
     @{
         'tools\chocolateyInstall.ps1' = @{
@@ -38,4 +42,4 @@ function global:au_GetLatest {
     throw "No release with suitable binaries found."
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none
