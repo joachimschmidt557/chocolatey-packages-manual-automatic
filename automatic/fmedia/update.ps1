@@ -2,14 +2,18 @@ import-module au
 
 $releases = 'https://api.github.com/repos/stsaz/fmedia/releases'
 
+function global:au_BeforeUpdate() {
+    #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
+    Get-RemoteFiles -Purge
+    $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64
+}
+
 function global:au_SearchReplace {
     @{
-        'tools\chocolateyInstall.ps1' = @{
-            "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
-            #"(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-            #"(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-            "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
-        }
+        ".\legal\VERIFICATION.txt" = @{
+            "(?i)(\s+64-bit:).*"             = "`${1} $($Latest.URL64)"
+            "(?i)(checksum64:).*"           = "`${1} $($Latest.Checksum64)"
+          }
      }
 }
 
@@ -41,4 +45,4 @@ function global:au_GetLatest {
     throw "No release with suitable binaries found."
 }
 
-update -ChecksumFor 64
+update -ChecksumFor none
