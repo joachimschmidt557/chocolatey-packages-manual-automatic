@@ -86,6 +86,7 @@ Buttercup helps you by remembering all of your passwords, and because you no lon
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
     <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>
