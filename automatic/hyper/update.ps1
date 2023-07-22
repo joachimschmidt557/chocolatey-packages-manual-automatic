@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/zeit/hyper/releases'
+$releases = 'https://api.github.com/repos/zeit/hyper/releases'
 
 function global:au_BeforeUpdate() {
     #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
@@ -18,30 +18,54 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $token = ConvertTo-SecureString $Env:github_api_key -AsPlainText -Force
+    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing -Authentication Bearer -Token $token
+    $json = ConvertFrom-Json $response
 
     # Release: Hyper-Setup-2.0.0.exe
     $re_release     = "Hyper-Setup-[^A-Za-z]+.exe"
-    $url_release    = $download_page.links | ? href -match $re_release | select -First 1 -expand href
-    # $url_release    = "https://github.com" + $url_release
-
-    $version_release= ($url_release -split '/' | select -last 1 -skip 1) -Replace 'v',''
+    $release_data   = $null
 
     # Canary: Hyper-Setup-2.1.0-canary.2.exe
     $re_canary      = "Hyper-Setup-[^A-Za-z]+-canary.[^A-Za-z]+.exe"
-    $url_canary     = $download_page.links | ? href -match $re_canary | select -First 1 -expand href
-    # $url_canary     = "https://github.com" + $url_canary
+    $canary_data   = $null
 
-    $version_canary = ($url_canary -split '/' | select -last 1 -skip 1) -Replace 'v',''
-    $version_canary = ($version_canary.split(".") | select -first 3) -join '.'
+    foreach ($release in $json) {
+        $asset64 = $release.assets | ? name -match $re_release
 
-    #$Latest = @{ URL = $url; Version = $version }
-    #return $Latest
+        if ($asset64 -eq $null) { continue }
+
+        $url64 = $asset64.browser_download_url
+
+        $version = $release.tag_name -Replace 'v',''
+
+        $release_data = @{ URL64 = $url64; Version = $version }
+    }
+
+    foreach ($release in $json) {
+        $asset64 = $release.assets | ? name -match $re_canary
+
+        if ($asset64 -eq $null) { continue }
+
+        $url64 = $asset64.browser_download_url
+
+        $version = $release.tag_name -Replace 'v',''
+
+        $canary_data = @{ URL64 = $url64; Version = $version }
+    }
+
+    if ($release_data -eq $null) {
+        throw "No release with suitable binaries found."
+    }
+
+    if ($canary_data -eq $null) {
+        throw "No canary release with suitable binaries found."
+    }
 
     @{
         Streams = [ordered] @{
-            'release' = @{ Version = $version_release; URL64 = $url_release }
-            'canary' = @{ Version = $version_canary; URL64 = $url_canary }
+            'release' = $release_data
+            'canary' = $canary_data
         }
     }
 }
