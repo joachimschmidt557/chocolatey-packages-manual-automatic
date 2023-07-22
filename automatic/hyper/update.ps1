@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://api.github.com/repos/zeit/hyper/releases'
+$releases = 'https://api.github.com/repos/vercel/hyper/releases'
 
 function global:au_BeforeUpdate() {
     #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
@@ -23,11 +23,11 @@ function global:au_GetLatest {
     $json = ConvertFrom-Json $response
 
     # Release: Hyper-Setup-2.0.0.exe
-    $re_release     = "Hyper-Setup-[^A-Za-z]+.exe"
+    $re_release     = "^Hyper-Setup-[^A-Za-z]+.exe$"
     $release_data   = $null
 
     # Canary: Hyper-Setup-2.1.0-canary.2.exe
-    $re_canary      = "Hyper-Setup-[^A-Za-z]+-canary.[^A-Za-z]+.exe"
+    $re_canary      = "^Hyper-Setup-[^A-Za-z]+-canary.[^A-Za-z]+.exe$"
     $canary_data   = $null
 
     foreach ($release in $json) {
@@ -40,6 +40,8 @@ function global:au_GetLatest {
         $version = $release.tag_name -Replace 'v',''
 
         $release_data = @{ URL64 = $url64; Version = $version }
+
+        break
     }
 
     foreach ($release in $json) {
@@ -50,8 +52,11 @@ function global:au_GetLatest {
         $url64 = $asset64.browser_download_url
 
         $version = $release.tag_name -Replace 'v',''
+        $version = ($version.split(".") | select -first 3) -join '.'
 
         $canary_data = @{ URL64 = $url64; Version = $version }
+
+        break
     }
 
     if ($release_data -eq $null) {
