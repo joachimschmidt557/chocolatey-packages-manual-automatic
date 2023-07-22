@@ -1,8 +1,8 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://www.asio4all.org/downloads_11/ASIO4ALL_2_15_English.exe'
-$checksum   = '74dfe576c6f16e362ff2d44c313947aad9d63ed839b4d3ffac88a1320a486b90'
+$url        = 'https://asio4all.org/downloads/ASIO4ALL_2_15_English.exe'
+$checksum   = 'b22282d5a2daa646deb624cf461bf4f1dfeda541cc505a6781124275f8c2960d'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
