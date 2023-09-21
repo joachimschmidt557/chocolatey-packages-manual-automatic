@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileLocation = Get-Item "$toolsDir\quodlibet-*-installer.msi"
+$fileLocation = Get-Item "$toolsDir\quodlibet-*-installer.exe"
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
