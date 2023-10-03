@@ -50,42 +50,46 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <tags>mockoon rest api rest-api mock foss cross-platfrom</tags>
     <summary>Mockoon is the easiest and quickest way to run mock APIs locally. No remote deployment, no account required, open source.</summary>
     <description>
-## What is it?
+## What is Mockoon?
 
-Mockoon is an open source server/API mocking tool built with Electron and available on Windows, Linux and MacOS.
+Mockoon is the easiest and quickest way to run mock APIs locally. No remote deployment, no account required, free and open-source.
 
-![screenshot](https://raw.githubusercontent.com/255kb/mockoon/master/images/screenshot.jpg)
+It's a desktop application and a [CLI](https://mockoon.com/cli/) that help you work faster with APIs by mocking them. Integrate third-party APIs quicker, improve your integration tests, speed up your development, etc.
 
-### Unlimited fast mocking
+➡️ [Download](https://mockoon.com/download/)
 
-Create an unlimited number of mock local servers and routes, and run them in parallel.
+![screenshot](https://mockoon.com/images/hero-repo.png)
 
-### Complete control
+Mockoon is an open-source project built by volunteer maintainers. If you like our application, please consider sponsoring us and join all the [Sponsors and Backers](https://github.com/mockoon/mockoon/blob/main/backers.md) who helped this project over time!
 
-customize routes: HTTP methods, regex paths, HTTP status, file serving, custom headers...
+➡️ [Sponsor us](https://mockoon.com/images/sponsor-btn.png?)
 
-### ... and more
+## Features
 
-Import / export, JSON templating, auto save, proxy mode, HTTPS, latency simulation, CORS support...
+Mockoon offers many features:
 
-## Complete list of features
+- unlimited number of mock local servers and routes
+- CLI to run your mock in headless environments, CI, etc.
+- complete control on routes definition: HTTP methods and statuses, regex paths, file serving, custom headers, etc.
+- OpenAPI compatibility
+- Record/logs of all entering and forwarded requests
+- JSON templating
+- proxy forwarding mode
+- HTTPS support
 
-* Mock an unlimited number of environments with unlimited number of routes
-* Environment import / export (from file or clipboard)
-* Run multiple mock local servers in parallel
-* Route regex supported (/.*, /[a-z]{3}, ...)
-* Support all HTTP codes and methods
-* Automatic CORS headers for OPTIONS requests
-* HTTPS support (self signed certificate)
-* Unlimited custom headers with autocompletion
-* Environment / route level latency simulation
-* Incoming request logs
-* Proxy mode: redirect all non-defined routes to an URL
-* File serving with automatic mime type detection
-* Rich text editor for body content with JSON templating
-* JSON templating supports request parameters (URL and route params, query string...)
-* Real-time auto save
-* No account required
+You can check the [complete list](https://mockoon.com/features/) on the website.
+
+## Mockoon's documentation
+
+You will find Mockoon's [documentation](https://mockoon.com/docs/latest) on the official website. It covers Mockoon's most complex features. Feel free to contribute or ask for new topics to be covered.
+
+## Changelogs
+
+You will find Mockoon applications [changelogs](https://mockoon.com/releases/) on the official website.
+
+## Support/feedback
+
+You can discuss all things related to Mockoon, and ask for help, on the [official community](https://github.com/mockoon/mockoon/discussions). It's also a good place to discuss bugs and feature requests before opening an issue on the repository. For more chat-like discussions, you can also join our [Discord server](https://discord.gg/FtJjkejKGp).
     </description>
     <releaseNotes>https://mockoon.com/releases/desktop/</releaseNotes>
     <!-- =============================== -->
