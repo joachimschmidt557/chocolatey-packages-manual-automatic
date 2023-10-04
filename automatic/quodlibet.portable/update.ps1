@@ -4,7 +4,7 @@ $releases = 'https://api.github.com/repos/quodlibet/quodlibet/releases'
 
 function global:au_BeforeUpdate() {
     #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
-    Get-RemoteFiles -Purge
+    Get-RemoteFiles -Purge -NoSuffix
     $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32
 }
 
