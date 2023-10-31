@@ -7,15 +7,15 @@ Package can be verified like this:
 
 1. Go to
 
-   URL: https://github.com/mockoon/mockoon/releases/download/v5.0.0/mockoon.setup.5.0.0.exe
+   URL: https://github.com/mockoon/mockoon/releases/download/v5.1.0/mockoon.setup.5.1.0.exe
 
    to download the installer.
 
-2. You can use one of the following methods to obtain the SHA256 checksum: 02228E4D82820C3C50564E73FEEFB71DCA03B0AC2BECEB36E87D069366E65FF4
+2. You can use one of the following methods to obtain the SHA256 checksum: 44AB5D3DC87A071120AFE2FF98627C14D914B24DF03155092EF39E231E39C42C
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum: 02228E4D82820C3C50564E73FEEFB71DCA03B0AC2BECEB36E87D069366E65FF4
+   checksum: 44AB5D3DC87A071120AFE2FF98627C14D914B24DF03155092EF39E231E39C42C
 
 File 'LICENSE.txt' obtained from:
    https://github.com/255kb/mockoon/blob/master/LICENSE.md
