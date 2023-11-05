@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   64-bit: https://github.com/buttercup/buttercup-desktop/releases/download/v2.20.3/Buttercup-win-x64-2.20.3-portable.exe
+   64-bit: https://github.com/buttercup/buttercup-desktop/releases/download/v2.21.0/Buttercup-win-x64-2.21.0-portable.exe
 
    to download the zip file.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: 9053c9c09cd68bb96400c276f051be276fc192d043bda002ae5b5ccb0732b86c
+   checksum64: b23bb78f9b0fdf610607965e4db8f39eb7968a737028d130e7ab8b8bec03660d
 
 File 'LICENSE.txt' obtained from:
    https://raw.githubusercontent.com/buttercup/buttercup-desktop/master/LICENSE
