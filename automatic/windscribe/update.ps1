@@ -8,7 +8,7 @@ function global:au_SearchReplace {
     @{
         'tools\chocolateyinstall.ps1' = @{
             "(^[$]url\s*=\s*)('.*')" = "`$1'$($Latest.Url64)'"
-            "(^\s*?checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
+            "(^\s*?checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
         }
         "$($Latest.PackageName).nuspec" = @{
           '(\<copyright\>).*?(\<\/copyright\>)' = "`${1}$(Get-Date -Format yyyy) Windscribe Limited`$2"
