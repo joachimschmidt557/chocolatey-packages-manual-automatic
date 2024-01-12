@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://deploy.totallyacdn.com/desktop-apps/2.8.6/Windscribe_2.8.6.exe'
+$url        = 'https://deploy.totallyacdn.com/desktop-apps/2.9.2/Windscribe_2.9.2_guinea_pig.exe'
 
 Confirm-Win10
 
@@ -13,7 +13,7 @@ $packageArgs = @{
 
   softwareName    = 'windscribe*'
 
-  checksum64      = 'd43f1ef244e8c9a9e22eb6c792d7420436e904fcb80f4fa4eafd4e6fab29e702'
+  checksum64      = '5e33bb6c77193a0e76302bc3b504336245be87aebf60c3232d24b340f8feee14'
   checksumType64  = 'sha256'
 
   silentArgs      = '-silent'
