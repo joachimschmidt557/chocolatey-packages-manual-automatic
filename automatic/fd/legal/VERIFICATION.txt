@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   32-bit: https://github.com/sharkdp/fd/releases/download/v9.0.0/fd-v9.0.0-i686-pc-windows-msvc.zip
-   64-bit: https://github.com/sharkdp/fd/releases/download/v9.0.0/fd-v9.0.0-x86_64-pc-windows-msvc.zip
+   32-bit: https://github.com/sharkdp/fd/releases/download/v10.0.0/fd-v10.0.0-i686-pc-windows-msvc.zip
+   64-bit: https://github.com/sharkdp/fd/releases/download/v10.0.0/fd-v10.0.0-x86_64-pc-windows-msvc.zip
 
    to download the zip file.
 
@@ -16,8 +16,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 84b37e3238de8d91e1501d9a317e53fd8d938380f9e7370c42ba1eed88f6440e
-   checksum64: 8c5ff3fb24ef02f78d3e8e7ddf116456aceeeb3832f20bba56f21d8b373e5e1b
+   checksum32: b590d372463ef4c6079183fe54c3828ef69ede3fe44cf9ea41811c3215058373
+   checksum64: c9be46e2a457b19686d9bcb0f732a6ef7d72d44019c2a8b419aeb2b3e4afb921
 
 File 'LICENSE.txt' obtained from:
    https://github.com/sharkdp/fd/blob/master/LICENSE-APACHE
