@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://flavio.tordini.org/files/musique/musique.exe'
+$url        = 'https://flavio.tordini.org/files/musique/musique.exe'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
