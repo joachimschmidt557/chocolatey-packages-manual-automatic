@@ -8,8 +8,8 @@
 This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Reference. Chocolatey uses a special version of NuGet.Core that allows us to do more than was initially possible. As such there are certain things to be aware of:
 
 * the package xmlns schema url may cause issues with nuget.exe
-* Any of the following elements can ONLY be used by choco tools - projectSourceUrl, docsUrl, mailingListUrl, bugTrackerUrl, packageSourceUrl, provides, conflicts, replaces 
-* nuget.exe can still install packages with those elements but they are ignored. Any authoring tools or commands will error on those elements 
+* Any of the following elements can ONLY be used by choco tools - projectSourceUrl, docsUrl, mailingListUrl, bugTrackerUrl, packageSourceUrl, provides, conflicts, replaces
+* nuget.exe can still install packages with those elements but they are ignored. Any authoring tools or commands will error on those elements
 -->
 
 <!-- You can embed software files directly into packages, as long as you are not bound by distribution rights. -->
@@ -26,7 +26,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>1.7</version>
+    <version>1.12</version>
     <packageSourceUrl>https://github.com/joachimschmidt557/chocolatey-packages-manual-automatic/tree/master/manual/musique</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>joachim.schmidt557</owners>
@@ -55,7 +55,7 @@ only thing that really matters: Music.
 
 Musique is great for kids and other family members that may find other
 players too complex and cumbersome.
-     
+
 * Starts fast, very lightweight and can easily handle large collections.
 * Browse by artist photos, album covers and folders too, so you can organize your music your way.
 * Immersive Info View you can switch to while listening. It shows information about the current track, album and artist.
@@ -64,10 +64,10 @@ players too complex and cumbersome.
 * Musique never ever modifies your files, it stores all of its data in its own database.
 * Supports scrobbling to Last.fm
 * Not an iTunes addon. It's a completely independent application that does one thing and does it well.
-* Translated to more than 20 languages including German, French, Spanish, Portuguese, Italian, Russian and Chinese.    
+* Translated to more than 20 languages including German, French, Spanish, Portuguese, Italian, Russian and Chinese.
     </description>
     <releaseNotes>http://flavio.tordini.org/musique-1-5-now-free-on-mac-windows</releaseNotes>
-    <!-- =============================== -->      
+    <!-- =============================== -->
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
     <!--<dependencies>
