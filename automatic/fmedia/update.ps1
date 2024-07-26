@@ -24,7 +24,7 @@ function global:au_GetLatest {
 
     # fmedia-0.34.1-win-x64.zip
     #$re_32  = "fmedia-.+-win-x64.zip"
-    $re_64  = "fmedia-.+-win-x64.zip"
+    $re_64  = "fmedia-.+-windows-x64.zip"
 
     foreach ($release in $json) {
         # $asset32 = $release.assets | ? name -match $re_32
