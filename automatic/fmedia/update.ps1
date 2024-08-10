@@ -4,7 +4,7 @@ $releases = 'https://api.github.com/repos/stsaz/fmedia/releases'
 
 function global:au_BeforeUpdate() {
     #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
-    Get-RemoteFiles -Purge
+    Get-RemoteFiles -Purge -NoSuffix
     $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64
 }
 
