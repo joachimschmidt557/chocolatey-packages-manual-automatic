@@ -1,2 +1,13 @@
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-Get-ChocolateyWebFile -PackageName 'bigbyte' -FileFullPath "$toolsDir\BigByte.exe" -Url 'http://www.donationcoder.com/Software/Skrommel/BigByte/BigByte.exe' -Checksum '1470C2B1A11E1BEB10890A4789CE9D7A34ABDDE170A6E8CB8C308086741B20E8' -ChecksumType 'sha256'
+# We need to fetch the download page and extract the URL from there as
+# it changes periodically
+
+$download_page = Invoke-WebRequest -Uri "https://www.dcmembers.com/skrommel/download/bigbyte/" -UseBasicParsing
+$link = $download_page.Links | where onclick -match "location.href.*" | select -first 1
+$onclick = $link.onclick
+$url = $onclick -replace "location.href='","" -replace "';return false;",""
+
+Install-ChocolateyZipPackage -PackageName 'BigByte' `
+  -Url $url `
+  -UnzipLocation "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)" `
+  -Checksum "4ab78826459bcb9dfe66925d1cba7729db77562ee320bf6f7e8331ae574b5831" `
+  -ChecksumType "sha256"

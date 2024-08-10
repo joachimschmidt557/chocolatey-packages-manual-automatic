@@ -1,3 +1,6 @@
+# We need to fetch the download page and extract the URL from there as
+# it changes periodically
+
 $download_page = Invoke-WebRequest -Uri "https://www.dcmembers.com/skrommel/download/accents/" -UseBasicParsing
 $link = $download_page.Links | where onclick -match "location.href.*" | select -first 1
 $onclick = $link.onclick
