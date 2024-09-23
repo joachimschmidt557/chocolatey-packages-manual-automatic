@@ -38,10 +38,10 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>alexkay</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://github.com/alexkay/spek</projectUrl>
-    <iconUrl>http://spek.cc/spek.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/chocolatey-packages-manual-automatic@2e3e3b9188bec5ebf2e3dc91e6fbd2b50b47cf5f/icons/spek.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is is required for the community feed -->
-    <licenseUrl>https://github.com/alexkay/spek/blob/master/LICENCE.md</licenseUrl>
+    <licenseUrl>https://github.com/alexkay/spek/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/alexkay/spek</projectSourceUrl>
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
@@ -83,6 +83,7 @@ Features
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
     <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>
