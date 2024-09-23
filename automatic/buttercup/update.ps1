@@ -2,17 +2,12 @@ import-module au
 
 $releases = 'https://api.github.com/repos/buttercup/buttercup-desktop/releases'
 
-function global:au_BeforeUpdate() {
-    $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64
-}
-
 function global:au_SearchReplace {
     @{
-        'tools\chocolateyInstall.ps1' = @{
-            "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
-            "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
+        "$($Latest.PackageName).nuspec" = @{
+          "(\<dependency .+?`"$($Latest.PackageName).install`" version=)`"([^`"]+)`"" = "`$1`"[$($Latest.Version)]`""
         }
-     }
+    }
 }
 
 function global:au_GetLatest {
