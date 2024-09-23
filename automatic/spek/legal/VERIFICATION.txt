@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   64-bit: https://github.com/buttercup/buttercup-desktop/releases/download/v2.28.1/Buttercup-win-x64-2.28.1-installer.exe
+   64-bit: https://github.com/alexkay/spek/releases/download/v0.8.5/spek-0.8.5-beta.msi
 
    to download the zip file.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: f1f66b7a7bfeccc717402696c936b311b3983d5545606ef73102d2475ba6ba50
+   checksum64: B869A697EA1A996505F628520A8A1FBABF200483928A806D5022DBBD89BC2121
 
 File 'LICENSE.txt' obtained from:
    https://raw.githubusercontent.com/alexkay/spek/refs/heads/master/LICENSE

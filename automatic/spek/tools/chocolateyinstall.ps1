@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileName     = 'spek'
+$fileName     = 'spek-0.8.5-beta.msi'
 $fileLocation = Get-Item "$toolsDir\${fileName}"
 
 $packageArgs = @{
