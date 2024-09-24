@@ -7,6 +7,7 @@ $fileLocation = Get-Item "$toolsDir\${fileName}"
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'MSI'
+  file          = $fileLocation
 
   softwareName  = 'resonic*'
 
