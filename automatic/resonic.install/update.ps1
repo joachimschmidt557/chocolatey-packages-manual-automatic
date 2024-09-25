@@ -4,7 +4,6 @@ $download = 'https://resonic.at/get/player'
 
 function global:au_BeforeUpdate() {
     #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
-    Get-RemoteFiles -Purge
     $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL
 }
 function global:au_SearchReplace {
