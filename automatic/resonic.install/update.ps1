@@ -19,6 +19,11 @@ function global:au_GetLatest {
     $download_file = Invoke-WebRequest -Uri $download -Method Head
 
     $version = ($download_file.Headers["Content-Disposition"] -split ' ' | select -last 1 ).replace('.msi"', '')
+    # The fourth version component is used, so add 00 for possible
+    # future fix version notation
+    #
+    # see https://community.chocolatey.org/courses/creating-chocolatey-packages/naming-description-and-versioning
+    $version += "00"
 
     $Latest = @{ URL = $download; Version = $version; FileType = 'msi' }
     return $Latest
