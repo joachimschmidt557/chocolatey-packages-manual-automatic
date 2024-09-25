@@ -6,7 +6,7 @@ $checksum   = '53dae7caaaa3568deecff4f29a4d1c67291e3f8cddf47df7930109189bdcb4af'
 
 $options     = @{
   Headers       = @{
-    'User-Agent' = "User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:129.0) Gecko/20100101 Firefox/129.0"
+    'User-Agent' = "Mozilla/5.0 (Windows NT 10.0; rv:129.0) Gecko/20100101 Firefox/129.0"
   }
 }
 $packageArgs = @{
