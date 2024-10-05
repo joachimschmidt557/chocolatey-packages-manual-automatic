@@ -1,10 +1,4 @@
-# We need to fetch the download page and extract the URL from there as
-# it changes periodically
-
-$download_page = Invoke-WebRequest -Uri "https://www.dcmembers.com/skrommel/download/bigbyte/" -UseBasicParsing
-$link = $download_page.Links | where onclick -match "location.href.*" | select -first 1
-$onclick = $link.onclick
-$url = $onclick -replace "location.href='","" -replace "';return false;",""
+$url = "https://www.dcmembers.com/skrommel/download/bigbyte/?wpdmdl=216"
 
 Install-ChocolateyZipPackage -PackageName 'BigByte' `
   -Url $url `
