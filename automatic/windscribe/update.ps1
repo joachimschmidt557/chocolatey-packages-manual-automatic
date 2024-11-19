@@ -59,7 +59,7 @@ function global:au_GetLatest {
         $version = $release.tag_name -Replace 'v',''
         $version = ($version.split(".") | select -first 3) -join '.'
 
-        $beta_data = @{ URL64 = $url64; Version = $version }
+        $beta_data = @{ URL64 = $url64; Version = "$version-beta" }
 
         break
     }
@@ -74,7 +74,7 @@ function global:au_GetLatest {
         $version = $release.tag_name -Replace 'v',''
         $version = ($version.split(".") | select -first 3) -join '.'
 
-        $alpha_data = @{ URL64 = $url64; Version = $version }
+        $alpha_data = @{ URL64 = $url64; Version = "$version-alpha" }
 
         break
     }
