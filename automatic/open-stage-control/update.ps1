@@ -25,7 +25,7 @@ function global:au_GetLatest {
 
     # open-stage-control-0.37.3-win32-x64.zip
     # $re_32  = "open-stage-control-.+-win32-ia32.zip"
-    $re_64  = "open-stage-control-.+-win32-x64.zip"
+    $re_64  = "open-stage-control_.+_win32-x64.zip"
 
     foreach ($release in $json) {
         # $asset32 = $release.assets | ? name -match $re_32
