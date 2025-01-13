@@ -1,2 +1,7 @@
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-Get-ChocolateyWebFile -PackageName 'draglock' -FileFullPath "$toolsDir\DragLock.exe" -Url 'http://www.donationcoder.com/Software/Skrommel/DragLock/DragLock.exe' -Checksum 'CD14D533D4D2CF159D6CC8050338011FAA5B99A09AF39C3EE353262C31DDB6D7' -ChecksumType 'sha256'
+$url = "https://www.dcmembers.com/skrommel/download/draglock/?wpdmdl=284"
+
+Install-ChocolateyZipPackage -PackageName 'DragLock' `
+  -Url $url `
+  -UnzipLocation "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)" `
+  -Checksum "80d82bdb7717eab8ed2035d00ee581c019b65d554e2024748086e2f9a598ded0" `
+  -ChecksumType "sha256"
