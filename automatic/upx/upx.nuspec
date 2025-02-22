@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>upx</id>
-    <version>4.2.4</version>
+    <version>5.0.0</version>
     <title>Ultimate Packer for eXecutables</title>
     <authors>Markus Oberhumer,Laszlo Molnar,John Reiser</authors>
     <owners>dtgm,joachim.schmidt557</owners>
