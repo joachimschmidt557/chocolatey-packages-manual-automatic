@@ -64,7 +64,7 @@ phiola - fast audio player, recorder, converter for Windows, Linux, and Android.
 * Terminal/Console UI for interaction at runtime
 * GUI for Windows, Linux, Android
 * Instant startup time: very short initial delay until the audio starts playing (e.g. Linux/PulseAudio: TUI: `~25ms`, GUI: `~50ms`)
-* Fast (small footprint, low overhead): keeps your CPU, memory & disk I/O at absolute minimum; spends 99% of time inside codec algorithms
+* Fast (small footprint, low overhead): keeps your CPU, memory and disk I/O at absolute minimum; spends 99% of time inside codec algorithms
 </description>
     <releaseNotes>https://github.com/stsaz/phiola/releases</releaseNotes>
     <!-- =============================== -->
