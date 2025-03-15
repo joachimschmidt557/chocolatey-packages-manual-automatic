@@ -48,9 +48,9 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://github.com/stsaz/phiola/issues</bugTrackerUrl>
     <tags>phiola fmedia media media-player player mp3 aac wav</tags>
-    <summary>Fast audio player, recorder, converter for Windows, Linux & Android</summary>
+    <summary>Fast audio player, recorder, converter for Windows, Linux, and Android</summary>
     <description>
-phiola - fast audio player, recorder, converter for Windows, Linux & Android. It can play audio files from your device or remote server, record audio from your microphone or Internet radio stream, process and convert audio into another format, and more. Its low CPU consumption conserves the notebook/phone battery. You can issue commands to phiola via its CLI, TUI, GUI, system pipe and SDK interfaces. Its fast startup time allows using it from custom scripts on a "play-and-exit" or "record-and-exit" basis. It's completely portable (all codecs are bundled) - you can run it directly from a read-only flash drive. It's a free and open-source project, and you can use it as a standalone application or as a library for your own software.
+phiola - fast audio player, recorder, converter for Windows, Linux, and Android. It can play audio files from your device or remote server, record audio from your microphone or Internet radio stream, process and convert audio into another format, and more. Its low CPU consumption conserves the notebook/phone battery. You can issue commands to phiola via its CLI, TUI, GUI, system pipe and SDK interfaces. Its fast startup time allows using it from custom scripts on a "play-and-exit" or "record-and-exit" basis. It's completely portable (all codecs are bundled) - you can run it directly from a read-only flash drive. It's a free and open-source project, and you can use it as a standalone application or as a library for your own software.
 
 ## Features
 
