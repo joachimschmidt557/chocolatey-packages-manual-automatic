@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   64-bit: https://github.com/stsaz/fmedia/releases/download/v1.31/fmedia-1.31-windows-x64.zip
+   64-bit: https://github.com/stsaz/phiola/releases/download/v2.4-beta1/phiola-2.4-beta1-windows-x64.zip
 
    to download the zip file.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: 3198bbdde2f89d5a2599337d589aca6ca318d5681fd1de1a9fcdfb0502e69b4d
+   checksum64: 36E181AE2523C3F8B035DE913E20ECFA699DBD368FF65B7E5CB7C62E2CFA2DC9
 
 File 'LICENSE.txt' obtained from:
    https://github.com/stsaz/phiola/blob/master/LICENSE

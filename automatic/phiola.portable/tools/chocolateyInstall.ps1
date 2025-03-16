@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileName   = 'spek-0.8.5-beta.msi'
+$fileName   = 'phiola-2.4-beta1-windows-x64.zip'
 $zipFile64  = Get-Item "$toolsDir\${fileName}"
 
 $packageArgs = @{
