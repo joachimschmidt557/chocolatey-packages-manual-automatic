@@ -1,8 +1,10 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$zipFile    = Get-Item "$toolsDir\*stable_win32*.zip"
-$zipFile64  = Get-Item "$toolsDir\*stable_win64*.zip"
+$fileName32 = 'phiola-2.4-beta1-windows-x64.zip'
+$fileName64 = 'phiola-2.4-beta1-windows-x64.zip'
+$zipFile    = Get-Item "$toolsDir\${fileName32}"
+$zipFile64  = Get-Item "$toolsDir\${fileName64}"
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
