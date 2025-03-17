@@ -15,7 +15,7 @@ function global:au_SearchReplace {
          }
 
         'tools\chocolateyInstall.ps1' = @{
-            "(^[$]fileName\s*=\s*)('.*')"      = "`$1'$($Latest.FileName)'"
+            "(^[$]fileName\s*=\s*)('.*')"      = "`$1'$($Latest.FileName64)'"
         }
     }
 }
@@ -40,7 +40,7 @@ function global:au_GetLatest {
 
         $version = $release.tag_name -Replace 'v',''
 
-        $Latest = @{ URL64 = $url64; Version = $version; FileName = $asset64.name }
+        $Latest = @{ URL64 = $url64; Version = $version }
         return $Latest
     }
 
