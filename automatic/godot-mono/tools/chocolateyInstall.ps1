@@ -1,8 +1,8 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileName32 = 'Godot_v4.5-dev1_win32.exe_x32.zip'
-$fileName64 = 'Godot_v4.5-dev1_win64.exe_x64.zip'
+$fileName32 = 'Godot_v4.5-dev1_mono_win32_x32.zip'
+$fileName64 = 'Godot_v4.5-dev1_mono_win64_x64.zip'
 $zipFile    = Get-Item "$toolsDir\${fileName32}.zip"
 $zipFile64  = Get-Item "$toolsDir\${fileName64}.zip"
 
