@@ -1,8 +1,10 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$zipFile    = Get-Item "$toolsDir\*stable_mono_win32*.zip"
-$zipFile64  = Get-Item "$toolsDir\*stable_mono_win64*.zip"
+$fileName32 = 'Godot_v4.5-dev1_win32.exe_x32.zip'
+$fileName64 = 'Godot_v4.5-dev1_win64.exe_x64.zip'
+$zipFile    = Get-Item "$toolsDir\${fileName32}.zip"
+$zipFile64  = Get-Item "$toolsDir\${fileName64}.zip"
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
