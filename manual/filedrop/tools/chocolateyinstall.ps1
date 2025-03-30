@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://commondatastorage.googleapis.com/filedropme/Filedrop.exe'
+$url        = 'https://web.archive.org/web/20160326020655/http://commondatastorage.googleapis.com/filedropme/Filedrop.exe'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
