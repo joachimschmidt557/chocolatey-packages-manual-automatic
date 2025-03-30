@@ -38,7 +38,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Flavio Tordini</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>http://flavio.tordini.org/musique</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/ChocolateyPackages@6640e06ca1e970cbfa77a5af676c1a8774d01733/icons/musique.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/joachimschmidt557/chocolatey-packages-manual-automatic@85dcb2d9b4639e5bacccdce1220c06ce6cb33071/icons/musique.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://github.com/flaviotordini/musique/blob/master/COPYING</licenseUrl>
