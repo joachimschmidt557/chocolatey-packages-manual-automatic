@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   64-bit: https://github.com/stsaz/phiola/releases/download/v2.4-beta2/phiola-2.4-beta2-windows-x64.zip
+   64-bit: https://github.com/stsaz/phiola/releases/download/v2.4-beta3/phiola-2.4-beta3-windows-x64.zip
 
    to download the zip file.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: 08C866904707CE50C5C136D13299F5916C2CD99C64AEF2DDB90E0046A04B7E1E
+   checksum64: 7BA452BC94D95A4DB4891E83260538944313239A53BBDFCDAD633D789D5B8DBE
 
 File 'LICENSE.txt' obtained from:
    https://github.com/stsaz/phiola/blob/master/LICENSE
