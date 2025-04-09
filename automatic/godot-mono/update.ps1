@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://api.github.com/repos/godotengine/godot-builds/releases?per_page=60'
+$releases = 'https://api.github.com/repos/godotengine/godot-builds/releases'
 
 function global:au_BeforeUpdate() {
     #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
@@ -25,8 +25,21 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $token = ConvertTo-SecureString $Env:github_api_key -AsPlainText -Force
-    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing -Authentication Bearer -Token $token
-    $json = ConvertFrom-Json $response
+
+    $json = @()
+
+    while ($true) {
+        $response = Invoke-WebRequest -Uri $releases -UseBasicParsing -Authentication Bearer -Token $token
+        $json += ConvertFrom-Json $response
+
+        $releases = $response.Headers.Link[0].Split(", ") -match '; rel="next"$'
+        if (-not $releases) {
+            break
+        }
+
+        $releases = $releases -replace '; rel="next"$', '' -replace '^<', '' -replace '>$', ''
+        $releases = $releases[0]
+    }
 
     # see https://docs.godotengine.org/en/stable/about/release_policy.html
     # TODO omitted 3.7 for now as no corresponding release exists yet
