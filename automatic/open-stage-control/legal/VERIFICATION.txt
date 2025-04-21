@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   64-bit: https://github.com/jean-emmanuel/open-stage-control/releases/download/v1.29.0/open-stage-control_1.29.0_win32-x64.zip
+   64-bit: https://github.com/jean-emmanuel/open-stage-control/releases/download/v1.29.2/open-stage-control_1.29.2_win32-x64.zip
 
    to download the zip file.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: 08F4E2464988841CB2C4022370194509473B8B4A39A841150C06A40694EF54E6
+   checksum64: CCB87DA9395E46CD3E69E8887D7F5FBA3A98C0E2C53F4EA70C58B70D23D38207
 
 File 'LICENSE.txt' obtained from:
    https://github.com/jean-emmanuel/open-stage-control/blob/master/LICENSE
