@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileName   = 'phiola-2.4-rc4-windows-x64.zip'
+$fileName   = 'phiola-2.4.5-windows-x64.zip'
 $zipFile64  = Get-Item "$toolsDir\${fileName}"
 
 $packageArgs = @{
