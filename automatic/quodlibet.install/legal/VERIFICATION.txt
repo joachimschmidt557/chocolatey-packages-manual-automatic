@@ -7,15 +7,15 @@ Package can be verified like this:
 
 1. Go to
 
-   URL: https://github.com/quodlibet/quodlibet/releases/download/release-4.6.0/quodlibet-4.6.0-installer.exe
+   URL: https://github.com/quodlibet/quodlibet/releases/download/release-4.7.1/quodlibet-4.7.1-installer.exe
 
    to download the installer.
 
-2. You can use one of the following methods to obtain the SHA256 checksum: cf709ec266197b129b87bd26fb72e9bf5ed1ba7ae8c67907c1f0935208c9b06b
+2. You can use one of the following methods to obtain the SHA256 checksum: 2F79F22C8BCA39FE3A4DEFEA03D0A6BA5A1C33D2F591FA09DB4558F95844A956
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum: cf709ec266197b129b87bd26fb72e9bf5ed1ba7ae8c67907c1f0935208c9b06b
+   checksum: 2F79F22C8BCA39FE3A4DEFEA03D0A6BA5A1C33D2F591FA09DB4558F95844A956
 
 File 'LICENSE.txt' obtained from:
    https://raw.githubusercontent.com/quodlibet/quodlibet/main/COPYING
