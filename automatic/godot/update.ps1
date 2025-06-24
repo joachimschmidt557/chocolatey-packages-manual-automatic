@@ -78,7 +78,16 @@ function global:au_GetLatest {
                 $version = $versionAndSuffix | Join-String -Separator "-"
             }
 
-            $data = @{ URL32 = $url32; URL64 = $url64; Version = $version }
+            $data = @{
+                URL32 = $url32
+                URL64 = $url64
+                Version = $version
+                Options = @{
+                    Headers = @{
+                        "Authorization" = "Bearer $token"
+                    }
+                }
+            }
             break
         }
 
