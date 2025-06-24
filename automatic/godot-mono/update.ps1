@@ -39,6 +39,8 @@ function global:au_GetLatest {
 
         $releases = $releases -replace '; rel="next"$', '' -replace '^<', '' -replace '>$', ''
         $releases = $releases[0]
+
+        Start-Sleep 3 # prevent GitHub API rate limiting
     }
 
     # see https://docs.godotengine.org/en/stable/about/release_policy.html

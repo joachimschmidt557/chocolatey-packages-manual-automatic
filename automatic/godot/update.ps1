@@ -39,6 +39,8 @@ function global:au_GetLatest {
 
         $releases = $releases -replace '; rel="next"$', '' -replace '^<', '' -replace '>$', ''
         $releases = $releases[0]
+
+        Start-Sleep 3 # prevent GitHub API rate limiting
     }
 
     # see https://docs.godotengine.org/en/stable/about/release_policy.html
@@ -74,7 +76,7 @@ function global:au_GetLatest {
             if ($versionComponents.Length -eq 2) {
                 # e.g. 4.5-beta1, convert to 4.5.0-beta1
                 $versionAndSuffix = $version.Split("-")
-                $versionAndSuffix[0] + ".0"
+                $versionAndSuffix[0] += ".0"
                 $version = $versionAndSuffix | Join-String -Separator "-"
             }
 
