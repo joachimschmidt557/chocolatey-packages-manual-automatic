@@ -71,6 +71,14 @@ function global:au_GetLatest {
 
             $version = $release.tag_name -Replace '-stable',''
 
+            $versionComponents = $version.Split(".")
+            if ($versionComponents.Length -eq 2) {
+                # e.g. 4.5-beta1, convert to 4.5.0-beta1
+                $versionAndSuffix = $version.Split("-")
+                $versionAndSuffix[0] += ".0"
+                $version = $versionAndSuffix | Join-String -Separator "-"
+            }
+
             $data = @{ URL32 = $url32; URL64 = $url64; Version = $version }
             break
         }
