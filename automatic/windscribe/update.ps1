@@ -24,15 +24,15 @@ function global:au_GetLatest {
     $json = ConvertFrom-Json $response
 
     # Release: Windscribe_2.11.11.exe
-    $re_release     = "^Windscribe_[^A-Za-z]+.exe$"
+    $re_release= "^Windscribe_[^A-Za-z]+_amd64.exe$"
     $release_data   = $null
 
     # Beta: Windscribe_2.12.4_beta.exe
-    $re_beta     = "^Windscribe_[^A-Za-z]+_beta.exe$"
+    $re_beta= "^Windscribe_[^A-Za-z]+_beta_amd64.exe$"
     $beta_data   = $null
 
     # Alpha: Windscribe_2.12.1_guinea_pig.exe
-    $re_alpha     = "^Windscribe_[^A-Za-z]+_guinea_pig.exe$"
+    $re_alpha= "^Windscribe_[^A-Za-z]+_guinea_pig_amd64.exe$"
     $alpha_data   = $null
 
     foreach ($release in $json) {
