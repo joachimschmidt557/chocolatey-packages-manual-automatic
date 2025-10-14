@@ -45,7 +45,7 @@ function global:au_GetLatest {
 
     # see https://docs.godotengine.org/en/stable/about/release_policy.html
     # TODO omitted 3.7 for now as no corresponding release exists yet
-    $supported_version_families = @("3.5", "3.6", "4.2", "4.3", "4.4", "4.5")
+    $supported_version_families = @("3.5", "3.6", "4.2", "4.3", "4.4", "4.5", "4.6")
 
     # Godot_v3.0.6-stable_win64.exe.zip
     # Godot_v3.0.6-stable_win32.exe.zip
