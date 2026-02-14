@@ -43,10 +43,10 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://github.com/jean-emmanuel/open-stage-control/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/jean-emmanuel/open-stage-control</projectSourceUrl>
+    <projectSourceUrl>https://framagit.org/jean-emmanuel/open-stage-control</projectSourceUrl>
     <docsUrl>https://openstagecontrol.ammd.net/docs/getting-started/introduction/</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
-    <bugTrackerUrl>https://github.com/jean-emmanuel/open-stage-control/issues</bugTrackerUrl>
+    <bugTrackerUrl>https://framagit.org/jean-emmanuel/open-stage-control/-/issues</bugTrackerUrl>
     <tags>open-stage-control open stage control osc midi audio foss cross-platform electron</tags>
     <summary>Libre and modular OSC / MIDI controller</summary>
     <description>
@@ -72,7 +72,7 @@ Firefox is *not* supported.
 Some anti-virus software falsely flag `osc-midi-windows.exe` as potential malware. This is because this executable was created using [PyInstaller](https://www.pyinstaller.org/) and executables created with this tool are known to often get false positive detections [1](https://openstagecontrol.discourse.group/t/windows-deffender-flagged-osc-midi-windows-exe-as-trojan-horse/1437/3) [2](https://openstagecontrol.discourse.group/t/testing-needed-out-of-the-box-midi-support/808/29).
 
 </description>
-    <releaseNotes>https://github.com/jean-emmanuel/open-stage-control/releases</releaseNotes>
+    <releaseNotes>https://framagit.org/jean-emmanuel/open-stage-control/-/releases</releaseNotes>
     <!-- =============================== -->
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->

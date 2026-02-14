@@ -18,4 +18,4 @@ Package can be verified like this:
    checksum64: 14C3BEB171A068ADA100B4E13C3B2444BC60328AEF68FF6F4DF9863087E2C3A7
 
 File 'LICENSE.txt' obtained from:
-   https://github.com/jean-emmanuel/open-stage-control/blob/master/LICENSE
+   https://framagit.org/jean-emmanuel/open-stage-control/-/blob/master/LICENSE
