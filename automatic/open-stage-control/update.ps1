@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://api.github.com/repos/jean-emmanuel/open-stage-control/releases'
+$releases = 'https://framagit.org/api/v4/projects/jean-emmanuel%2Fopen-stage-control/releases'
 
 function global:au_BeforeUpdate() {
     #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
@@ -14,28 +14,30 @@ function global:au_SearchReplace {
             "(?i)(\s+64-bit:).*"             = "`${1} $($Latest.URL64)"
             # "(?i)(checksum32:).*"           = "`${1} $($Latest.Checksum32)"
             "(?i)(checksum64:).*"           = "`${1} $($Latest.Checksum64)"
-          }
+        }
+
+        'tools\chocolateyInstall.ps1' = @{
+            "(^[$]fileName\s*=\s*)('.*')"      = "`$1'$($Latest.FileName64)'"
+        }
      }
 }
 
 function global:au_GetLatest {
-    $token = ConvertTo-SecureString $Env:github_api_key -AsPlainText -Force
-    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing -Authentication Bearer -Token $token
+    # $token = ConvertTo-SecureString $Env:github_api_key -AsPlainText -Force
+    $response = Invoke-WebRequest -Uri $releases -UseBasicParsing # -Authentication Bearer -Token $token
     $json = ConvertFrom-Json $response
 
-    # open-stage-control-0.37.3-win32-x64.zip
-    # $re_32  = "open-stage-control-.+-win32-ia32.zip"
-    $re_64  = "open-stage-control_.+_win32-x64.zip"
+    $link_name_64 = "Windows (64-bit)"
 
     foreach ($release in $json) {
-        # $asset32 = $release.assets | ? name -match $re_32
-        $asset64 = $release.assets | ? name -match $re_64
+        # $asset32 = $release.assets.links | ? name -eq $link_name_32
+        $asset64 = $release.assets.links | ? name -eq $link_name_64
 
         # if ($asset32 -eq $null) { continue }
         if ($asset64 -eq $null) { continue }
 
-        # $url32 = $asset32.browser_download_url
-        $url64 = $asset64.browser_download_url
+        # $url32 = $asset32.url
+        $url64 = $asset64.url
 
         $version = $release.tag_name -Replace 'v',''
 

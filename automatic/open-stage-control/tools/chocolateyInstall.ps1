@@ -1,7 +1,8 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$zipFile64  = Get-Item "$toolsDir\open-stage-control*x64*.zip"
+$fileName   = 'phiola-2.7-beta5-windows-x64.zip'
+$zipFile64  = Get-Item "$toolsDir\${fileName}"
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
