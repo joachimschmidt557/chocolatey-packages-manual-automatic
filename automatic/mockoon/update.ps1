@@ -12,8 +12,12 @@ function global:au_SearchReplace {
         ".\legal\VERIFICATION.txt" = @{
             "(?i)(\s+URL:).*"             = "`${1} $($Latest.URL32)"
             "(?i)(checksum:).*"           = "`${1} $($Latest.Checksum32)"
-          }
-     }
+        }
+
+        'tools\chocolateyInstall.ps1' = @{
+            "(^[$]fileName\s*=\s*)('.*')"      = "`$1'$($Latest.FileName64)'"
+        }
+    }
 }
 
 function global:au_GetLatest {

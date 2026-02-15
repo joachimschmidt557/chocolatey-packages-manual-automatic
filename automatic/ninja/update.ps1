@@ -14,8 +14,12 @@ function global:au_SearchReplace {
             #"(?i)(\s+64-bit:).*"             = "`${1} $($Latest.URL64)"
             "(?i)(checksum:).*"           = "`${1} $($Latest.Checksum32)"
             #"(?i)(checksum64:).*"           = "`${1} $($Latest.Checksum64)"
-          }
-     }
+        }
+
+        'tools\chocolateyInstall.ps1' = @{
+            "(^[$]fileName\s*=\s*)('.*')"      = "`$1'$($Latest.FileName64)'"
+        }
+    }
 }
 
 function global:au_GetLatest {

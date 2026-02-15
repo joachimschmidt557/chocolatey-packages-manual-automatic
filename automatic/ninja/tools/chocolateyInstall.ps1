@@ -8,7 +8,8 @@ if ( $pp.InstallDir ) {
 }
 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$zipFile    = Get-Item "$toolsDir\ninja-win*.zip"
+$fileName   = 'phiola-2.7-beta5-windows-x64.zip'
+$zipFile  = Get-Item "$toolsDir\${fileName}"
 #$zipFile64  = Get-Item "$toolsDir\*-x86_64-pc-windows-gnu*.zip"
 
 $packageArgs = @{

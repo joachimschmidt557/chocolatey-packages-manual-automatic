@@ -1,7 +1,8 @@
 
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
-$fileLocation = Get-Item "$toolsDir\mockoon*.exe"
+$fileName   = 'phiola-2.7-beta5-windows-x64.zip'
+$fileLocation = Get-Item "$toolsDir\${fileName}"
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
