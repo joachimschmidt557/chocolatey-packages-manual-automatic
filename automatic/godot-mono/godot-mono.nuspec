@@ -101,7 +101,6 @@ years as an in-house engine, used to publish several work-for-hire titles.
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
     <file src="tools\**" target="tools" />
-    <file src="legal\**" target="legal" />
     <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>
