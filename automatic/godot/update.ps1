@@ -50,8 +50,8 @@ function global:au_GetLatest {
     # Godot_v3.0.6-stable_win64.exe.zip
     # Godot_v3.0.6-stable_win32.exe.zip
     # Godot_v4.4.1-rc1_win32.exe.zip
-    $re_32  = "Godot_v.+_win32.exe.zip"
-    $re_64  = "Godot_v.+_win64.exe.zip"
+    $re_32  = "^Godot_v.+_win32.exe.zip$"
+    $re_64  = "^Godot_v.+_win64.exe.zip$"
 
     $Streams = [ordered] @{}
 
