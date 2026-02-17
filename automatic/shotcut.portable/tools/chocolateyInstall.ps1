@@ -1,6 +1,6 @@
 ﻿$packageName = 'shotcut.portable'
-$url64      = 'https://github.com/mltframework/shotcut/releases/download/v26.1.30/shotcut-win64-26.1.30.zip'
-$checksum64 = '6fac61e1b8203a6509c549c2833a04619368cf81d57b676e1d5ad94b11c6395b'
+$url64      = 'https://github.com/mltframework/shotcut/releases/download/v26.2.16/shotcut-win64-26.2.16.zip'
+$checksum64 = '3d5717f197d2c5bb529a208fb44d42c253e5f33088e90b652e677dc076f3548b'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 Install-ChocolateyZipPackage -PackageName "$packageName" `
                              -Url64Bit "$url64" `
