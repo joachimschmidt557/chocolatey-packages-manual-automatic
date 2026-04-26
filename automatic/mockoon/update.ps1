@@ -15,7 +15,7 @@ function global:au_SearchReplace {
         }
 
         'tools\chocolateyInstall.ps1' = @{
-            "(^[$]fileName\s*=\s*)('.*')"      = "`$1'$($Latest.FileName64)'"
+            "(^[$]fileName\s*=\s*)('.*')"      = "`$1'$($Latest.FileName32)'"
         }
     }
 }
