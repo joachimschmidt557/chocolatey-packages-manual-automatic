@@ -1,8 +1,8 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileName32 = 'upx-5.1.1-win32_x32.zip'
-$fileName64 = 'upx-5.1.1-win64_x64.zip'
+$fileName32 = 'upx-5.2.0-win32_x32.zip'
+$fileName64 = 'upx-5.2.0-win64_x64.zip'
 $zipFile    = Get-Item "$toolsDir\${fileName32}"
 $zipFile64  = Get-Item "$toolsDir\${fileName64}"
 
