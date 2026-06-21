@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
-$fileName   = ''
+$fileName   = 'mockoon.setup.9.7.0_x32.exe'
 $fileLocation = Get-Item "$toolsDir\${fileName}"
 
 $packageArgs = @{
