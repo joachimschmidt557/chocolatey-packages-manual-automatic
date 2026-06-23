@@ -1,8 +1,8 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/IrosTheBeggar/mStream/releases/download/v6.11.2/mStream-Server-Setup-6.11.2.exe'
-$checksum   = '70ae1197adbae12cc9a557dc46deb0c5b9845fd8b56543fc4e2c580158aac92c'
+$url        = 'https://github.com/IrosTheBeggar/mStream/releases/download/v6.12.0/mStream-Server-Setup-6.12.0.exe'
+$checksum   = '50453f87e3c2292422d9bee773968aca5c82799d978de40ffb3d0d1499cf9319'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
