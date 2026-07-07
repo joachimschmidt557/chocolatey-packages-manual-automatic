@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   64-bit: https://openstagecontrol.ammd.net/packages/open-stage-control_1.30.3_win32-x64.zip
+   64-bit: https://openstagecontrol.ammd.net/packages/open-stage-control_1.30.4_win32-x64.zip
 
    to download the zip file.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: B83FD6AA0A3B65B3D825972DEB0022EC609EB02BF5C47BE554C22D81D88A4B0C
+   checksum64: 29EEB376C8E4A20F0B4B2A51E123A5080BE65B14697111DCCD67D007DD992B4B
 
 File 'LICENSE.txt' obtained from:
    https://framagit.org/jean-emmanuel/open-stage-control/-/blob/master/LICENSE
