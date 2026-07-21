@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   32-bit: https://github.com/godotengine/godot-builds/releases/download/4.7.1-stable/Godot_v4.7.1-stable_win32.exe.zip
-   64-bit: https://github.com/godotengine/godot-builds/releases/download/4.7.1-stable/Godot_v4.7.1-stable_win64.exe.zip
+   32-bit: https://github.com/godotengine/godot-builds/releases/download/4.8-dev2/Godot_v4.8-dev2_win32.exe.zip
+   64-bit: https://github.com/godotengine/godot-builds/releases/download/4.8-dev2/Godot_v4.8-dev2_win64.exe.zip
 
    to download the zip file.
 
@@ -16,8 +16,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 92E2AC08D43F3BC131B0815E5111D8BC3193A72ECF486FEA515CBD4297185CDF
-   checksum64: C7A289051EAEFB460B0106B60E9CD5BEE0EF55FD102DCB2BED1EB356CF3D90A1
+   checksum32: B71D65E77FF6A5CD67BD3FBD2B28084CFD0AF40710C4746BF2E879F353B2347B
+   checksum64: 939750D448D11AE377169CE68912A9092D9DFABE3172C421C1464B042B495852
 
 File 'LICENSE.txt' obtained from:
    https://github.com/godotengine/godot/blob/master/LICENSE.txt
