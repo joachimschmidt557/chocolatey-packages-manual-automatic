@@ -1,10 +1,10 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url32 = 'https://github.com/godotengine/godot-builds/releases/download/4.8-dev3/Godot_v4.8-dev3_mono_win32.zip'
-$url64 = 'https://github.com/godotengine/godot-builds/releases/download/4.8-dev3/Godot_v4.8-dev3_mono_win64.zip'
-$checksum32   = 'b664f6d4d92a3db9368c63e7f3cf705fbae57baa42dec7f100f2031628065e9c'
-$checksum64   = 'c75619e700e6c94ffc774292eb065c58eaec91f7436a5e3bb7ec694b45b40346'
+$url32 = 'https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/Godot_v4.7.2-stable_mono_win32.zip'
+$url64 = 'https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/Godot_v4.7.2-stable_mono_win64.zip'
+$checksum32   = 'b09c64d8d461276fd7fe4efdf89386b71ac32fcda1e1d9ec1870ba31737eb1ad'
+$checksum64   = 'a2a48473a7414c5f19fab690518caebb738c09ef9601f6bd2388676a7f53b3c0'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
