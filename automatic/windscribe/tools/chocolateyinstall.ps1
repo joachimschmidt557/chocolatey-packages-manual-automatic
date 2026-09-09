@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/Windscribe/Desktop-App/releases/download/v2.24.12/Windscribe_2.24.12_amd64.exe'
+$url        = 'https://github.com/Windscribe/Desktop-App/releases/download/v2.24.13/Windscribe_2.24.13_amd64.exe'
 
 Confirm-Win10
 
@@ -13,7 +13,7 @@ $packageArgs = @{
 
   softwareName    = 'windscribe*'
 
-  checksum64      = 'f2258515892aaad39f31b33a65b9d1edb0dc173979a6d43ef5b02079e60e7d07'
+  checksum64      = '821ff217d87b4acbd71408303d9a5bc35abfefdada6761f7fd2944a92d5609d2'
   checksumType64  = 'sha256'
 
   silentArgs      = '-silent'
